@@ -6,15 +6,15 @@
 </header>
 <body>
 	<div id="menu">
-		
+		<?php require_once "layouts/menu/menu.php" ?>
 	</div>
 	
 	<div id="body">
-	
+		<?php require_once "layouts/body/body_home.php" ?>
 	</div>
 	
 	<div id="footer">
-	
+		<?php require_once "layouts/footer/footer.php" ?>
 	</div>
 </body>
 </html>
