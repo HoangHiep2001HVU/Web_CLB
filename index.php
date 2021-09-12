@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="public/css/css.css" />
 </header>
 <body>
-	<div id="menu">
+	<div id="top">
 		<?php require_once "layouts/menu/menu.php" ?>
 	</div>
 	
