@@ -13,7 +13,6 @@
 	<div class="right">
 		<ul>
 			<li><a href="#">Hoàng Hiệp</a></li>
-			<li><a href="#">Đăng nhập</a></li>
             <li><a href="#">Đăng xuất</a></li>
 		</ul>
 	</div>
