@@ -3,7 +3,7 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	margin: 0px auto;
 	color: #fff;
-	font-size: 24px; 
+	font-size: 22px; 
 	width: 100%;
 }
 
@@ -56,14 +56,19 @@ body {
 }
 
 .menu .left {
-	display: flex;
+	width: 60%;
 }
 
 .menu .right {
-	margin-left: 50%;
+	width: 40%;
+}
+
+.menu .left ul {
+	margin-left: 2%;
 }
 
 .menu .right ul{
+	float: right;
 	padding-left: 20px;
 	padding-right: 30px;
 }
@@ -82,10 +87,6 @@ body {
 		padding-left: 10px;
 		padding-right: 10px;
 		height: 20px;
-	}
-	
-	.menu .right {
-		margin-left: 15%;
 	}
 	
 	#top img {
