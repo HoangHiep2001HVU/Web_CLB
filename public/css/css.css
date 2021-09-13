@@ -7,30 +7,21 @@ body {
 	width: 100%;
 }
 
-#top {
-	margin: 0px auto;
-	background: #0b0c10;
-	display: flex;
-}
-
-#top img {
+.menu img {
 	width: 3%;
 	height: 3%;
-	margin-top: 2px;
-	padding: 3px;
 	margin-left: 20px;
 }
 
 .menu  {
-	width: 97%;
+	width: 100%;
 	display: flex;
-	margin-top: 0.7%;
+	background: #0b0c10;
 }
 
 .menu ul {
 	margin: 0px auto;
 	padding: 0px;
-	background: #0b0c10;
 }
 
 .menu li a {
@@ -56,11 +47,13 @@ body {
 }
 
 .menu .left {
-	width: 60%;
+	margin-top: 0.5%;
+	width: 57%;
 }
 
 .menu .right {
-	width: 40%;
+	margin-top: 0.5%;
+	width: 43%;
 }
 
 .menu .left ul {
@@ -78,7 +71,8 @@ body {
 	position: absolute;
 	width: 200%;
 	padding: 5%;
-	margin-top: 4%;
+	margin-top: 3.3%;
+	background: #0b0c10;
 }
 
 .menu .left ul li:hover .sub_Group{
@@ -106,6 +100,10 @@ body {
 		margin-top: 5px;
 		width: 5%;
 		height: 5%;
+	}
+	
+	.menu .left ul .sub_Group{
+		margin-top: 8%;
 	}
 }
 

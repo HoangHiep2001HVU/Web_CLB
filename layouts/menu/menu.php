@@ -1,5 +1,6 @@
-<img src="public/img/clb.png" />
+
 <div class="menu">
+	<img src="public/img/clb.png" />
 	<div class="left">
 		<ul>
 			<li><a href="index.php">Trang chủ</a></li>
@@ -26,4 +27,7 @@
             <li><a href="#">Đăng xuất</a></li>
 		</ul>
 	</div>
+</div>
+<div>
+	<h1>dfhsdhf</h1>
 </div>
