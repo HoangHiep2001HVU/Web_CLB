@@ -3,7 +3,8 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	margin: 0px auto;
 	color: #fff;
-	font-size: 1.6em; 
+	font-size: 24px; 
+	width: 100%;
 }
 
 #top {
@@ -43,7 +44,7 @@ body {
 	text-transform:uppercase;
 	padding-left: 15px;
 	padding-right: 15px;
-	padding-top: 6px;
+	padding-top: 8px;
 	padding-bottom: 5px;
 	margin: 2px;
 	border-radius: 5px;
@@ -59,7 +60,7 @@ body {
 }
 
 .menu .right {
-	margin-left: 18em;
+	margin-left: 50%;
 }
 
 .menu .right ul{
@@ -84,7 +85,7 @@ body {
 	}
 	
 	.menu .right {
-		margin-left: 10em;
+		margin-left: 15%;
 	}
 	
 	#top img {
