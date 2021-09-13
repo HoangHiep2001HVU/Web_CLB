@@ -3,8 +3,6 @@
 	<title>CLB Tin Học</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="public/css/css.css" />
-	<script type="text/javascript" src="public/jss/js.js"></script>
-	
 </header>
 <body>
 	<div id="top">
@@ -18,5 +16,6 @@
 	<div id="footer">
 		<?php require_once "layouts/footer/footer.php" ?>
 	</div>
+	<script type="text/javascript" src="public/jss/js.js"></script>
 </body>
 </html>
