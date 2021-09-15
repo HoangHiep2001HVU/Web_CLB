@@ -1,3 +1,4 @@
+/*Định dạng chung cho web*/
 body {
 	background: #1f2833;
 	font-family: Helvetica, Arial, sans-serif;
@@ -7,6 +8,7 @@ body {
 	width: 100%;
 }
 
+/*Định dạng css cho menu top*/
 .menu img {
 	width: 3%;
 	height: 3%;
@@ -79,6 +81,7 @@ body {
 	display: grid;
 }
 
+/*Định dạng css cho silde ảnh top*/
 .banner_top {
 	width: 100%;
 	overflow: hidden;
@@ -112,7 +115,7 @@ body {
 .slide_img {
 	width: 100%;
 	display: flex;
-	transition: all 0.5s;
+	transition: all 0.8s;
 }
 
 .banner_top img {
