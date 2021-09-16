@@ -14,13 +14,12 @@
 	</div>
 	
 	<div id="body">
-		<?php require "layouts/body/body_home.php" ?>
+		<?php require "layouts/users/login.php" ?>
 	</div>
 	
 	<div id="footer">
-		<?php require "layouts/footer/footer.php" ?>
+		<?php require  "layouts/footer/footer.php" ?>
 	</div>
-	
 	<script type="text/javascript" src="public/jss/js.js"></script>
 </body>
 </html>
