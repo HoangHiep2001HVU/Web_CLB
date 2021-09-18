@@ -29,7 +29,25 @@ function Back(){
 		slide_img[i].style.marginLeft = '-' + x + '%';
 	}
 }
-//Tự động gọi hàm Next() sau 2s
+//Tự động gọi hàm Next() sau 5s
 setInterval(function(){
 	Next();
 },5000);
+
+
+function click_img(id,src,alt){
+	var modal = document.getElementById("myModal");
+	var img = document.getElementById("sl_1");
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	modal.style.display = "block";
+	modalImg.src = src;
+	captionText.innerHTML = alt;
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	span.onclick = function() { 
+	  modal.style.display = "none";
+	}
+}
