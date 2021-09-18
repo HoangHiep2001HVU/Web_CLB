@@ -45,9 +45,22 @@ function click_img(id,src,alt){
 	modalImg.src = src;
 	captionText.innerHTML = alt;
 	
-	var span = document.getElementsByClassName("close")[0];
+	var span = document.getElementById("click_img");
 
 	span.onclick = function() { 
 	  modal.style.display = "none";
 	}
 }
+
+function users(id,close_id){
+	
+	var reg = document.getElementById(id);
+	reg.style.display = "block";
+
+	var span = document.getElementById(close_id);
+	
+	span.onclick = function(){
+		reg.style.display = "none";
+	}
+}
+

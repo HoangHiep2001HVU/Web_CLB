@@ -21,8 +21,8 @@
 	
 	<div class="right">
 		<ul>
-			<li><a href="layouts/users/login.php">Đăng nhập</a></li>
-			<li><a href="layouts/users/register.php">Đăng ký</a></li>
+			<li onclick="users('login','log');">Đăng nhập</li>
+			<li onclick="users('register','reg');">Đăng ký</li>
 			<!--<li><a href="#">Hoàng Hiệp</a></li>-->
             <li><a href="#">Đăng xuất</a></li>
 		</ul>
@@ -45,7 +45,5 @@
 		<img id="sl_2" src="public/img/img1.jpg" alt="anh 2" onclick="click_img(this.id,this.src,this.alt);"/>
 		<img id="sl_3" src="public/img/img_1.jpg" alt="anh 3" onclick="click_img(this.id,this.src,this.alt);"/>
 	</div>
-	
-	<?php require "layouts/body/click_img.php"; ?>
 
 </div>

@@ -21,6 +21,10 @@
 		<?php require "layouts/footer/footer.php" ?>
 	</div>
 	
+	<?php require "layouts/users/login.php" ?>
+	<?php require "layouts/body/click_img.php" ?>
+	<?php require "layouts/users/register.php" ?>
+	
 	<script type="text/javascript" src="public/jss/js.js"></script>
 </body>
 </html>
