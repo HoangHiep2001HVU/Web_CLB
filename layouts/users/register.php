@@ -37,48 +37,7 @@
 				<input type="password" class="form_control" id="rPassword" placeholder="Nhập lại mật khẩu" name="rPassword">
 			</div>
 				
-			<button type="submit" name="register" id="insert_acc">Đăng ký</button>
+			<button type="submit" name="register" id="insert_acc" onclick="reg();">Đăng ký</button>
 		</form>
-		
-		<script type="text/javascript">
-			$('#insert_acc').on('click',function(){
-				var name = $('#name').val();
-				var birthday = $('#birthday').val();
-				var email = $('#email').val();
-				var _class = $('#_class').val();
-				var sex = $('#sex').val();
-				var _password = $('#_password').val();
-				var rPassword = $('#rPassword').val();
-				
-				if(name== ''){
-					$("#name").css("border-color", "red");
-					$('#name').attr('placeholder','Vui lòng nhập tên');
-				}
-				if(email== ''){
-					$("#email").css("border-color", "red");
-					$('#email').attr('placeholder','Vui lòng nhập email');
-				}
-				if(_class== ''){
-					$("#_class").css("border-color", "red");
-					$('#_class').attr('placeholder','Vui lòng nhập lớp');
-				}
-				if(sex== ''){
-					$("#sex").css("border-color", "red");
-					$('#sex').attr('placeholder','Vui lòng nhập giới tính');
-				}
-				if(_password== ''){
-					$("#_password").css("border-color", "red");
-					$('#_password').attr('placeholder','Vui lòng nhập mật khẩu');
-				}
-				if(rPassword== ''){
-					$("#rPassword").css("border-color", "red");
-					$('#rPassword').attr('placeholder','Vui lòng nhập lại mật khẩu');
-				}
-				
-				if(name != '' && email != '' && _class != '' && sex != '' && password != '' && rPassword != ''){
-					alert(_password+"+"+rPassword);
-				}
-			});
-		</script>
-	<div>
+	</div>
 </div>

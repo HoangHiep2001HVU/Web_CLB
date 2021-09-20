@@ -27,5 +27,10 @@
 	<?php require "layouts/users/register.php" ?>
 	
 	<script type="text/javascript" src="public/jss/js.js"></script>
+	
+	<?php 
+		//Tắt kết nối
+		mysqli_close($conn);
+	?>
 </body>
 </html>
