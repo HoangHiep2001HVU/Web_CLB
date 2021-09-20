@@ -90,6 +90,7 @@ body {
 }
 
 .tranfer {
+	display: none;
 	width: 100%;
 	position: absolute;
 	margin-top: 7%;
@@ -123,6 +124,10 @@ body {
 
 .banner_top img {
 	width: 100%;
+}
+
+.banner_top:hover .tranfer{
+	display: block; 
 }
 
 /* Định dạng phần layouts khi click vào ảnh */
@@ -218,7 +223,7 @@ body {
 	color: #7826f5;
 	width: 30%;
 	float: right;
-	margin: 7% 10%;
+	margin: 4% 10%;
 	position: relative;
 	z-index: 2;
 	text-align: center;
@@ -249,6 +254,10 @@ body {
 	width: 72%;
 	height: 50px;
 	font-size: 22px;
+}
+
+.form button:hover{
+	background: #8b48f7;
 }
 
 .bg, .form {
@@ -301,8 +310,8 @@ body {
 	}
 
 	.form_group input {
-		height: 30px;
-		font-size: 18px;
+		height: 25px;
+		font-size: 12px;
 		padding-left: 3%;
 	}
 

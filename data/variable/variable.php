@@ -14,8 +14,4 @@
 		}
 	}
 	
-	function Login($con, $sql){
-		
-	}
-	
 ?>
