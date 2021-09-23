@@ -8,11 +8,7 @@
             <li>
 				<a href="#">Các nhóm</a>
 				<ul class="sub_Group">
-					<li><a href="#">Nhóm lập trình</a></li>
-					<li><a href="#">Nhóm E-Spost</a></li>
-					<li><a href="#">Nhóm Office</a></li>
-					<li><a href="#">Nhóm Đồ Hoạ</a></li>
-					<li><a href="#">Nhóm UD Công nghệ</a></li>
+					<?php groups($conn); ?>
 				</ul>
 			</li>
             <li><a href="#">Diễn đàn</a></li>
@@ -21,10 +17,20 @@
 	
 	<div class="right">
 		<ul>
-			<li onclick="users('login','log');">Đăng nhập</li>
-			<li onclick="users('register','reg');">Đăng ký</li>
-			<!--<li><a href="#">Hoàng Hiệp</a></li>-->
-            <li><a href="#">Đăng xuất</a></li>
+			<?php 
+				if(isset($_GET["email"])){
+					$email = $_GET["email"];
+					$name = username($conn, $user_id, $email, $role);
+					echo "<li><a href='#'>$name</a></li>";
+					echo "<li><a href='index.php'>Đăng xuất</a></li>";
+				}
+				else {
+					$log = 'users("login","log");';
+					$reg = 'users("register","reg");';
+					echo "<li onclick='$log'>Đăng nhập</li>";
+					echo "<li onclick='$reg'>Đăng ký</li>";
+				}
+			?>
 		</ul>
 	</div>
 </div>
@@ -40,10 +46,26 @@
 		</svg>
 	</div>
 	
+	<?php
+		$upload_sl_img = 'users("upload_sl_img","close_sl");';
+		if($role == 1){
+			echo "
+				<div class='insert_slide_img'>
+					<button name='button' type='button' onclick='$upload_sl_img'>
+						<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+						  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z' />
+						</svg>
+						Thêm ảnh
+					</button>
+				</div>
+			";
+		}
+	?>
+	
 	<div class="slide_img">
 		<img id="sl_1" src="public/img/img_1.jpg" alt="anh 1" onclick="click_img(this.id,this.src,this.alt);"/>
 		<img id="sl_2" src="public/img/img1.jpg" alt="anh 2" onclick="click_img(this.id,this.src,this.alt);"/>
 		<img id="sl_3" src="public/img/img_1.jpg" alt="anh 3" onclick="click_img(this.id,this.src,this.alt);"/>
 	</div>
-
+	
 </div>

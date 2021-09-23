@@ -1,0 +1,4 @@
+-Ngày 23/9:
+	+ Lấy đc thông tin ng đăng nhập: id, name, role
+	+ Đang làm giao diện của phần upload ảnh slide  img top
+	+ ở file index đag cmt lại phần login và register

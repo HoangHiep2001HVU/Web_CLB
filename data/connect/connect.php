@@ -13,5 +13,6 @@
 			die("Connection failed: " .$con->connect_error);
 		}
 	}
+	Connect($conn);
 	
 ?>
