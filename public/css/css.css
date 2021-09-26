@@ -20,6 +20,7 @@ body {
 	width: 100%;
 	display: flex;
 	background: #0b0c10;
+	max-width: 1920px;
 }
 
 ul {
@@ -52,11 +53,11 @@ ul {
 
 .menu .left {
 	margin-top: 0.2%;
-	width: 75%;
+	width: 60%;
 }
 
 .menu .right {
-	width: 25%;
+	width: 40%;
 }
 
 .menu .left ul {
@@ -443,25 +444,34 @@ ul {
 		margin: 24% 6% 0% 0%;
 	}
 
+	#register .form_group input {
+		height: 20px;
+		font-size: 12px;
+	}
+	
+	#register  .form_group #gender{
+		height: 30px;
+		font-size: 12px;
+	}
+	
+	#register  .form{
+		margin-right: 10%;
+		margin-top: 22%;
+	}
+
+	.form button {
+		height: 30px;
+		font-size: 16px;
+	}
+
 	.form_group input {
 		height: 25px;
 		font-size: 12px;
 		padding-left: 3%;
 	}
 	
-	.form_group #gender {
-		height: 25px;
-		font-size: 12px;
-		padding-left: 3%;
-	}
-
-	.form button {
-		height: 40px;
-		font-size: 22px;
-	}
-	
 	#login .form {
-		margin: 32% 8% 0% 0%;
+		margin: 28% 15% 0% 0%;
 	}
 	
 	#upload_sl_img .bg img {
@@ -526,10 +536,24 @@ ul {
 		padding-left: 3%;
 	}
 	
-	.form_group #gender {
+	#register .form_group input {
 		height: 25px;
 		font-size: 12px;
-		padding-left: 3%;
+	}
+	
+	#register  .form_group #gender{
+		height: 30px;
+		font-size: 12px;
+	}
+	
+	#register  .form{
+		margin-right: 15%;
+		margin-top: 2%;
+	}
+
+	.form button {
+		height: 30px;
+		font-size: 16px;
 	}
 
 	.form h1 {
