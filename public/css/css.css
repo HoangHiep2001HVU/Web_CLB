@@ -52,12 +52,12 @@ body {
 
 .menu .left {
 	margin-top: 0.2%;
-	width: 54%;
+	width: 75%;
 }
 
 .menu .right {
 	margin-top: 0.2%;
-	width: 43%;
+	width: 25%;
 }
 
 .menu .left ul {
@@ -66,8 +66,7 @@ body {
 
 .menu .right ul{
 	float: right;
-	padding-left: 20px;
-	padding-right: 30px;
+	padding-right: 20px;
 }
 
 .menu .left ul .sub_Group {
@@ -124,6 +123,8 @@ body {
 
 .banner_top img {
 	width: 100%;
+    max-height: 380px;
+    min-width: 100%;
 }
 
 .banner_top:hover .tranfer{
@@ -319,6 +320,39 @@ body {
 	margin: 14% 12% 0% 0%;
 }
 
+#upload_sl_img .bg {
+	width: 100%;
+}
+
+#upload_sl_img .bg img {
+	width: 30%;
+}
+
+#upload_sl_img .form {
+	margin: 8% 35% 0% 0%;
+}
+
+#upload_sl h1{
+	font-size: 32px;
+}
+
+#upload_sl #file_img_sl {
+	padding-top: 2%;
+}
+
+#upload_sl #note_img_sl{
+	max-width: 67%;
+	min-width: 67%;
+	max-height: 300px;
+	font-size: 22px;
+	padding: 2%;
+	border: solid #cbcbcb;
+}
+
+#upload_sl #note_img_sl:focus{
+	border-color: #7826f5;
+}
+
 /*Chung cho mobible và tablet */
 @media only screen and (max-width: 63.9375em){
 	body {
@@ -335,11 +369,6 @@ body {
 		padding-left: 10px;
 		padding-right: 10px;
 		height: 20px;
-	}
-	
-	#top .menu img {
-		width: 5%;
-		height: 5%;
 	}
 	
 	.menu .left ul .sub_Group{
@@ -361,6 +390,10 @@ body {
 		margin-top: 9%;
 		width: 150%;
 		font-size: 10px;
+	}
+	
+	.banner_top img {
+		max-height: 200px;
 	}
 	
 	.insert_slide_img {
@@ -403,6 +436,29 @@ body {
 	#login .form {
 		margin: 32% 8% 0% 0%;
 	}
+	
+	#upload_sl_img .bg img {
+		width: 70%;
+	}
+
+	#upload_sl h1{
+		font-size: 40px;
+	}
+
+	#upload_sl_img .form {
+		margin: 40% 15% 0% 0%;
+		width: 70%;
+	}
+	#upload_sl #file_img_sl {
+		padding-top: 1%;
+	}
+
+	#upload_sl #note_img_sl{
+		max-width: 66%;
+		min-width: 66%;
+		max-height: 350px;
+		font-size: 14px;
+	}
 }
 	
 @media only screen and (max-width: 1366px) and (min-width: 1024px){
@@ -420,6 +476,10 @@ body {
 		padding-left: 10px;
 		padding-right: 10px;
 		height: 20px;
+	}
+	
+	.banner_top img {
+		max-height: 210px;
 	}
 	
 	.insert_slide_img {
@@ -447,6 +507,29 @@ body {
 
 	.form h1 {
 		font-size: 25px;
+	}
+	
+	#upload_sl_img .bg img {
+		width: 70%;
+	}
+
+	#upload_sl h1{
+		font-size: 40px;
+	}
+
+	#upload_sl_img .form {
+		margin: 20% 15% 0% 0%;
+		width: 70%;
+	}
+	#upload_sl #file_img_sl {
+		padding-top: 1%;
+	}
+
+	#upload_sl #note_img_sl{
+		max-width: 66%;
+		min-width: 66%;
+		max-height: 350px;
+		font-size: 14px;
 	}
 }
 

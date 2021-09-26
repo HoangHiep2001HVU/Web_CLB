@@ -1,4 +1,11 @@
--Ngày 23/9:
+- Ngày 23/9:
 	+ Lấy đc thông tin ng đăng nhập: id, name, role
-	+ Đang làm giao diện của phần upload ảnh slide  img top
-	+ ở file index đag cmt lại phần login và register
+	+ Đang làm giao diện của phần upload ảnh slide img top
+	+ Ở file index đag cmt lại phần login và register
+- Ngày 24/9:
+	+ Đang làm song giao diện của phần upload ảnh slide img top
+	+ Làm song phần upload ảnh lên vào một forder cố định trong trang web
+	và đưa tên ảnh lên mysql.
+	+ Đã phối hợp login và upload ảnh sl top
+	+ Đang tìm cách load lại phần silde_img khi thêm một ảnh hoặc xoá 1 ảnh 
+	(đã thử .load(), .remove())

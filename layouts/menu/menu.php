@@ -2,7 +2,15 @@
 	<img src="public/img/clb.png" />
 	<div class="left">
 		<ul>
-			<li><a href="index.php">Trang chủ</a></li>
+			<?php 
+				if(isset($_GET["email"])){
+					$email = $_GET["email"];
+					echo "<li><a href='index.php?email=$email'>Trang chủ</a></li>";
+				}
+				else {
+					echo "<li><a href='index.php'>Trang chủ</a></li>";
+				}
+			?>
             <li><a href="#">Giới thiệu</a></li>
             <li><a href="#">Tin tức</a></li>
             <li>
@@ -63,9 +71,7 @@
 	?>
 	
 	<div class="slide_img">
-		<img id="sl_1" src="public/img/img_1.jpg" alt="anh 1" onclick="click_img(this.id,this.src,this.alt);"/>
-		<img id="sl_2" src="public/img/img1.jpg" alt="anh 2" onclick="click_img(this.id,this.src,this.alt);"/>
-		<img id="sl_3" src="public/img/img_1.jpg" alt="anh 3" onclick="click_img(this.id,this.src,this.alt);"/>
+		<?php sl_img($conn); ?>
 	</div>
 	
 </div>

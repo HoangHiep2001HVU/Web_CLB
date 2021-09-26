@@ -28,4 +28,18 @@
 			}
 		}
 	}
+	
+	function sl_img($con){
+		$sql = "select * from slide_imgs order by created_at desc LIMIT 6";
+		$result = $con->query($sql);
+		if($result->num_rows > 0){
+			while($row = $result->fetch_assoc()) {
+				$id = $row['id'];
+				$name = $row['name'];
+				$img = $row['image'];
+				$note = $row['note'];
+				echo "<img id='$id' src='public/img/slide_img/$img' alt='$name' onclick='click_img(this.id,this.src,this.alt);'/>";
+			}
+		}
+	}
 ?>
