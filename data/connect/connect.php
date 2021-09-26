@@ -7,7 +7,8 @@
 	$password = "";
 	$dbname = "clb_tinhoc";
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
-	
+
+	mysqli_set_charset($conn, 'UTF8');
 	function Connect($con){
 		if ($con->connect_error) {
 			die("Connection failed: " .$con->connect_error);

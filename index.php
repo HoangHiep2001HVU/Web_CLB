@@ -26,6 +26,13 @@
 	<?php require "layouts/body/click_img.php" ?>
 	<?php require "layouts/users/register.php" ?>
 	<?php require "layouts/menu/upload_sl_img.php" ?>
+
+	<script type="text/javascript">
+			$(document).ready(function(){
+				Next();
+				Back();
+			});
+	</script>
 	<script type="text/javascript" src="public/jss/js.js"></script>
 	
 	<?php 
