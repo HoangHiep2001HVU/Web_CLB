@@ -14,7 +14,7 @@
 		<?php require "layouts/menu/menu.php" ?>
 	</div>
 	
-	<div id="body">
+	<div id="body" class="gird">
 		<?php require "layouts/body/body_home.php" ?>
 	</div>
 	

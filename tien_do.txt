@@ -9,3 +9,8 @@
 	+ Đã phối hợp login và upload ảnh sl top
 	+ Đang tìm cách load lại phần silde_img khi thêm một ảnh hoặc xoá 1 ảnh 
 	(đã thử .load(), .remove())
+- Ngày 26/9:
+	+ Chỉnh sửa giao diện phần menu top và slide ảnh
+	+ Làm đc load lại phần silde_img khi thêm một ảnh hoặc xoá 1 ảnh bảng $(".slide_img").load(location.href + " .slide_img");
+	+ Bắt đầu thiết kế body home
+	+ Học lại display gird
