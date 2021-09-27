@@ -1,0 +1,276 @@
+/*Chung cho mobible và tablet */
+@media only screen and (max-width: 63.9375em) and (min-width: 768px){
+	body {
+		margin: 0px auto;
+		font-size: 14px;
+	}
+	/*menu top*/
+	.menu {
+		width: 100%;
+		padding-top: 5px;
+	}
+	
+	.menu li {
+		padding-left: 10px;
+		padding-right: 10px;
+		height: 20px;
+	}
+
+    .menu ul {
+        margin: 5px;
+    }
+	
+	.menu .sub_Group {
+		margin-top: 9%;
+		width: 150%;
+		font-size: 10px;
+	}
+
+    .menu .sub_Group li {
+        height: 15px;
+    }
+	
+	.bg {
+		margin-top: 50%;
+	}
+	
+	#top .menu img {
+		width: 5%;
+		height: 5%;
+	}
+	
+	.banner_top img {
+		max-height: 200px;
+	}
+	
+	.insert_slide_img {
+		width: 15%;
+		margin-top: 160px;
+		margin-left: 85%;
+	}
+	
+	.insert_slide_img button {
+		font-size: 14px;
+	}
+	
+	/*form đăng ký, đăng nhập*/
+	.bg {
+		margin-top: 20%;
+	}
+	
+	.form {
+		width: 38%;
+		margin: 24% 6% 0% 0%;
+	}
+
+	#register .form_group input {
+		height: 20px;
+		font-size: 12px;
+	}
+	
+	#register  .form_group #gender{
+		height: 30px;
+		font-size: 12px;
+	}
+	
+	#register  .form{
+		margin-right: 10%;
+		margin-top: 22%;
+	}
+
+	.form button {
+		height: 30px;
+		font-size: 16px;
+	}
+
+	.form_group input {
+		height: 25px;
+		font-size: 12px;
+		padding-left: 3%;
+	}
+	
+	#login .form {
+		margin: 28% 15% 0% 0%;
+	}
+	
+	#upload_sl_img .bg img {
+		width: 70%;
+	}
+
+	#upload_sl h1{
+		font-size: 40px;
+	}
+
+	#upload_sl_img .form {
+		margin: 40% 15% 0% 0%;
+		width: 70%;
+	}
+	#upload_sl #file_img_sl {
+		padding-top: 1%;
+	}
+
+	#upload_sl #note_img_sl{
+		max-width: 66%;
+		min-width: 66%;
+		max-height: 350px;
+		font-size: 14px;
+	}
+}
+	
+@media only screen and (max-width: 1366px) and (min-width: 1024px){
+	body {
+		margin: 0px auto;
+		font-size: 14px;
+	}
+	
+	.menu {
+		width: 100%;
+		padding-top: 5px;
+	}
+	
+	.menu li {
+		padding: 5px;
+        font-size: 12px;
+	}
+	
+	.menu .sub_Group {
+		margin-top: 9%;
+		width: 150%;
+		font-size: 10px;
+	}
+
+    .menu .sub_Group li {
+        height: 15px;
+    }
+	
+	.banner_top img {
+		max-height: 210px;
+	}
+	
+	.insert_slide_img {
+		width: 10%;
+		margin-top: 180px;
+	}
+	
+	.insert_slide_img button {
+		font-size: 14px;
+	}
+	
+	/*form đăng ký, đăng nhập*/
+	.form_group input {
+		height: 25px;
+		font-size: 12px;
+		padding-left: 3%;
+	}
+	
+	#register .form_group input {
+		height: 25px;
+		font-size: 12px;
+	}
+	
+	#register  .form_group #gender{
+		height: 30px;
+		font-size: 12px;
+	}
+	
+	#register  .form{
+		margin-right: 15%;
+		margin-top: 2%;
+	}
+
+	.form button {
+		height: 30px;
+		font-size: 16px;
+	}
+
+	.form h1 {
+		font-size: 25px;
+	}
+	
+	#upload_sl_img .bg img {
+		width: 70%;
+	}
+
+	#upload_sl h1{
+		font-size: 40px;
+	}
+
+	#upload_sl_img .form {
+		margin: 20% 15% 0% 0%;
+		width: 70%;
+	}
+	#upload_sl #file_img_sl {
+		padding-top: 1%;
+	}
+
+	#upload_sl #note_img_sl{
+		max-width: 66%;
+		min-width: 66%;
+		max-height: 350px;
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 768px){
+    body {
+		margin: 0px auto;
+		font-size: 12px;
+	}
+
+    .menu {
+        padding-bottom: 10px;
+    }
+
+    .menu img {
+        width: 35px;
+        height: 35px;
+        margin-top: 2px;
+    }
+
+    .menu_top {
+        margin: 0px;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        background-color: #0b0c10;
+        margin: 0px auto;
+        padding: 5px 10px;
+        margin-left: 10px;
+    }
+
+    .menu_top .nav li{
+        height: 15px;
+    }
+
+    .icon_menu {
+        display: flex;
+        width: 20%;
+        margin-left: 10px;
+        padding: 0px 10px;
+        margin-top: 5px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .icon_menu svg{
+        width: 25px;
+    }
+
+    .icon_menu p{
+        font-size: 18px;
+        margin: 5px;
+    }
+
+    .icon_menu:hover {
+        background-color: #66fcf1;
+    }
+
+    .sub_Group {
+        margin-left: 85px;
+        margin-top: -25px;
+        font-size: 10px;
+    }
+
+}

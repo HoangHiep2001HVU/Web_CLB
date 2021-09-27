@@ -64,3 +64,12 @@ function users(id,close_id){
 	}
 }
 
+function menu_mobile(){
+	var menu = document.getElementsByClassName("nav")[0];
+	if(menu.style.display==""){
+		menu.style.display = "grid";
+	}
+	else {
+		menu.style.display = "";
+	}
+}

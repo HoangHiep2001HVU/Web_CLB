@@ -15,3 +15,7 @@
 	+ Bắt đầu thiết kế body home
 	+ Học lại display gird
 	+ Tội ngu nên phải sửa lại CSDL và lm lại giao diện web
+- Ngày 27/9:
+	+ Sửa lại giao diện thích ứng màn hình
+	+ Tạo menu thu gọn cho thích ứng màn hình
+	+ Còn phần đăng ký và đăng nhập chưa lm được

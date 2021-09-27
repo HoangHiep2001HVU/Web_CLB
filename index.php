@@ -7,6 +7,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="public/css/css.css" />
+	<link rel="stylesheet" type="text/css" href="public/css/responsive.css" />
 	<script src="public/jss/jquery-3.6.0.min.js"></script>
 </header>
 <body>
