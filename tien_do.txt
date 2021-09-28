@@ -19,3 +19,4 @@
 	+ Sửa lại giao diện thích ứng màn hình
 	+ Tạo menu thu gọn cho thích ứng màn hình
 	+ Còn phần đăng ký và đăng nhập chưa lm được
+- Ngày 28/09:

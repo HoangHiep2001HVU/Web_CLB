@@ -7,6 +7,7 @@ body {
 	font-size: 16px; 
 	width: 100%;
 	font-family: Arial, Helvetica, sans-serif;
+	max-width: 1920px;
 }
 
 /*Định dạng css cho menu top*/
@@ -20,7 +21,6 @@ body {
 	width: 100%;
 	display: flex;
 	background: #0b0c10;
-	max-width: 1920px;
 }
 
 .icon_menu {
@@ -364,15 +364,7 @@ ul {
 	border-color: #7826f5;
 }
 
-/*Định dạng cho phần body home*/
-#body {
-	width: 100%;
-	display: block;
-	padding: 0px;
-	background: red;
-}
-
-#body.gird {
-	max-width: 1200px;
-	margin: 0 auto;
+.col {
+	text-align: center;
+	background: #ccc;
 }

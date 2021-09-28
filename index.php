@@ -8,6 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="public/css/css.css" />
 	<link rel="stylesheet" type="text/css" href="public/css/responsive.css" />
+	<link rel="stylesheet" type="text/css" href="public/css/grid_system.css" />
 	<script src="public/jss/jquery-3.6.0.min.js"></script>
 </header>
 <body>
@@ -15,7 +16,7 @@
 		<?php require "layouts/menu/menu.php" ?>
 	</div>
 	
-	<div id="body" class="gird">
+	<div id="body">
 		<?php require "layouts/body/body_home.php" ?>
 	</div>
 	

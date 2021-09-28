@@ -1,13 +1,13 @@
-<div class="asd_1">
-	<!--<img id="sl_1" src="public/img/img_1.jpg" alt="anh 1" onclick="click_img(this.id,this.src,this.alt);"/>
-	<img id="sl_2" src="public/img/img1.jpg" alt="anh 2" onclick="click_img(this.id,this.src,this.alt);"/>
-	<img id="sl_3" src="public/img/img_1.jpg" alt="anh 3" onclick="click_img(this.id,this.src,this.alt);"/>-->
-</div>
-
-<div class="event">
-	<h1>Body home</h1>
-</div>
-
-<div class="asd_2">
-
+<div class="gird wide">
+	<div class="row">
+	<div class="col l-12 m-12 c12">
+			<h1>abcd</h1>
+		</div>
+		<div class="col l-5 m-6 c12">
+			<h1>abcd</h1>
+		</div>
+		<div class="col l-5 m-6 c12">
+			<h1>abcd</h1>
+		</div>
+	</div>
 </div>
