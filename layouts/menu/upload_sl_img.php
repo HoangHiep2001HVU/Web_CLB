@@ -1,4 +1,4 @@
-<!--Giao diện đăng nhập-->
+<!--tải ảnh sl lên-->
 <div id="upload_sl_img" class="modal">
 	<span class="close" id="close_sl">&times;</span>
 	<div class="bg">

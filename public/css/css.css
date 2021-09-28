@@ -364,10 +364,26 @@ ul {
 }
 
 #body{
+	width: 100%;
 	text-align: center;
+	margin: 50px 0px;
 }
 
-.col {
-	text-align: center;
-	background: #ccc;
+.main {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 49% 49%;
+	grid-gap: 2%;
+}
+
+.even {
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 30%;
+}
+
+.even .img img{
+	min-width: 100%;
+	max-width: 100%;
 }

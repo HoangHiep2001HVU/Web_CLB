@@ -1,12 +1,6 @@
 <div class="menu">
 	<img src="public/img/clb.png" />
 	<div class="menu_top">
-		<div class="icon_menu">
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-			</svg>
-			<p>Menu</p>
-		</div>
 		<ul class="nav">
 			<?php 
 				if(isset($_GET["email"])){
@@ -20,7 +14,7 @@
             <li><a href="#">Giới thiệu</a></li>
             <li><a href="#">Tin tức</a></li>
             <li>
-				<a href="#">Các nhóm</a>
+				Các nhóm
 				<ul class="sub_Group">
 					<?php groups($conn); ?>
 				</ul>
@@ -30,14 +24,14 @@
 				if(isset($_GET["email"])){
 					$email = $_GET["email"];
 					$name = username($conn, $user_id, $email, $role);
-					echo "<li class='users'><a href='#'>$name</a></li>";
 					echo "<li class='users'><a href='index.php'>Đăng xuất</a></li>";
+					echo "<li class='users'><a href='#'>$name</a></li>";
 				}
 				else {
 					$log = 'users("login","log");';
 					$reg = 'users("register","reg");';
-					echo "<li onclick='$log' class='users'>Đăng nhập</li>";
 					echo "<li onclick='$reg' class='users'>Đăng ký</li>";
+					echo "<li onclick='$log' class='users'>Đăng nhập</li>";
 				}
 			?>
 		</ul>
@@ -73,6 +67,12 @@
 	
 	<div class="slide_img">
 		<?php sl_img($conn); ?>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				Next();
+				Back();
+			});
+		</script>
 	</div>
 	
 </div>

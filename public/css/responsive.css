@@ -1,5 +1,5 @@
-/*Chung cho mobible và tablet */
-@media only screen and (max-width: 63.9375em) and (min-width: 768px){
+/*Chung cho mobible vÃ  tablet */
+@media only screen and (max-width: 63.9375em) and (min-width: 795px){
 	body {
 		margin: 0px auto;
 		font-size: 14px;
@@ -15,10 +15,6 @@
 		padding-right: 10px;
 		height: 20px;
 	}
-
-    .menu ul {
-        margin: 5px;
-    }
 	
 	.menu .sub_Group {
 		margin-top: 9%;
@@ -53,9 +49,9 @@
 		font-size: 14px;
 	}
 	
-	/*form đăng ký, đăng nhập*/
+	/*form dang nhap va dang ky*/
 	.bg {
-		margin-top: 20%;
+		margin-top: 10%;
 	}
 	
 	.form {
@@ -75,7 +71,7 @@
 	
 	#register  .form{
 		margin-right: 10%;
-		margin-top: 22%;
+		margin-top: 12%;
 	}
 
 	.form button {
@@ -90,7 +86,7 @@
 	}
 	
 	#login .form {
-		margin: 28% 15% 0% 0%;
+		margin: 18% 15% 0% 0%;
 	}
 	
 	#upload_sl_img .bg img {
@@ -135,8 +131,7 @@
 	
 	.menu .sub_Group {
 		margin-top: 9%;
-		width: 150%;
-		font-size: 10px;
+		width: 200%;
 	}
 
     .menu .sub_Group li {
@@ -156,7 +151,7 @@
 		font-size: 14px;
 	}
 	
-	/*form đăng ký, đăng nhập*/
+	/*form dang nhap va dang ky*/
 	.form_group input {
 		height: 25px;
 		font-size: 12px;
@@ -211,68 +206,113 @@
 	}
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 795px){
     body {
 		margin: 0px auto;
 		font-size: 12px;
 	}
 
-    .menu {
-        padding-bottom: 10px;
-    }
-
     .menu img {
-        width: 35px;
-        height: 35px;
-        margin-top: 2px;
+        width: 15px;
+        height: 15px;
+        margin: 7px 7px;
     }
 
     .menu_top {
         margin: 0px;
+		margin-top: 5px;
     }
 
-    .nav {
-        display: none;
-        position: absolute;
-        background-color: #0b0c10;
-        margin: 0px auto;
-        padding: 5px 10px;
-        margin-left: 10px;
+	.nav li{
+		font-size: 9px;
+        height: 9px;
+		padding: 2px 5px;
+		border-radius: 2px;
     }
 
-    .menu_top .nav li{
-        height: 15px;
+	.sub_Group {
+		width: 200%;
     }
 
-    .icon_menu {
-        display: flex;
-        width: 20%;
-        margin-left: 10px;
-        padding: 0px 10px;
-        margin-top: 5px;
-        border-radius: 3px;
-        cursor: pointer;
-    }
-
-    .icon_menu svg{
-        width: 25px;
-    }
-
-    .icon_menu p{
-        font-size: 18px;
-        margin: 5px;
-    }
-
-    .icon_menu:hover {
-        background-color: #66fcf1;
-    }
-
-    .sub_Group {
-        margin-left: 85px;
-        margin-top: -25px;
-        font-size: 10px;
-    }
-	.icon_menu:hover .nav {
-		display: grid;
+	.banner_top img {
+		max-height: 160px;
 	}
+
+	/*form dang nhap va dang ky*/
+	.bg {
+		margin-top: 20%;
+	}
+
+	#login .form {
+		margin-top: 30%;
+	}
+
+	.form_group input {
+		height: 15px;
+		font-size: 10px;
+		padding-left: 3%;
+	}
+	
+	#register .form_group input {
+		width: 150px;
+		height: 10px;
+		font-size: 8px;
+	}
+	
+	#register  .form_group #gender{
+		width: 163px;
+		height: 18px;
+		font-size: 8px;
+	}
+	
+	#register  .form{
+		margin-top: 23%;
+	}
+
+	#register  .form button{
+		width: 160px;
+	}
+
+	.form button {
+		height: 22px;
+		font-size: 12px;
+	}
+
+	.form h1 {
+		font-size: 12px;
+	}
+
+	.insert_slide_img {
+		width: 15%;
+		margin-top: 130px;
+		margin-left: 85%;
+	}
+	
+	.insert_slide_img button {
+		font-size: 12px;
+	}
+	
+	#upload_sl_img .bg img {
+		width: 70%;
+	}
+
+	#upload_sl h1{
+		font-size: 40px;
+	}
+
+	#upload_sl_img .form {
+		margin: 20% 15% 0% 0%;
+		width: 70%;
+	}
+	#upload_sl #file_img_sl {
+		padding-top: 1%;
+	}
+
+	#upload_sl #note_img_sl{
+		max-width: 66%;
+		min-width: 66%;
+		max-height: 350px;
+		font-size: 14px;
+	}
+
 }
