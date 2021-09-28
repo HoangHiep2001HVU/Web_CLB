@@ -272,5 +272,7 @@
         margin-top: -25px;
         font-size: 10px;
     }
-
+	.icon_menu:hover .nav {
+		display: grid;
+	}
 }
