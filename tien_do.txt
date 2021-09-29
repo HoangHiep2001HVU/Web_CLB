@@ -21,3 +21,5 @@
 	+ Còn phần đăng ký và đăng nhập chưa lm được
 - Ngày 28/09:
 	+ Resposive loạn hết lại phải sửa lại
+	+ Giao diện phần top tạm ổn
+	+ Mới bắt đầu giao diện body home
