@@ -222,9 +222,12 @@
         margin: 0px;
 		margin-top: 5px;
     }
+	
+	.nav {
+		
+	}
 
 	.nav li{
-		font-size: 9px;
         height: 9px;
 		padding: 2px 5px;
 		border-radius: 2px;
@@ -235,7 +238,7 @@
     }
 
 	.banner_top img {
-		max-height: 160px;
+		max-height: 90px;
 	}
 
 	/*form dang nhap va dang ky*/

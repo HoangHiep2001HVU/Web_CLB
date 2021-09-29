@@ -1,5 +1,5 @@
 <div class="menu">
-	<img src="public/img/clb.png" />
+	<img src="public/img/clb.png" alt="Logo menu"/>
 	<div class="menu_top">
 		<ul class="nav">
 			<?php 

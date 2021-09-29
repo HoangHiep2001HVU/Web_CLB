@@ -23,3 +23,8 @@
 	+ Resposive loạn hết lại phải sửa lại
 	+ Giao diện phần top tạm ổn
 	+ Mới bắt đầu giao diện body home
+- Ngày 30/09:
+	+ Làm thêm được giao diện phần body
+	+ Học sử dụng grid
+	+ Đang tìm hiểu thẻ Meta Viewport
+	+ Phần responsive vẫn chưa hiểu kỹ, cần tìm hiểu nhiều hơn nữa

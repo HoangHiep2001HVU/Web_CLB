@@ -15,7 +15,7 @@
 			</div>
 			
 			<div class="form_group">
-				<input type="date" class="form_control" id="birthday" placeholder="Nhập vào ngày sinh" 
+				<input type="date" class="form_control" id="birthday" value="2018-07-22"
 				name="birthday">
 			</div>
 					
