@@ -2,7 +2,6 @@
     width: 100%;
     display: block;
     padding: 0;
-    background: red;
 }
 
 .grid.wide {
@@ -92,8 +91,8 @@
 }
 
 .c-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 98.5%;
+    max-width: 98.5%;
 }
 
 .c-o-1 {
@@ -197,8 +196,8 @@
     }
 
     .m-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 47.5%;
+        max-width: 47.5%;
     }
 
     .m-7 {
@@ -349,8 +348,8 @@
     }
 
     .l-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 47.5%;
+        max-width: 47.5%;
     }
 
     .l-7 {
@@ -512,8 +511,8 @@
     }
 
     .wide .l-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 47.5%;
+        max-width: 47.5%;
     }
 
     .wide .l-7 {

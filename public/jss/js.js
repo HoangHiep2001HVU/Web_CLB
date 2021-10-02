@@ -56,6 +56,7 @@ function click_img(id,src,alt){
 function users(id,close_id){
 	
 	var x = document.getElementById(id);
+	console.log(x);
 	x.style.display = "block";
 
 	var span = document.getElementById(close_id);
@@ -72,10 +73,10 @@ function users(id,close_id){
 
 function menu_mobile(){
 	var menu = document.getElementsByClassName("nav")[0];
-	if(menu.style.display==""){
+	if(menu.style.display != "grid"){
 		menu.style.display = "grid";
 	}
 	else {
-		menu.style.display = "";
+		menu.style.display = "none";
 	}
 }

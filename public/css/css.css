@@ -25,9 +25,9 @@ body {
 
 /*Định dạng css cho menu top*/
 .menu img {
-	width: 3%;
-	height: 3%;
-	margin-left: 20px;
+	width: 36px;
+	height: 36px;
+	margin: 5px 5px;
 }
 
 .menu  {
@@ -42,7 +42,7 @@ body {
 
 .menu_top {
 	margin: 5px;
-	width: 95%;
+	width: 1140px;
 }
 
 .menu_top .users {
@@ -91,6 +91,23 @@ ul {
 	display: grid;
 }
 
+.mb_menu {
+    display: none;
+}
+
+.nav .users {
+    display: block;
+}
+
+.mb_users{
+	margin-top: -37px;
+	margin-right: 10px;
+}
+
+.banner_top img {
+	max-height: 90px;
+}
+
 /*Định dạng css cho silde ảnh top*/
 .banner_top {
 	width: 100%;
@@ -102,7 +119,7 @@ ul {
 	width: 100%;
 	max-width: 1200px;
 	position: absolute;
-	margin-top: 8%;
+	margin-top: 120px;
 }
 
 .tranfer svg {
@@ -122,7 +139,7 @@ ul {
 
 .tranfer .right {
 	float: right;
-    margin-right: 1%;
+    margin-right: 5%;
 }
 
 .slide_img {
@@ -143,27 +160,26 @@ ul {
 
 .insert_slide_img {
 	display: none;
-    width: 10%;
-    position: absolute;
-    margin-top: 250px;
-    margin-left: 69%;
+	width: 100%;
+	max-width: 1200px;
+	position: absolute;
 }
 
 .insert_slide_img button {
-	width: 90%;
-	background: none;
+	background: gray;
+	float: right;
 	outline: none;
 	border: none;
 	color: #fff;
-	display: flex;
-	font-size: 22px;
-	padding: 2%;
+	font-size: 18px;
+	padding: 5px 5px;
 	opacity: 0.8;
 	border-radius: 5%;
+	margin: 5px;
 }
 
 .insert_slide_img button svg {
-	width: 15%;
+	width: 20px;
 }
 
 .insert_slide_img button:hover{
@@ -385,56 +401,66 @@ ul {
 	border-color: #7826f5;
 }
 
-#body{
-	width: 100%;
-	text-align: center;
+
+.row h1 {
 	margin: 50px 0px;
-	height: auto;
+	color: #fff;
+	text-shadow: 2px 2px 5px #c5c6c7;
 }
 
-.main_even {
-	max-width: 1200px;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: auto auto;
-}
-
-.header_even {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
-.header_even h1 {
-	margin: 0px;
-	color: #66fcf1;
+.row .col svg {
+	width: 30px;
 }
 
 .even {
 	box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
-	margin: 10% 5%;
+	margin-bottom: 150px;
 }
 
-.even:hover {
-	
-}
-
-.even .img img {
+.even img {
 	max-width: 100%;
 	min-width: 100%;
 	max-height: 400px;
 	min-height: 400px;
 }
 
-.even .img {
-	
+.header_even {
+	background: #c5c6c7;
+	padding: 10px;
+	color: #0b0c10;
 }
 
-#footer {
-	width: 100%;
-	margin: 0 auto;
+.header_even button {
+	background-color: #0b0c10;
+	color: #66fcf1;
+	border: none;
+	outline: none;
+	padding: 5px 10px;
+}
+
+.header_even button:hover {
+	background-color: #66fcf1;
+	color: #0b0c10;
 }
 
 .footer {
-	max-width: 1200px;
-	margin: 0px auto;
+	background-color: #0b0c10;
+	color: #fff;
+}
+
+.footer .row img {
+	margin-top: 10px;
+	margin-right: 20px;
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+}
+
+.footer .row .col{
+	display: flex;
+}
+
+.footer .row .col a{
+	text-decoration: none;
+	color: #fff;
 }

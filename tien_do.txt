@@ -28,3 +28,11 @@
 	+ Học sử dụng grid
 	+ Đang tìm hiểu thẻ Meta Viewport
 	+ Phần responsive vẫn chưa hiểu kỹ, cần tìm hiểu nhiều hơn nữa
+	+ Chỉnh lại responsive
+	+ Đang làm đến phần sửa icon login, logout
+- Ngày 01/10:
+	+ Sửa giao diện
+	+ Tìm hiểu làm body
+- Ngày 02/10:
+	- Vẫn là sửa giao diện
+	- Làm giao diện trang chủ
