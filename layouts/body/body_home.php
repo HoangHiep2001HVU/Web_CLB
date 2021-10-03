@@ -1,7 +1,10 @@
 <div class="grid wide">
 	<div class="row">
-		<div class="col l-12">
+		<div class="col l-8 m-8 c-8">
 			<h1>=> Sự kiện đang diễn ra</h1>
+		</div>
+		<div class="col l-4 m-4 c-4">
+			<button class="insert_even">+ Thêm sự kiện</button>
 		</div>
 	</div>
 	<div class="row">

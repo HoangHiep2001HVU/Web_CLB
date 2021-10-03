@@ -119,263 +119,387 @@
 	}
 }*/
 
-@media only screen and (max-width: 1366px) and (min-width: 1024px){
-	body {
-		margin: 0px auto;
-		font-size: 14px;
-	}
-	
-	.menu {
-		width: 100%;
-		padding-top: 5px;
-	}
-	
-	.menu li {
-		padding: 5px;
-        font-size: 12px;
-	}
-	
-	.menu .sub_Group {
-		margin-top: 9%;
-		width: 200%;
-	}
+@media only screen and (max-width: 1366px) and (min-width: 1024px) {
+  body {
+    margin: 0px auto;
+    font-size: 14px;
+  }
 
-    .menu .sub_Group li {
-        height: 15px;
-    }
+  .menu {
+    width: 100%;
+    padding-top: 5px;
+  }
 
-	.mb_users {
-		margin-top: -27px;
-	}
-	
-	.banner_top img {
-		max-height: 210px;
-	}
-	
-	.insert_slide_img {
-		max-width: 95%;
-	}
-	
-	.insert_slide_img button {
-		font-size: 12px;
-	}
+  .menu li {
+    padding: 5px;
+    font-size: 12px;
+  }
 
-	.insert_slide_img button svg {
-		width: 10px;
-	}
+  .menu .sub_Group {
+    margin-top: 9%;
+    width: 200%;
+  }
 
-	.tranfer{
-		margin-top: 80px;
-	}
-	
-	/*form dang nhap va dang ky*/
-	.form_group input {
-		height: 25px;
-		font-size: 12px;
-		padding-left: 3%;
-	}
-	
-	#register .form_group input {
-		height: 25px;
-		font-size: 12px;
-	}
-	
-	#register  .form_group #gender{
-		height: 30px;
-		font-size: 12px;
-	}
-	
-	#register  .form{
-		margin-right: 15%;
-		margin-top: 2%;
-	}
+  .menu .sub_Group li {
+    height: 15px;
+  }
 
-	#login .bg, form{
-		margin-top: 200px;
-	}
+  .mb_users {
+    margin-top: -27px;
+  }
 
-	.form button {
-		height: 30px;
-		font-size: 16px;
-	}
+  .banner_top img {
+    max-height: 210px;
+  }
 
-	.form h1 {
-		font-size: 25px;
-	}
-	
-	#upload_sl_img .bg img {
-		width: 70%;
-	}
+  .insert_slide_img {
+    max-width: 95%;
+  }
 
-	#upload_sl h1{
-		font-size: 40px;
-	}
+  .insert_slide_img button {
+    font-size: 12px;
+  }
 
-	#upload_sl_img .form {
-		margin: 0% 14% 0% 0%;
-		width: 70%;
-	}
+  .insert_slide_img button svg {
+    width: 10px;
+  }
 
-	#upload_sl_img .form input{
-		height: 50px;
-		font-size: 18px;
-	}
+  .tranfer {
+    margin-top: 80px;
+  }
 
-	#upload_sl #file_img_sl {
-		font-size: 16px;
-	}
+  .tranfer .right {
+    margin-right: 5%;
+  }
 
-	#upload_sl #note_img_sl{
-		max-width: 66%;
-		min-width: 66%;
-		max-height: 350px;
-		font-size: 18px;
-	}
+  /*form dang nhap va dang ky*/
+  #login .form_group input {
+    height: 30px;
+    font-size: 12px;
+    padding-left: 3%;
+  }
 
-	#upload_sl_img button{
-		font-size: 26px;
-		padding: 10px 0px;
-		height: auto;
-	}
+  #register .bg {
+    margin-top: 20%;
+  }
+
+  #register .form_group input {
+    height: 25px;
+    font-size: 12px;
+  }
+
+  #register .form_group #gender {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  #register .form {
+    margin-right: 15%;
+    margin-top: 4%;
+  }
+
+  #login .bg,
+  form {
+    margin-top: 200px;
+  }
+
+  #login .form {
+    width: 40%;
+    margin-right: 10%;
+  }
+
+  #login .form button {
+    height: 35px;
+    font-size: 16px;
+    width: 68%;
+  }
+
+  #login .form h1 {
+    font-size: 28px;
+  }
+
+  #upload_sl_img .bg img {
+    width: 70%;
+  }
+
+  #upload_sl h1 {
+    font-size: 40px;
+  }
+
+  #upload_sl_img .form {
+    margin: 0% 14% 0% 0%;
+    width: 70%;
+  }
+
+  #upload_sl_img .form input {
+    height: 50px;
+    font-size: 18px;
+  }
+
+  #upload_sl #file_img_sl {
+    font-size: 16px;
+  }
+
+  #upload_sl #note_img_sl {
+    max-width: 66%;
+    min-width: 66%;
+    max-height: 350px;
+    font-size: 18px;
+  }
+
+  #upload_sl_img button {
+    font-size: 26px;
+    padding: 10px 0px;
+    height: auto;
+  }
 }
 
-@media only screen and (max-width: 1023px){
-    body {
-		margin: 0px auto;
-		font-size: 12px;
-	}
+@media only screen and (max-width: 1023px) {
+  body {
+    margin: 0px auto;
+    font-size: 12px;
+  }
 
-    .menu img {
-        width: 15px;
-        height: 15px;
-        margin: 7px 7px;
-    }
+  .menu img {
+    width: 15px;
+    height: 15px;
+    margin: 7px 7px;
+  }
 
-    .menu_top {
-        margin: 0px;
-		margin-top: 2px;
-    }
+  .menu_top {
+    margin: 0px;
+    margin-top: 2px;
+  }
 
-    .mb_menu {
-    	width: 20px;
-    	display: block;
-    }
+  .mb_menu {
+    width: 20px;
+    display: block;
+  }
 
-    .mb_menu:hover {
-    	background: #66fcf1;
-    }
-	
-	.nav {
-		display: none;
-		position: absolute;
-		background: #0b0c10;
-		font-size: 10px;
-	}
+  .mb_menu:hover {
+    background: #66fcf1;
+  }
 
-	.sub_Group {
-		width: 150px;
-		margin-top: -21px;
-		margin-left: 75px;
-		font-size: 10px;
-    }
+  .nav {
+    display: none;
+    position: absolute;
+    background: #0b0c10;
+    font-size: 10px;
+  }
 
-    .nav .users {
-    	display: none;
-    }
+  .sub_Group {
+    width: 150px;
+    margin-top: -21px;
+    margin-left: 75px;
+    font-size: 10px;
+  }
 
-	.mb_users {
-		margin-top: -25px;
-	}
+  .nav .users {
+    display: none;
+  }
 
-	.banner_top img {
-		max-height: 200px;
-	}
+  .mb_users {
+    margin-top: -25px;
+  }
 
-	.tranfer {
-		margin-top: 90px;
-		width: 100%;
-		max-width: 644px;
-	}
+  /*form dang nhap va dang ky*/
+  .bg {
+    margin-top: 20%;
+  }
 
-	.tranfer .right {
-		margin-right: 1%;
-	}
+  #login .form {
+    width: 40%;
+    margin-top: 26%;
+    margin-right: 12%;
+  }
 
-	/*form dang nhap va dang ky*/
-	.bg {
-		margin-top: 20%;
-	}
+  #login .form_group input {
+    height: 20px;
+    font-size: 10px;
+    padding-left: 3%;
+  }
 
-	#login .form {
-		margin-top: 30%;
-	}
+  #login .form button {
+    height: 22px;
+    font-size: 12px;
+    width: 68%;
+  }
 
-	.form_group input {
-		height: 15px;
-		font-size: 10px;
-		padding-left: 3%;
-	}
-	
-	#register .form_group input {
-		width: 150px;
-		height: 10px;
-		font-size: 8px;
-	}
-	
-	#register  .form_group #gender{
-		width: 163px;
-		height: 18px;
-		font-size: 8px;
-	}
-	
-	#register  .form{
-		margin-top: 23%;
-	}
+  #register .form_group input {
+    width: 150px;
+    height: 10px;
+    font-size: 8px;
+  }
 
-	#register  .form button{
-		width: 160px;
-	}
+  #register .form_group #gender {
+    width: 163px;
+    height: 18px;
+    font-size: 8px;
+  }
 
-	.form button {
-		height: 22px;
-		font-size: 12px;
-	}
+  #register .form {
+    margin-top: 23%;
+  }
 
-	.form h1 {
-		font-size: 12px;
-	}
+  #register .form button {
+    width: 160px;
+  }
 
-	.insert_slide_img {
-		width: 15%;
-		margin-top: 130px;
-		margin-left: 85%;
-	}
-	
-	.insert_slide_img button {
-		font-size: 12px;
-	}
-	
-	#upload_sl_img .bg img {
-		width: 70%;
-	}
+  .form h1 {
+    font-size: 12px;
+  }
 
-	#upload_sl h1{
-		font-size: 40px;
-	}
+  .insert_slide_img {
+    width: 15%;
+    margin-top: 130px;
+    margin-left: 85%;
+  }
 
-	#upload_sl_img .form {
-		margin: 20% 15% 0% 0%;
-		width: 70%;
-	}
-	#upload_sl #file_img_sl {
-		padding-top: 1%;
-	}
+  .insert_slide_img button {
+    font-size: 12px;
+  }
 
-	#upload_sl #note_img_sl{
-		max-width: 66%;
-		min-width: 66%;
-		max-height: 350px;
-		font-size: 14px;
-	}
+  #upload_sl_img .bg img {
+    width: 70%;
+  }
 
+  #upload_sl h1 {
+    font-size: 40px;
+  }
+
+  #upload_sl_img .form {
+    margin: 20% 15% 0% 0%;
+    width: 70%;
+  }
+  #upload_sl #file_img_sl {
+    padding-top: 1%;
+  }
+
+  #upload_sl #note_img_sl {
+    max-width: 66%;
+    min-width: 66%;
+    max-height: 350px;
+    font-size: 14px;
+  }
+
+  .banner_top img {
+    max-height: 200px;
+  }
+
+  .tranfer {
+    margin-top: 90px;
+    width: 100%;
+    max-width: 644px;
+  }
+
+  .tranfer .right {
+    margin-right: 1%;
+  }
+
+  .row h1 {
+    margin: 30px 0px;
+  }
+
+  .insert_even {
+    margin-top: 30px;
+  }
+
+  .even img {
+    max-height: 300px;
+    min-height: 300px;
+  }
+
+  .footer .contact img {
+    margin-left: 10px;
+  }
+
+  .row h1 {
+    margin: 30px 0px;
+    font-size: 20px;
+  }
+
+  .insert_even {
+    margin-top: 30px;
+  }
+
+  .footer .contact img {
+    margin-left: 60px;
+  }
 }
+
+@media only screen and (max-width: 667px) {
+  #login .form {
+    margin-top: 25%;
+  }
+
+  #login .form_group input {
+    height: 20px;
+  }
+
+  #register .form_group input {
+    width: 150px;
+    height: 10px;
+    font-size: 8px;
+  }
+
+  #register .form_group #gender {
+    width: 163px;
+    height: 18px;
+    font-size: 8px;
+  }
+
+  #register .form {
+    margin-top: 23%;
+  }
+
+  #register .form button {
+    width: 160px;
+  }
+
+  .form button {
+    height: 22px;
+    font-size: 12px;
+  }
+
+  .form h1 {
+    font-size: 12px;
+  }
+
+  .insert_slide_img {
+    width: 15%;
+    margin-top: 130px;
+    margin-left: 85%;
+  }
+
+  .insert_slide_img button {
+    font-size: 12px;
+  }
+
+  #upload_sl_img .bg img {
+    width: 70%;
+  }
+
+  #upload_sl h1 {
+    font-size: 40px;
+  }
+
+  #upload_sl_img .form {
+    margin: 20% 15% 0% 0%;
+    width: 70%;
+  }
+  #upload_sl #file_img_sl {
+    padding-top: 1%;
+  }
+
+  #upload_sl #note_img_sl {
+    max-width: 66%;
+    min-width: 66%;
+    max-height: 350px;
+    font-size: 14px;
+  }
+
+  .footer .contact img {
+    margin-left: 10px;
+  }
+}
+

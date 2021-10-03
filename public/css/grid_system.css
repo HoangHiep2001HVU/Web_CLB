@@ -91,8 +91,8 @@
 }
 
 .c-12 {
-    flex: 0 0 98.5%;
-    max-width: 98.5%;
+    flex: 0 0 100%;
+    max-width: 100%;
 }
 
 .c-o-1 {
@@ -196,8 +196,8 @@
     }
 
     .m-6 {
-        flex: 0 0 47.5%;
-        max-width: 47.5%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 
     .m-7 {
@@ -348,8 +348,8 @@
     }
 
     .l-6 {
-        flex: 0 0 47.5%;
-        max-width: 47.5%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 
     .l-7 {
@@ -511,8 +511,8 @@
     }
 
     .wide .l-6 {
-        flex: 0 0 47.5%;
-        max-width: 47.5%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 
     .wide .l-7 {
