@@ -196,7 +196,6 @@ ul {
 }
 
 /* Định dạng phần layouts khi click vào ảnh */
-
 .click_img {
   width: 100%;
 }
@@ -283,138 +282,191 @@ ul {
 }
 
 /*Định dạng phần đăng ký và đăng nhập*/
-
-.bg {
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  z-index: 1;
-  margin: 0 auto;
+/* Login */
+#login .row {
+  background-image: url("../img/backgrounds/bg_login.jpg");
+  margin-top: 100px;
+  background-size: 100%;
+  border-radius: 3%;
+  min-height: 570px;
+  max-height: 570px;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
+    0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  color: #6633ff;
 }
 
-#login .bg img {
-  width: 80%;
-  max-width: 1200px;
-  border-radius: 1%;
-  -moz-border-radius: 1%;
-  -webkit-border-radius: 1%;
+#login_form {
+  margin-top: 150px;
+  margin-left: 50px;
 }
 
-/*Định dạng css cho form*/
-.form {
-  color: #7826f5;
-  width: 30%;
-  float: right;
-  margin: 4% 10%;
-  position: relative;
-  z-index: 2;
-  text-align: center;
+#login .row .heder_log{
+  display: flex;
+  margin-bottom: 20px;
 }
 
-.form h1 {
-  margin: 2%;
+#login .row .heder_log h1 {
+  margin: 10px;
+  color: #6633ff;
 }
 
-.form_group input {
-  border: solid #cbcbcb;
-  width: 67%;
+#login .row .heder_log img {
+  width: 50px;
   height: 50px;
-  margin-bottom: 2%;
+}
+
+#login_form .form_group {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+#login_form label {
+  font-weight: bold;
+}
+
+#login_form .form_group input {
+  height: 40px;
+  width: 300px;
+  font-size: 18px;
+  border: 2px solid #cbcbcb;
+  margin-left: 10px;
+  padding-left: 20px;
   outline: none;
-  font-size: 22px;
-  padding-left: 3%;
 }
 
-.form_group input:focus {
-  border-color: #7826f5;
+#login_form .form_group input:focus {
+  border-color: #6633ff;
 }
 
-#register .form_group #gender {
-  border: solid #cbcbcb;
-  width: 72%;
-  height: 50px;
-  margin-bottom: 2%;
+#login_form #email_login {
+  margin-left: 40px;
+}
+
+#login_form .group_button{
+  width: 400px;
+  max-width: 400px;
+}
+
+#login_form button {
+  background: #6633ff;
   outline: none;
-  font-size: 22px;
-  padding-left: 3%;
-}
-
-#register .form_group #gender:focus {
-  border-color: #7826f5;
-}
-
-.form button {
-  background: #7826f5;
-  color: #fff;
   border: none;
-  width: 72%;
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Register */
+#register .row {
+  background-image: url("../img/backgrounds/bg_reg.jpg");
+  margin-top: 100px;
+  background-size: 100%;
+  border-radius: 3%;
+  min-height: 570px;
+  max-height: 570px;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
+    0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  color: #6633ff;
+}
+
+#form_reg {
+  margin-top: 70px;
+  margin-left: 70px;
+}
+
+#register .row .heder_reg{
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 50px
+}
+
+#register .row .heder_reg h1 {
+  margin: 10px;
+  color: #6633ff;
+}
+
+#register .row .heder_reg img {
+  width: 50px;
   height: 50px;
-  font-size: 22px;
 }
 
-.form button:hover {
-  background: #8b48f7;
-}
-
-.bg,
-.form {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-#login .form {
-  margin: 9% 15% 0% 0%;
-}
-
-#register .form_group input {
-  height: 35px;
+#form_reg .form_group {
+  margin-bottom: 10px;
   font-size: 18px;
 }
 
-#register .form_group #gender {
-  height: 35px;
+#form_reg label {
+  font-weight: bold;
+}
+
+#form_reg .form_group input, #gender {
+  height: 40px;
+  width: 300px;
   font-size: 18px;
+  border: 2px solid #cbcbcb;
+  margin-left: 10px;
+  padding-left: 20px;
+  outline: none;
 }
 
-#register .form {
-  margin-right: 15%;
-  margin-top: 3%;
+#form_reg .form_group input:focus {
+  border-color: #6633ff;
 }
 
-#upload_sl_img .bg {
-  width: 100%;
+#form_reg #email_login {
+  margin-left: 38px;
 }
 
-#upload_sl_img .bg img {
-  width: 30%;
+#form_reg .group_button{
+  width: 476px;
+  max-width: 476px;
 }
 
-#upload_sl_img .form {
-  margin: 8% 35% 0% 0%;
+#form_reg button {
+  background: #6633ff;
+  outline: none;
+  border: none;
+  width: 155px;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-#upload_sl h1 {
-  font-size: 32px;
+#form_reg #name{
+  margin-left: 108px;
 }
 
-#upload_sl #file_img_sl {
-  padding-top: 2%;
+#form_reg #birthday{
+  margin-left: 78px;
 }
 
-#upload_sl #note_img_sl {
-  max-width: 67%;
-  min-width: 67%;
-  max-height: 300px;
-  font-size: 22px;
-  padding: 2%;
-  border: solid #cbcbcb;
+#form_reg #email{
+  margin-left: 116px;
 }
 
-#upload_sl #note_img_sl:focus {
-  border-color: #7826f5;
+#form_reg #_class{
+  margin-left: 129px;
 }
+
+#form_reg #gender{
+  margin-left: 89px;
+}
+
+#form_reg #_password{
+  margin-left: 92px;
+}
+
+/* them anh cho sl */
+
+/* body even */
 
 .row h1 {
   margin: 50px 0px;
@@ -476,7 +528,7 @@ ul {
   margin-right: 20px;
   width: 30px;
   height: 30px;
-  margin-left: 10px;
+  margin-left: 25px;
 }
 
 .footer .row .col {
@@ -489,5 +541,9 @@ ul {
 }
 
 .contact {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin-top: 18px;
 }

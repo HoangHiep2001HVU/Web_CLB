@@ -12,7 +12,7 @@ require "data/config.php";
 	<link rel="stylesheet" type="text/css" href="public/css/css.css" />
 	<link rel="stylesheet" type="text/css" href="public/css/responsive.css" />
 	<link rel="stylesheet" type="text/css" href="public/css/grid_system.css" />
-	<script src="public/jss/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="public/jss/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript" src="public/jss/js.js"></script>
 </head>
 
@@ -29,9 +29,7 @@ require "data/config.php";
 		<?php require "layouts/footer/footer.php" ?>
 	</div>
 
-	<?php require "layouts/users/login.php" ?>
 	<?php require "layouts/body/click_img.php" ?>
-	<?php require "layouts/users/register.php" ?>
 	<?php require "layouts/users/upload_sl_img.php" ?>
 
 	<?php

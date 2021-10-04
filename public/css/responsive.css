@@ -1,124 +1,3 @@
-/*Chung cho mobible va  tablet */
-/*@media only screen and (min-width: 1367px){
-	body {
-		margin: 0px auto;
-		font-size: 14px;
-	}
-
-	.menu {
-		width: 100%;
-		padding-top: 5px;
-	}
-	
-	.menu li {
-		padding-left: 10px;
-		padding-right: 10px;
-		height: 20px;
-	}
-	
-	.menu .sub_Group {
-		margin-top: 9%;
-		width: 150%;
-		font-size: 10px;
-	}
-
-    .menu .sub_Group li {
-        height: 15px;
-    }
-	
-	.bg {
-		margin-top: 50%;
-	}
-	
-	#top .menu img {
-		width: 5%;
-		height: 5%;
-	}
-	
-	.banner_top img {
-		max-height: 200px;
-	}
-	
-	.insert_slide_img {
-		width: 100%;
-	}
-	
-	.insert_slide_img button {
-		font-size: 14px;
-	}
-
-	.insert_slide_img button svg {
-		width: 10px;
-	}
-
-	.tranfer {
-		margin-top: 80px;
-	}
-	
-	/*form dang nhap va dang ky
-	.bg {
-		margin-top: 10%;
-	}
-	
-	.form {
-		width: 38%;
-		margin: 24% 6% 0% 0%;
-	}
-
-	#register .form_group input {
-		height: 20px;
-		font-size: 12px;
-	}
-	
-	#register  .form_group #gender{
-		height: 30px;
-		font-size: 12px;
-	}
-	
-	#register  .form{
-		margin-right: 10%;
-		margin-top: 12%;
-	}
-
-	.form button {
-		height: 30px;
-		font-size: 16px;
-	}
-
-	.form_group input {
-		height: 25px;
-		font-size: 12px;
-		padding-left: 3%;
-	}
-	
-	#login .form {
-		margin: 18% 15% 0% 0%;
-	}
-	
-	#upload_sl_img .bg img {
-		width: 70%;
-	}
-
-	#upload_sl h1{
-		font-size: 40px;
-	}
-
-	#upload_sl_img .form {
-		margin: 40% 15% 0% 0%;
-		width: 70%;
-	}
-	#upload_sl #file_img_sl {
-		padding-top: 1%;
-	}
-
-	#upload_sl #note_img_sl{
-		max-width: 66%;
-		min-width: 66%;
-		max-height: 350px;
-		font-size: 14px;
-	}
-}*/
-
 @media only screen and (max-width: 1366px) and (min-width: 1024px) {
   body {
     margin: 0px auto;
@@ -173,85 +52,43 @@
   }
 
   /*form dang nhap va dang ky*/
-  #login .form_group input {
-    height: 30px;
-    font-size: 12px;
-    padding-left: 3%;
+  /* Login */
+  #login .row {
+    min-height: 470px;
+    max-height: 470px;
   }
 
-  #register .bg {
-    margin-top: 20%;
+  #login_form {
+    margin-top: 100px;
+    margin-left: 10px;
   }
 
-  #register .form_group input {
-    height: 25px;
-    font-size: 12px;
+  /* Register */
+  #register .row {
+    min-height: 470px;
+    max-height: 470px;
   }
 
-  #register .form_group #gender {
-    height: 30px;
-    font-size: 12px;
+  #form_reg {
+    margin-top: 20px;
+    margin-left: 50px;
   }
 
-  #register .form {
-    margin-right: 15%;
-    margin-top: 4%;
-  }
-
-  #login .bg,
-  form {
-    margin-top: 200px;
-  }
-
-  #login .form {
-    width: 40%;
-    margin-right: 10%;
-  }
-
-  #login .form button {
+  #form_reg .form_group input,
+  #gender {
     height: 35px;
-    font-size: 16px;
-    width: 68%;
+    width: 230px;
   }
 
-  #login .form h1 {
-    font-size: 28px;
+  #form_reg group_button {
+    max-width: 406px;
   }
 
-  #upload_sl_img .bg img {
-    width: 70%;
+  #form_reg button {
+    width: 133px;
   }
 
-  #upload_sl h1 {
-    font-size: 40px;
-  }
-
-  #upload_sl_img .form {
-    margin: 0% 14% 0% 0%;
-    width: 70%;
-  }
-
-  #upload_sl_img .form input {
-    height: 50px;
-    font-size: 18px;
-  }
-
-  #upload_sl #file_img_sl {
-    font-size: 16px;
-  }
-
-  #upload_sl #note_img_sl {
-    max-width: 66%;
-    min-width: 66%;
-    max-height: 350px;
-    font-size: 18px;
-  }
-
-  #upload_sl_img button {
-    font-size: 26px;
-    padding: 10px 0px;
-    height: auto;
-  }
+  /* them anh sl */
 }
 
 @media only screen and (max-width: 1023px) {
@@ -301,89 +138,113 @@
   .mb_users {
     margin-top: -25px;
   }
+}
 
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
   /*form dang nhap va dang ky*/
-  .bg {
-    margin-top: 20%;
+  /* Login */
+  #login .row {
+    margin-top: 150px;
+    max-height: 310px;
+    min-height: 310px;
   }
 
-  #login .form {
-    width: 40%;
-    margin-top: 26%;
-    margin-right: 12%;
+  #login_form {
+    margin-top: 40px;
+    margin-left: 3%;
+  }
+  #login_form .form_group {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  #login .row .heder_log {
+    margin-bottom: 0px;
   }
 
-  #login .form_group input {
-    height: 20px;
-    font-size: 10px;
-    padding-left: 3%;
+  #login_form .form_group input {
+    width: 170px;
   }
 
-  #login .form button {
-    height: 22px;
+  #login_form .group_button {
+    width: 260px;
+    max-width: 260px;
+  }
+
+  #login_form button {
+    width: 84px;
+    font-size: 13px;
+  }
+
+  /* Register */
+  #register .row {
+    min-height: 309px;
+    max-height: 309px;
+  }
+
+  #form_reg {
+    margin-top: 20px;
+    margin-left: 370px;
+    max-width: 230px;
+    min-width: 230px;
+  }
+
+  #register .row .heder_reg {
+    margin: 0px;
+  }
+
+  #register .row .heder_reg h1 {
+    font-size: 20px;
+  }
+
+  #register .row .heder_reg img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  #form_reg label {
+    display: none;
+  }
+  #form_reg #name,
+  #form_reg #birthday,
+  #form_reg #email,
+  #form_reg #_class,
+  #form_reg #gender,
+  #form_reg #_password,
+  #form_reg #rPassword {
+    margin-left: 0px;
+  }
+
+  #form_reg .form_group {
+    margin-bottom: 2px;
+    max-width: 230px;
+    min-width: 230px;
+  }
+
+  #form_reg .form_group input,
+  #gender {
     font-size: 12px;
-    width: 68%;
+    height: 25px;
+    width: 230px;
   }
 
-  #register .form_group input {
-    width: 150px;
-    height: 10px;
-    font-size: 8px;
+  #form_reg .group_button {
+    max-width: 230px;
+    min-width: 230px;
   }
 
-  #register .form_group #gender {
-    width: 163px;
-    height: 18px;
-    font-size: 8px;
-  }
-
-  #register .form {
-    margin-top: 23%;
-  }
-
-  #register .form button {
-    width: 160px;
-  }
-
-  .form h1 {
+  #form_reg button {
+    width: 74px;
     font-size: 12px;
+    height: 30px;
   }
+
+  /* them anh sl */
 
   .insert_slide_img {
     width: 15%;
     margin-top: 130px;
     margin-left: 85%;
-  }
-
-  .insert_slide_img button {
-    font-size: 12px;
-  }
-
-  #upload_sl_img .bg img {
-    width: 70%;
-  }
-
-  #upload_sl h1 {
-    font-size: 40px;
-  }
-
-  #upload_sl_img .form {
-    margin: 20% 15% 0% 0%;
-    width: 70%;
-  }
-  #upload_sl #file_img_sl {
-    padding-top: 1%;
-  }
-
-  #upload_sl #note_img_sl {
-    max-width: 66%;
-    min-width: 66%;
-    max-height: 350px;
-    font-size: 14px;
-  }
-
-  .banner_top img {
-    max-height: 200px;
   }
 
   .tranfer {
@@ -428,78 +289,113 @@
 }
 
 @media only screen and (max-width: 667px) {
-  #login .form {
-    margin-top: 25%;
+  /* form login and logout */
+  /* Login */
+  #login .row {
+    background-image: url("../img/backgrounds/bg_login_mb.jpg");
+    background-size: 100% 100%;
+    margin-top: 30px;
   }
 
-  #login .form_group input {
-    height: 20px;
+  #login_form {
+    margin-top: 310px;
+    margin-left: 10%;
   }
-
-  #register .form_group input {
-    width: 150px;
-    height: 10px;
-    font-size: 8px;
-  }
-
-  #register .form_group #gender {
-    width: 163px;
-    height: 18px;
-    font-size: 8px;
-  }
-
-  #register .form {
-    margin-top: 23%;
-  }
-
-  #register .form button {
-    width: 160px;
-  }
-
-  .form button {
-    height: 22px;
-    font-size: 12px;
-  }
-
-  .form h1 {
-    font-size: 12px;
-  }
-
-  .insert_slide_img {
-    width: 15%;
-    margin-top: 130px;
-    margin-left: 85%;
-  }
-
-  .insert_slide_img button {
-    font-size: 12px;
-  }
-
-  #upload_sl_img .bg img {
-    width: 70%;
-  }
-
-  #upload_sl h1 {
-    font-size: 40px;
-  }
-
-  #upload_sl_img .form {
-    margin: 20% 15% 0% 0%;
-    width: 70%;
-  }
-  #upload_sl #file_img_sl {
-    padding-top: 1%;
-  }
-
-  #upload_sl #note_img_sl {
-    max-width: 66%;
-    min-width: 66%;
-    max-height: 350px;
+  #login_form .form_group {
+    margin-bottom: 10px;
     font-size: 14px;
   }
-
-  .footer .contact img {
+  #login .row .heder_log {
+    margin-bottom: 10px;
     margin-left: 10px;
   }
+
+  #login .row .heder_log h1 {
+    font-size: 20px;
+    margin: 5px;
+  }
+
+  #login .row .heder_log img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #login_form .form_group input {
+    width: 170px;
+  }
+
+  #login_form #email_login {
+    margin-left: 34px;
+  }
+
+  #login_form .group_button {
+    width: 300px;
+    max-width: 300px;
+  }
+
+  #login_form button {
+    width: 84px;
+    font-size: 13px;
+  }
+
+  /* Register */
 }
 
+@media only screen and (max-width: 320px) {
+  /* form login and logout */
+  /* Login */
+  #login .row {
+    background-image: url("../img/backgrounds/bg_login_mb.jpg");
+    background-size: 100% 100%;
+    margin: 0px;
+  }
+
+  #login_form {
+    margin-top: 300px;
+    margin-left: 10%;
+  }
+
+  #login .row .heder_log h1 {
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  #login .row .heder_log img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #login label {
+    font-size: 10px;
+  }
+
+  #login_form .form_group {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  #login .row .heder_log {
+    margin-bottom: 0px;
+  }
+
+  #login_form .form_group input {
+    width: 180px;
+    height: 30px;
+  }
+
+  #login_form #email_login,
+  #login_form #password_login {
+    margin-left: 30px;
+    max-width: 260px;
+  }
+
+  #login_form .group_button {
+    max-width: 210px;
+  }
+
+  #login_form button {
+    width: 65px;
+    font-size: 10px;
+    height: 35px;
+  }
+}

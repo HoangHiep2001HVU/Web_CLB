@@ -36,7 +36,10 @@
 - Ngày 02/10:
 	- Vẫn là sửa giao diện
 	- Làm giao diện trang chủ
-- Ngày 4/10:
+- Ngày 3/10:
 	+ Sửa đc grid system
 	+ Hoàn thiện giao diện body
 	+ Đang sửa responsive
+- Ngày 4/10:
+	+ Sửa lại giao diện login, logout
+	+ Sửa responsive

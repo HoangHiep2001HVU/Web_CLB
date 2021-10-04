@@ -37,10 +37,8 @@
 						echo "<li class='users'><a href='#'>$name</a></li>";
 					}
 					else {
-						$log = 'users("login","log");';
-						$reg = 'users("register","reg");';
-						echo "<li onclick='$reg' class='users'>Đăng ký</li>";
-						echo "<li onclick='$log' class='users'>Đăng nhập</li>";
+						echo "<li class='users'><a href='layouts/users/register.php'>Đăng ký</a></li>";
+						echo "<li class='users'><a href='layouts/users/login.php'>Đăng nhập</a></li>";
 					}
 				?>
 			</ul>
