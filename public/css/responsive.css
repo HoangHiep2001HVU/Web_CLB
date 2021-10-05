@@ -71,7 +71,7 @@
 
   #form_reg {
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 30px;
   }
 
   #form_reg .form_group input,
@@ -138,6 +138,7 @@
   .mb_users {
     margin-top: -25px;
   }
+
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
@@ -300,14 +301,11 @@
   #login_form {
     margin-top: 310px;
     margin-left: 10%;
+    text-align: center;
   }
   #login_form .form_group {
     margin-bottom: 10px;
     font-size: 14px;
-  }
-  #login .row .heder_log {
-    margin-bottom: 10px;
-    margin-left: 10px;
   }
 
   #login .row .heder_log h1 {
@@ -328,17 +326,67 @@
     margin-left: 34px;
   }
 
-  #login_form .group_button {
-    width: 300px;
-    max-width: 300px;
-  }
-
   #login_form button {
     width: 84px;
     font-size: 13px;
   }
 
   /* Register */
+  #register .row {
+    background-image: url("../img/backgrounds/bg_reg_mb.jpg");
+    background-size: 100% 100%;
+    margin-top: 50px;
+  }
+
+  #register #form_reg {
+    margin-top: 295px;
+  }
+
+  #register .row .heder_reg {
+    margin: 0px;
+  }
+
+  #register .row .heder_reg h1 {
+    font-size: 20px;
+  }
+
+  #register .row .heder_reg img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  #form_reg label {
+    display: none;
+  }
+  #form_reg #name,
+  #form_reg #birthday,
+  #form_reg #email,
+  #form_reg #_class,
+  #form_reg #gender,
+  #form_reg #_password,
+  #form_reg #rPassword {
+    margin-left: 0px;
+  }
+
+  #form_reg .form_group {
+    margin-bottom: 2px;
+    max-width: 230px;
+    min-width: 230px;
+  }
+
+  #form_reg .form_group input,
+  #gender {
+    font-size: 12px;
+    height: 25px;
+    width: 240px;
+  }
+
+  #form_reg button {
+    width: 78px;
+    font-size: 12px;
+    height: 30px;
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -351,12 +399,13 @@
   }
 
   #login_form {
-    margin-top: 300px;
+    margin-top: 310px;
     margin-left: 10%;
+    text-align: inherit;
   }
 
   #login .row .heder_log h1 {
-    font-size: 14px;
+    font-size: 18px;
     margin: 5px;
   }
 
@@ -366,7 +415,7 @@
   }
 
   #login label {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   #login_form .form_group {
@@ -375,7 +424,7 @@
   }
 
   #login .row .heder_log {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
 
   #login_form .form_group input {
@@ -390,12 +439,222 @@
   }
 
   #login_form .group_button {
-    max-width: 210px;
+    max-width: 220px;
+    min-width: 220px;
   }
 
   #login_form button {
-    width: 65px;
+    width: 68px;
     font-size: 10px;
-    height: 35px;
+    height: 30px;
+  }
+  /* Register */
+  #register .row {
+    background-image: url("../img/backgrounds/bg_reg_mb.jpg");
+    background-size: 100% 100%;
+    margin-top: 50px;
+  }
+
+  #form_reg {
+    margin-top: 295px;
+    margin-left: 10%;
+    max-width: 260px;
+    min-width: 260px;
+  }
+
+  #register .row .heder_reg {
+    margin: 0px;
+  }
+
+  #register .row .heder_reg h1 {
+    font-size: 20px;
+  }
+
+  #register .row .heder_reg img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  #form_reg label {
+    display: none;
+  }
+  #form_reg #name,
+  #form_reg #birthday,
+  #form_reg #email,
+  #form_reg #_class,
+  #form_reg #gender,
+  #form_reg #_password,
+  #form_reg #rPassword {
+    margin-left: 0px;
+  }
+
+  #form_reg .form_group {
+    margin-bottom: 2px;
+    max-width: 230px;
+    min-width: 230px;
+  }
+
+  #form_reg .form_group input,
+  #gender {
+    font-size: 12px;
+    height: 25px;
+    width: 240px;
+  }
+
+  #form_reg .group_button {
+    width: 240px;
+  }
+
+  #form_reg button {
+    width: 75px;
+    font-size: 12px;
+    height: 30px;
+  }
+}
+
+@media only screen and (width: 540px) {
+  #login .row .heder_log {
+    margin-left: 80px;
+  }
+
+  #register #form_reg {
+    margin-left: 150px;
+  }
+}
+
+
+@media only screen and (min-width: 666px) and (max-width: 768px) {
+  /*form dang nhap va dang ky*/
+  /* Login */
+  #login .row {
+    margin-top: 150px;
+    max-height: 310px;
+    min-height: 310px;
+  }
+
+  #login_form {
+    margin-top: 40px;
+    margin-left: 3%;
+  }
+  #login_form .form_group {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  #login .row .heder_log {
+    margin-bottom: 0px;
+  }
+
+  #login_form .form_group input {
+    width: 170px;
+  }
+
+  #login_form .group_button {
+    width: 260px;
+    max-width: 260px;
+  }
+
+  #login_form button {
+    width: 84px;
+    font-size: 13px;
+  }
+
+  /* Register */
+  #register .row {
+    min-height: 320px;
+    max-height: 320px;
+  }
+
+  #form_reg {
+    margin-top: 10px;
+    margin-left: 405px;
+    max-width: 230px;
+    min-width: 230px;
+  }
+
+  #register .row .heder_reg {
+    margin: 0px;
+  }
+
+  #register .row .heder_reg h1 {
+    font-size: 20px;
+  }
+
+  #register .row .heder_reg img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  #form_reg label {
+    display: none;
+  }
+  #form_reg #name,
+  #form_reg #birthday,
+  #form_reg #email,
+  #form_reg #_class,
+  #form_reg #gender,
+  #form_reg #_password,
+  #form_reg #rPassword {
+    margin-left: 0px;
+  }
+
+  #form_reg .form_group {
+    margin-bottom: 5px;
+    max-width: 230px;
+    min-width: 230px;
+  }
+
+  #form_reg .form_group input,
+  #gender {
+    font-size: 12px;
+    height: 25px;
+    width: 230px;
+  }
+
+  #form_reg .group_button {
+    max-width: 230px;
+    min-width: 230px;
+  }
+
+  #form_reg button {
+    width: 74px;
+    font-size: 12px;
+    height: 30px;
+  }
+}
+
+
+@media only screen and (min-width: 666px) and (max-width: 740px){
+  /* Login */
+  #login .row {
+    margin-top: 150px;
+    max-height: 310px;
+    min-height: 310px;
+  }
+
+  #login_form {
+    margin-top: 40px;
+    margin-left: 310px;
+  }
+  #login_form .form_group {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  #login .row .heder_log {
+    margin-bottom: 0px;
+  }
+
+  #login .row .heder_log h1 {
+    font-size: 16px;
+  }
+
+  #login_form .form_group input {
+    width: 140px;
+  }
+  
+  #login_form button {
+    width: 80px;
+    font-size: 13px;
   }
 }

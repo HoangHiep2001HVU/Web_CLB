@@ -342,11 +342,6 @@ ul {
   margin-left: 40px;
 }
 
-#login_form .group_button{
-  width: 400px;
-  max-width: 400px;
-}
-
 #login_form button {
   background: #6633ff;
   outline: none;
@@ -379,6 +374,7 @@ a{
 #form_reg {
   margin-top: 70px;
   margin-left: 70px;
+  text-align: center;
 }
 
 #register .row .heder_reg{
@@ -422,11 +418,6 @@ a{
 
 #form_reg #email_login {
   margin-left: 38px;
-}
-
-#form_reg .group_button{
-  width: 476px;
-  max-width: 476px;
 }
 
 #form_reg button {

@@ -43,3 +43,7 @@
 - Ngày 4/10:
 	+ Sửa lại giao diện login, logout
 	+ Sửa responsive
+	+ Đang lm đến responsive của register
+- Ngày 5/10:
+	+ Hoàn thành login, logout vs responsive
+	+ Mặc dù lm quá link tinh, bị lặp lại nhiều thuộc tính
