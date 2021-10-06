@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th9 26, 2021 lúc 06:46 PM
--- Phiên bản máy phục vụ: 10.4.20-MariaDB
--- Phiên bản PHP: 7.3.29
+-- Máy chủ: localhost:3306
+-- Thời gian đã tạo: Th10 06, 2021 lúc 12:21 AM
+-- Phiên bản máy phục vụ: 5.7.33
+-- Phiên bản PHP: 7.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `account` (
   `id` int(11) NOT NULL,
   `email` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `role` int(11) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -40,8 +40,25 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`id`, `email`, `password`, `role`, `created_at`) VALUES
-(7, 'admin@123.com', 'e10adc3949ba59abbe56e057f20f883e', 1, '2021-09-22 14:35:31'),
-(8, 'ly@123.com', 'e10adc3949ba59abbe56e057f20f883e', 0, '2021-09-22 16:34:41');
+(1, 'admin@123.com', 'e10adc3949ba59abbe56e057f20f883e', 1, '2021-09-26 18:17:21'),
+(2, 'hiep@123.com', 'e10adc3949ba59abbe56e057f20f883e', 0, '2021-10-04 15:39:19');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `evens`
+--
+
+CREATE TABLE `evens` (
+  `id` int(11) NOT NULL,
+  `id_group` int(11) NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `detail` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `start_day` date NOT NULL,
+  `end_date` date NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -51,7 +68,7 @@ INSERT INTO `account` (`id`, `email`, `password`, `role`, `created_at`) VALUES
 
 CREATE TABLE `groups` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -62,8 +79,8 @@ INSERT INTO `groups` (`id`, `name`) VALUES
 (1, 'Nhóm lập trình'),
 (2, 'Nhóm E-Spost'),
 (3, 'Nhóm Office'),
-(4, 'Nhóm Đồ Hoạ'),
-(5, 'Nhóm ƯD Công nghệ');
+(4, 'Nhóm đồ họa'),
+(5, 'Nhóm ƯD công nghệ');
 
 -- --------------------------------------------------------
 
@@ -76,7 +93,7 @@ CREATE TABLE `slide_imgs` (
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -84,10 +101,15 @@ CREATE TABLE `slide_imgs` (
 --
 
 INSERT INTO `slide_imgs` (`id`, `name`, `image`, `note`, `created_at`) VALUES
-(4, 'Wellcom to the CLUB TIN HOC', 'img_1.jpg', 'Chào mừng bạn đến với CLB tin học', '2021-09-24 15:26:17'),
-(5, 'Wellcom to the CLUB TIN HOC', 'img1.jpg', '', '2021-09-24 15:28:20'),
-(6, 'Wellcom to the CLUB TIN HOC', 'img_1.jpg', 'Thử lần 3', '2021-09-24 15:30:55'),
-(26, 'Wellcom to the CLUB TIN HOC', 'clb.png', '', '2021-09-26 15:12:09');
+(1, 'Wellcom Tin Hoc Club', 'img_1.jpg', '', '2021-09-26 18:20:38'),
+(2, 'Test Sl ảnh', 'img1.jpg', '', '2021-09-26 18:21:02'),
+(3, 'Test Sl ảnh', 'img_1.jpg', '', '2021-09-26 18:23:33'),
+(4, 'test_1', 'clb.png', '', '2021-09-28 15:41:46'),
+(5, 'test_1', 'clb.png', '', '2021-09-28 15:50:09'),
+(6, 'test_3', 'banner game.jpg', '', '2021-09-28 15:53:02'),
+(7, 'đồ họa', 'do hoa.jpg', '', '2021-09-28 16:07:04'),
+(8, 'lập trình', 'CODE.jpg', '', '2021-09-28 16:09:36'),
+(9, 'giáo dục', 'gđ.jpg', '', '2021-09-28 16:21:29');
 
 -- --------------------------------------------------------
 
@@ -100,9 +122,9 @@ CREATE TABLE `users` (
   `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `birthday` datetime NOT NULL,
   `email` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `class` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `class` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `sex` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -110,8 +132,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `birthday`, `email`, `class`, `sex`, `created_at`) VALUES
-(7, 'Giang Ly', '2021-09-02 00:00:00', 'admin@123.com', 'CNTT', 'Nữ', '2021-09-22 14:35:31'),
-(8, 'Giang Ly', '2021-09-10 00:00:00', 'ly@123.com', 'CNTT', 'Nam', '2021-09-22 16:34:41');
+(1, 'Hoàng Hiệp', '2021-09-08 00:00:00', 'admin@123.com', 'Cntt', 'Nam', '2021-09-26 18:17:21'),
+(2, 'Hoàng Hiệp', '2018-07-22 00:00:00', 'hiep@123.com', 'Cntt', 'Nam', '2021-10-04 15:39:19');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -123,6 +145,12 @@ INSERT INTO `users` (`id`, `name`, `birthday`, `email`, `class`, `sex`, `created
 ALTER TABLE `account`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Chỉ mục cho bảng `evens`
+--
+ALTER TABLE `evens`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `groups`
@@ -151,7 +179,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT cho bảng `evens`
+--
+ALTER TABLE `evens`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `groups`
@@ -163,13 +197,13 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT cho bảng `slide_imgs`
 --
 ALTER TABLE `slide_imgs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
@@ -179,7 +213,7 @@ ALTER TABLE `users`
 -- Các ràng buộc cho bảng `users`
 --
 ALTER TABLE `users`
-  ADD CONSTRAINT `email` FOREIGN KEY (`email`) REFERENCES `account` (`email`) ON DELETE CASCADE;
+  ADD CONSTRAINT `khoa_ngoai` FOREIGN KEY (`email`) REFERENCES `account` (`email`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
