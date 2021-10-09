@@ -47,3 +47,5 @@
 - Ngày 5/10:
 	+ Hoàn thành login, logout vs responsive
 	+ Mặc dù lm quá link tinh, bị lặp lại nhiều thuộc tính
+- ngày 8/10:
+	+ Lm nốt giao diện

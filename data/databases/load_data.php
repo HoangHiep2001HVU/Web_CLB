@@ -44,4 +44,9 @@
 			}
 		}
 	}
+
+	//Hàm lấy sự kiện ở phần body_home
+	function load_even($con){
+		$sql = "select * from evens order by created_at desc LIMIT 8";
+	}
 ?>

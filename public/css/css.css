@@ -300,7 +300,7 @@ ul {
   margin-left: 50px;
 }
 
-#login .row .heder_log{
+#login .row .heder_log {
   display: flex;
   margin-bottom: 20px;
 }
@@ -353,7 +353,7 @@ ul {
   font-weight: bold;
 }
 
-a{
+a {
   text-decoration: none;
   color: #fff;
 }
@@ -377,10 +377,10 @@ a{
   text-align: center;
 }
 
-#register .row .heder_reg{
+#register .row .heder_reg {
   display: flex;
   margin-bottom: 10px;
-  margin-left: 50px
+  margin-left: 50px;
 }
 
 #register .row .heder_reg h1 {
@@ -402,7 +402,8 @@ a{
   font-weight: bold;
 }
 
-#form_reg .form_group input, #gender {
+#form_reg .form_group input,
+#gender {
   height: 40px;
   width: 300px;
   font-size: 18px;
@@ -431,31 +432,102 @@ a{
   font-weight: bold;
 }
 
-#form_reg #name{
+#form_reg #name {
   margin-left: 108px;
 }
 
-#form_reg #birthday{
+#form_reg #birthday {
   margin-left: 78px;
 }
 
-#form_reg #email{
+#form_reg #email {
   margin-left: 116px;
 }
 
-#form_reg #_class{
+#form_reg #_class {
   margin-left: 129px;
 }
 
-#form_reg #gender{
+#form_reg #gender {
   margin-left: 89px;
 }
 
-#form_reg #_password{
+#form_reg #_password {
   margin-left: 92px;
 }
 
 /* them anh cho sl */
+#upload_sl_img {
+  margin: 0 auto;
+}
+
+#upload_sl_img .form {
+  background-image: url("../img/backgrounds/bg_insert_img.jpg");
+  background-size: 100% 100%;
+  min-height: 1000px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+#upload_sl_img form {
+  width: 700px;
+  margin: 0 auto;
+  padding-top: 150px;
+  color: #6633ff;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+#upload_sl_img .header_sl {
+  display: flex;
+}
+
+#upload_sl_img .header_sl img {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+
+#upload_sl_img .form_group {
+  margin-bottom: 10px;
+}
+
+#upload_sl_img input {
+  margin-left: 20px;
+  width: 500px;
+  border: 1px solid #6633ff;
+  padding-left: 10px;
+  height: 35px;
+}
+
+#upload_sl_img textarea {
+  min-width: 595px;
+  max-width: 595px;
+  max-height: 300px;
+  padding: 10px;
+  border: 1px solid #6633ff;
+}
+
+#upload_sl_img #file_img_sl {
+  padding-top: 5px;
+  margin-left: 7px;
+}
+
+#upload_sl_img button {
+  width: 295px;
+  height: 35px;
+  background: #6633ff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#upload_sl_img button:hover{
+  background: #c5c6c7;
+  border: 1px solid #6633ff;
+  color: #6633ff;
+}
 
 /* body even */
 
