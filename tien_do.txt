@@ -49,3 +49,6 @@
 	+ Mặc dù lm quá link tinh, bị lặp lại nhiều thuộc tính
 - ngày 8/10:
 	+ Lm nốt giao diện
+- Ngày 11/10:
+	+ lm giao diện phần giới thiệu 
+	+ sửa lại biến $con

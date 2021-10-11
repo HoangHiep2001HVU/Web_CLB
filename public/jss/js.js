@@ -80,3 +80,28 @@ function menu_mobile(){
 		menu.style.display = "none";
 	}
 }
+
+function about(){
+	var video = document.getElementById("myVideo");
+    var btn = document.getElementById("myBtn");
+	
+    if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+     } else {
+        video.pause();
+        btn.innerHTML = "Play";
+    }
+}
+
+function about_us(){
+	var bdHome = document.getElementById("body_home");
+    var aboutUs = document.getElementById("about");
+
+	console.log(aboutUs.style.display);
+
+	if(aboutUs.style.display != "block"){
+		aboutUs.style.display = "block";
+		bdHome.style.display = "none";
+	}
+}

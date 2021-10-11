@@ -23,6 +23,7 @@ require "data/config.php";
 
 	<div id="body">
 		<?php require "layouts/body/body_home.php" ?>
+		<?php require "layouts/body/about_us.php" ?>
 	</div>
 
 	<div id="footer">
@@ -32,10 +33,13 @@ require "data/config.php";
 	<?php require "layouts/body/click_img.php" ?>
 	<?php require "layouts/users/upload_sl_img.php" ?>
 
-	<?php
-	//Tắt kết nối
-	mysqli_close($conn);
-	?>
+	<?php  ?>
+
 </body>
 
 </html>
+
+<?php
+//Tắt kết nối
+mysqli_close($conn);
+?>

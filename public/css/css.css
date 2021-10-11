@@ -353,6 +353,10 @@ ul {
   font-weight: bold;
 }
 
+#login_form button:hover {
+  background-color: #6633aa;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -430,6 +434,10 @@ a {
   color: #fff;
   font-size: 18px;
   font-weight: bold;
+}
+
+#form_reg button:hover {
+  background-color: #6633aa;
 }
 
 #form_reg #name {
@@ -609,4 +617,59 @@ a {
 
 .footer p {
   margin-top: 18px;
+}
+
+/* Phan gioi thieu */
+#about {
+  display: none;
+  margin-bottom: 50px;
+}
+
+.us {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
+  0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+#about .header {
+  display: flex;
+}
+
+#about button{
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #0b0c10;
+  color: #66fcf1;
+  cursor: pointer;
+}
+
+#about_update {
+  float: right;
+  width: 100px;
+  margin-top: 50px;
+}
+
+#myVideo {
+  max-width: 1200px;
+}
+
+.content h1 {
+  margin: 0px;
+  color: #0b0c10;
+}
+
+.content {
+  max-width: 1200px;
+  background: #c5c6c7;
+  color: #0b0c10;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+}
+
+#myBtn:hover , #about_update:hover {
+  background-color: #66fcf1;
+  color: #0b0c10;
 }
