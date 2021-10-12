@@ -1,8 +1,6 @@
 <div class="grid wide">
 	<div class="menu">
-		<?php
-		echo "<img src='$hostName/public/img/clb.png' alt='Logo menu'/>";
-		?>
+		<img src='/public/img/clb.png' alt='Logo menu'/>
 		<div class="menu_top">
 			<div class="mb_menu" onclick="menu_mobile();">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -13,9 +11,9 @@
 				<?php
 				if (isset($_GET["email"])) {
 					$email = $_GET["email"];
-					echo "<li><a href='$hostName/index.php?email=$email'>Trang chủ</a></li>";
+					echo "<li><a href='index.php?email=$email'>Trang chủ</a></li>";
 				} else {
-					echo "<li><a href='$hostName/index.php'>Trang chủ</a></li>";
+					echo "<li><a href='index.php'>Trang chủ</a></li>";
 				}
 				?>
 				<li>
@@ -34,15 +32,15 @@
 					if ($_GET["email"] != "") {
 						$email = $_GET["email"];
 						$name = username($user_id, $email, $role);
-						echo "<li class='users'><a href='$hostName/index.php'>Đăng xuất</a></li>";
+						echo "<li class='users'><a href='index.php'>Đăng xuất</a></li>";
 						echo "<li class='users'><a href='#'>$name</a></li>";
 					} else {
-						echo "<li class='users'><a href='$hostName/layouts/users/register.php'>Đăng ký</a></li>";
-						echo "<li class='users'><a href='$hostName/layouts/users/login.php'>Đăng nhập</a></li>";
+						echo "<li class='users'><a href='layouts/users/register.php'>Đăng ký</a></li>";
+						echo "<li class='users'><a href='layouts/users/login.php'>Đăng nhập</a></li>";
 					}
 				} else {
-					echo "<li class='users'><a href='$hostName/layouts/users/register.php'>Đăng ký</a></li>";
-					echo "<li class='users'><a href='$hostName/layouts/users/login.php'>Đăng nhập</a></li>";
+					echo "<li class='users'><a href='layouts/users/register.php'>Đăng ký</a></li>";
+					echo "<li class='users'><a href='layouts/users/login.php'>Đăng nhập</a></li>";
 				}
 				?>
 			</ul>
