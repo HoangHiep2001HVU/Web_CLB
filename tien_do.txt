@@ -54,3 +54,5 @@
 	+ sửa lại biến $con
 - Ngày 12/10:
 	+ Đang tìm cách kế thừa file mà ko bị lỗi đường dẫn ảnh và đường dẫn file.
+- Ngày 13/10:
+

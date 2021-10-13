@@ -1,6 +1,6 @@
 <div class="grid wide">
 	<div class="menu">
-		<img src='public/img/clb.png' alt='Logo menu'/>
+		<img src='../public/img/clb.png' alt='Logo menu'/>
 		<div class="menu_top">
 			<div class="mb_menu" onclick="menu_mobile();">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -22,7 +22,7 @@
 						<?php groups(); ?>
 					</ul>
 				</li>
-				<li><a href="layouts/body/forum.php">Diễn đàn</a></li>
+				<li><a href="forum.php">Diễn đàn</a></li>
 				<li onclick="about_us();">Giới thiệu</li>
 			</ul>
 
@@ -35,12 +35,12 @@
 						echo "<li class='users'><a href='index.php'>Đăng xuất</a></li>";
 						echo "<li class='users'><a href='#'>$name</a></li>";
 					} else {
-						echo "<li class='users'><a href='layouts/users/register.php'>Đăng ký</a></li>";
-						echo "<li class='users'><a href='layouts/users/login.php'>Đăng nhập</a></li>";
+						echo "<li class='users'><a href='users/register.php'>Đăng ký</a></li>";
+						echo "<li class='users'><a href='users/login.php'>Đăng nhập</a></li>";
 					}
 				} else {
-					echo "<li class='users'><a href='layouts/users/register.php'>Đăng ký</a></li>";
-					echo "<li class='users'><a href='layouts/users/login.php'>Đăng nhập</a></li>";
+					echo "<li class='users'><a href='users/register.php'>Đăng ký</a></li>";
+					echo "<li class='users'><a href='users/login.php'>Đăng nhập</a></li>";
 				}
 				?>
 			</ul>

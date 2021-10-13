@@ -1,45 +1,9 @@
-<?php
-require "data/config.php";
-?>
-<!Doctype html>
-<html lang="en">
-
-<head>
-	<title>CLB Tin Học</title>
-	<meta charset="UTF-8" />
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width = device-width, initial-scale = 1" />
-	<link rel="stylesheet" type="text/css" href="public/css/css.css" />
-	<link rel="stylesheet" type="text/css" href="public/css/responsive.css" />
-	<link rel="stylesheet" type="text/css" href="public/css/grid_system.css" />
-	<script type="text/javascript" src="public/jss/jquery-3.6.0.min.js"></script>
-	<script type="text/javascript" src="public/jss/js.js"></script>
-</head>
-
-<body>
-	<div id="top">
-		<?php require "layouts/menu/menu.php" ?>
-	</div>
-
-	<div id="body">
-		<?php require "layouts/body/body_home.php" ?>
-		<?php require "layouts/body/about_us.php" ?>
-	</div>
-
-	<div id="footer">
-		<?php require "layouts/footer/footer.php" ?>
-	</div>
-
-	<?php require "layouts/body/click_img.php" ?>
-	<?php require "layouts/users/upload_sl_img.php" ?>
-
-	<?php  ?>
-
-</body>
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Refresh" content="0; url=layouts" />
+  </head>
+  <body>
+    <p>Moved <a href="layouts">Here</a>.</p>
+  </body>
 </html>
-
-<?php
-//Tắt kết nối
-mysqli_close($conn);
-?>
