@@ -30,7 +30,7 @@
 			while($row = $result->fetch_assoc()) {
 				$id = $row['id'];
 				$name_group = $row['name'];
-				echo "<li><a href='../../layouts/body/group.php?id=$id&email=$email'>$name_group</a></li>";
+				echo "<li><a href='layouts/body/group.php?id=$id&email=$email'>$name_group</a></li>";
 			}
 		}
 	}
@@ -45,7 +45,7 @@
 				$name = $row['name'];
 				$img = $row['image'];
 				$note = $row['note'];
-				echo "<img id='$id' src='/public/img/slide_img/$img' alt='$name' onclick='click_img(this.id,this.src,this.alt);'/>";
+				echo "<img id='$id' src='public/img/slide_img/$img' alt='$name' onclick='click_img(this.id,this.src,this.alt);'/>";
 			}
 		}
 	}
