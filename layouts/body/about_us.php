@@ -19,7 +19,7 @@
             <div class="us">
                 <div class="vd">
                     <video autoplay muted loop id="myVideo" onclick="about();">
-                        <source src="../../public/video/about_us.mp4" type="video/mp4">
+                        <source src="public/video/about_us.mp4" type="video/mp4">
                         Your browser does not support HTML5 video.
                     </video>
                 </div>
