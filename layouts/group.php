@@ -20,6 +20,12 @@ require "../data/config.php";
     <div id="top">
         <?php require "menu/menu.php"; ?>
     </div>
+
+    <div id="footer">
+		<?php require "footer/footer.php" ?>
+	</div>
+
+	<?php require "body/click_img.php" ?>
     
 </body>
 

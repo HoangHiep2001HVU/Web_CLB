@@ -23,7 +23,6 @@ require "../data/config.php";
 
 	<div id="body">
 		<?php require "body/body_home.php" ?>
-		<?php require "about_us.php" ?>
 	</div>
 
 	<div id="footer">

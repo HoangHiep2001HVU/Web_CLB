@@ -23,7 +23,7 @@
 					</ul>
 				</li>
 				<li><a href="forum.php">Diễn đàn</a></li>
-				<li onclick="about_us();">Giới thiệu</li>
+				<li><a href="about_us.php">Giới thiệu</a></li>
 			</ul>
 
 			<ul class="mb_users">
