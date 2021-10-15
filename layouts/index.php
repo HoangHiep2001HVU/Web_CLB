@@ -30,9 +30,6 @@ require "../data/config.php";
 	</div>
 
 	<?php require "body/click_img.php" ?>
-	<?php require "users/upload_sl_img.php" ?>
-
-	<?php  ?>
 
 </body>
 

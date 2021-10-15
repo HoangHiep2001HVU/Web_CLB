@@ -1,5 +1,5 @@
 <?php
-    require "../data/config.php";
+require "../data/config.php";
 ?>
 <!Doctype html>
 <html lang="en">
@@ -21,35 +21,75 @@
         <?php require "menu/menu.php"; ?>
     </div>
 
-    <div id="about" class="grid wide">
-        <div class="row">
+    <div id="contact" class="grid wide">
+        <div class="header row">
             <div class="col l-12">
-                <div class="header row">
-                    <div class="col l-10">
-                        <h1>Giới thiệu về CLB Tin Học</h1>
-                    </div>
-                    <?php
-                    if ($role == 1) {
-                        echo "
-                    <div class='col l-2'>
-                        <button id='about_update'>Sửa</button>
-                    </div>
-                    ";
-                    }
-                    ?>
-
+                <h1>Ban chủ nhiệm câu lạc bộ</h1>
+            </div>
+        </div>
+        <div class="member row">
+            <div class="col l-4">
+                <div class="card">
+                    <img src="../public/img/users/team2.jpg" alt="John">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <p><a href="#">Contact</a></p>
                 </div>
-                <div class="us">
-                    <div class="vd">
-                        <video autoplay muted loop id="myVideo" onclick="about();">
-                            <source src="../public/video/about_us.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
+            </div>
+            <div class="col l-4">
+                <div class="card">
+                    <img src="../public/img/users/team2.jpg" alt="John">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <p><a href="#">Contact</a></p>
+                </div>
+            </div>
+            <div class="col l-4">
+                <div class="card">
+                    <img src="../public/img/users/team2.jpg" alt="John">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <p><a href="#">Contact</a></p>
+                </div>
+            </div>
+        </div>
+        <div id="contact_us">
+            <div class="row">
+                <div class="col l-6">
+                    <img src="../public/img/backgrounds/contact.png" alt="Ảnh contact.png">
+                </div>
+                <div class="col l-6">
+                    <div class="contact row">
+                        <div class="col l-12">
+                            <h1>Thông tin liên hệ chung</h1>
+                        </div>
                     </div>
-                    <div class="content">
-                        <h1>Heading</h1>
-                        <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
-                        <button id="myBtn" onclick="about();">Pause</button>
+                    <div class="phone row">
+                        <div class="col l-1 l-o-1">
+                            <img src="../public/img/backgrounds/phone.png" alt="Ảnh điện thoại">
+                        </div>
+                        <div class="col l-10">
+                            <p>SĐT: 0384191013</p>
+                        </div>
+                    </div>
+                    <div class="email row">
+                        <div class="col l-1 l-o-1">
+                            <img src="../public/img/backgrounds/email.png" alt="Ảnh email">
+                        </div>
+                        <div class="col l-10">
+                            <p>Email: clbtinhoc@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="fb row">
+                        <div class="col l-1 l-o-1">
+                            <img src="../public/img/backgrounds/fb_bg.png" alt="Ảnh điện thoại">
+                        </div>
+                        <div class="col l-10">
+                            <p>Facebook: CLB Tin Hoc</p>
+                        </div>
                     </div>
                 </div>
             </div>

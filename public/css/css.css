@@ -464,77 +464,45 @@ a {
   margin-left: 92px;
 }
 
-/* them anh cho sl */
-#upload_sl_img {
-  margin: 0 auto;
+/* Phan gioi thieu */
+.header {
+  text-align: center;
 }
 
-#upload_sl_img .form {
-  background-image: url("../img/backgrounds/bg_insert_img.jpg");
-  background-size: 100% 100%;
-  min-height: 1000px;
+.us {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
+  0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+.myVideo {
+  max-width: 100%;
+}
+
+.content h1 {
+  margin: 0px;
+  color: #0b0c10;
+}
+
+.content {
   max-width: 1200px;
-  margin: 0 auto;
-  font-size: 18px;
-}
-
-#upload_sl_img form {
-  width: 700px;
-  margin: 0 auto;
-  padding-top: 150px;
-  color: #6633ff;
-  font-weight: bold;
-  padding-left: 50px;
-}
-
-#upload_sl_img .header_sl {
-  display: flex;
-}
-
-#upload_sl_img .header_sl img {
-  width: 50px;
-  height: 50px;
-  margin: 5px;
-}
-
-#upload_sl_img .form_group {
-  margin-bottom: 10px;
-}
-
-#upload_sl_img input {
-  margin-left: 20px;
-  width: 500px;
-  border: 1px solid #6633ff;
-  padding-left: 10px;
-  height: 35px;
-}
-
-#upload_sl_img textarea {
-  min-width: 595px;
-  max-width: 595px;
-  max-height: 300px;
-  padding: 10px;
-  border: 1px solid #6633ff;
-}
-
-#upload_sl_img #file_img_sl {
-  padding-top: 5px;
-  margin-left: 7px;
-}
-
-#upload_sl_img button {
-  width: 295px;
-  height: 35px;
-  background: #6633ff;
-  color: #fff;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-#upload_sl_img button:hover{
   background: #c5c6c7;
-  border: 1px solid #6633ff;
-  color: #6633ff;
+  color: #0b0c10;
+  padding: 20px;
+}
+
+.myBtn {
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #0b0c10;
+  color: #66fcf1;
+  cursor: pointer;
+  width: 200px;
+}
+
+.myBtn:hover {
+  background-color: #66fcf1;
+  color: #0b0c10;
 }
 
 /* body even */
@@ -568,7 +536,6 @@ a {
   color: #0b0c10;
 }
 
-.insert_even,
 .header_even button {
   background-color: #0b0c10;
   color: #66fcf1;
@@ -577,15 +544,9 @@ a {
   padding: 5px 10px;
 }
 
-.insert_even:hover,
 .header_even button:hover {
   background-color: #66fcf1;
   color: #0b0c10;
-}
-
-.insert_even {
-  float: right;
-  margin-top: 60px;
 }
 
 .footer {
@@ -619,56 +580,105 @@ a {
   margin-top: 18px;
 }
 
-/* Phan gioi thieu */
-#about {
+/* dinh dang phan nhom trong clb (group.php) */
+
+.leader {
+  background-color: #c5c6c7;
+  border: 2px solid gray;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.txt {
+  margin: 0 auto;
+}
+
+.txt a {
+  background: #000;
+  color: #fff;
+  padding: 5px 20px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.txt a:hover {
+  background: #66fcf1;
+}
+
+.introduce {
   margin-bottom: 50px;
 }
 
-.us {
-  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
-  0 6px 20px 0 rgba(255, 255, 255, 0.19);
-}
-
-#about .header {
-  display: flex;
-}
-
-#about button{
-  font-size: 18px;
-  padding: 10px;
-  border: none;
-  background: #0b0c10;
-  color: #66fcf1;
-  cursor: pointer;
-}
-
-#about_update {
-  float: right;
-  width: 100px;
-  margin-top: 50px;
-}
-
-#myVideo {
-  max-width: 1200px;
-}
-
 .content h1 {
-  margin: 0px;
-  color: #0b0c10;
+  margin: 0px auto;
 }
 
-.content {
-  max-width: 1200px;
-  background: #c5c6c7;
-  color: #0b0c10;
-  padding: 20px;
+/* dinh dang phan thong tin lien he (about_us.php) */
+
+.member .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: arial;
+  background: #fff;
+  color: black;
 }
 
-#myBtn {
-  width: 200px;
+.member img {
+  width: 100%;
 }
 
-#myBtn:hover , #about_update:hover {
-  background-color: #66fcf1;
-  color: #0b0c10;
+.member h1 {
+  color: black;
+  margin: 20px;
+}
+
+.member .title {
+  color: grey;
+  font-size: 18px;
+}
+
+.member a {
+  text-decoration: none;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius: inherit;
+}
+
+.member a:hover {
+  opacity: 0.7;
+}
+
+#contact_us {
+  background-color: #c5c6c7;
+  color: #000;
+  font-size: 24px;
+  margin: 50px 0px;
+}
+
+#contact_us .contact {
+  text-align: center;
+}
+
+#contact_us h1 {
+  color: #000;
+}
+
+#contact_us img {
+  width: 100%;
+}
+
+#contact_us .phone img, #contact_us .email img, #contact_us .fb img {
+  width: 150%;
+  margin-top: 20px;
 }

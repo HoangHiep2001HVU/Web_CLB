@@ -30,7 +30,13 @@
 			while($row = $result->fetch_assoc()) {
 				$id = $row['id'];
 				$name_group = $row['name'];
-				echo "<li><a href='group.php?id=$id&email=$email'>$name_group</a></li>";
+				if($email==""){
+					echo "<li><a href='group.php?id=$id'>$name_group</a></li>";
+				}
+				else{
+					echo "<li><a href='group.php?id=$id&email=$email'>$name_group</a></li>";
+				}
+				
 			}
 		}
 	}

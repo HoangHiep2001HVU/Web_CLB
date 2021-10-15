@@ -5,7 +5,7 @@
 	<span class="close" id="close_sl">&times;</span>
 		<form method="POST" id="upload_sl" enctype="multipart/form-data">
 			<div class="header_sl">
-				<img src="../../public/img/clb.png" alt="Ảnh logo">
+				<img src="../public/img/clb.png" alt="Ảnh logo">
 				<h1>Thêm ảnh vào slide show</h1>
 			</div>
 

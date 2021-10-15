@@ -5,7 +5,7 @@
 	$header_img = $_POST['header_img_sl'];
 	$note_sl = $_POST['note_img_sl'];
 	
-	$target = "../../public/img/slide_img/".basename($file);
+	$target = "../public/img/slide_img/".basename($file);
 	
 	if($file == ""){
 		echo 0;

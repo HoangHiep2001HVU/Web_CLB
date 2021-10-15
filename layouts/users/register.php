@@ -67,14 +67,17 @@ require "../../data/config.php";
 						<input type="password" class="form_control" id="rPassword" placeholder="Nhập lại mật khẩu" name="rPassword" required minlength="6" maxlength="20">
 					</div>
 					<div class="group_button">
-						<button type="button" name="register" onclick="reg();">Đăng ký</button>
-						<button type="button" name="login"><a href="login.php">Đăng nhập</a></button>
-						<button type="button" name="back"><a href="../../index.php">Quay lại</a></button>
+						<?php 
+							$X = $_GET["x"];
+							echo "<button type='button' name='registe' onclick='reg(_href,$X);'>Đăng ký</button>";
+						?>
+						<button type="button" name="login"><a href="login.php?x=2">Đăng nhập</a></button>
+						<button type="button" name="back"><a href="../index.php">Quay lại</a></button>
 					</div>
 
 				</form>
 			</div>
-
+			<?php echo "<script>var _href = '$pastServer'</script>" ?>
 		</div>
 	</div>
 

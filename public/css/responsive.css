@@ -87,11 +87,6 @@
   #form_reg button {
     width: 133px;
   }
-
-  /* them anh sl */
-  #upload_sl_img .form {
-    max-width: 984px;
-  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -142,45 +137,6 @@
     margin-top: -25px;
   }
 
-  #upload_sl_img .form {
-    min-height: 600px;
-    max-width: 100%;
-    font-size: 14px;
-  }
-
-  #upload_sl_img .form h1{
-    font-size: 20px;
-  }
-
-  #upload_sl_img {
-    padding-top: 20px;
-  }
-
-  #upload_sl_img form {
-    width: 100%;
-    padding-top: 70px;
-  }
-
-  #upload_sl_img .header_sl img {
-    width: 30px;
-    height: 30px;
-  }
-
-  #upload_sl_img input {
-    margin-left: 17px;
-    width: 220px;
-  }
-
-  #upload_sl_img textarea {
-    min-width: 295px;
-    max-width: 295px;
-    max-height: 200px;
-  }
-
-  #upload_sl_img button {
-    width: 146px;
-  }
-
   .row h1 {
     font-size: 20px;
     margin: 30px 0px;
@@ -188,6 +144,16 @@
 
   .insert_even {
     margin-top: 30px;
+  }
+
+  .footer .row img {
+    max-width: 25px;
+    max-height: 25px;
+    margin-right: 10px;
+  }
+
+  .footer .row p {
+    font-size: 8px;
   }
 }
 
@@ -327,10 +293,6 @@
     min-height: 300px;
   }
 
-  .footer .contact img {
-    margin-left: 10px;
-  }
-
   .row h1 {
     margin: 30px 0px;
     font-size: 20px;
@@ -342,330 +304,6 @@
 
   .footer .contact img {
     margin-left: 60px;
-  }
-
-  #upload_sl_img .form {
-    min-height: 850px;
-    max-width: 644px;
-    margin: 0 auto;
-    font-size: 14px;
-  }
-
-  #upload_sl_img form {
-    width: 450px;
-    padding-left: 0px;
-  }
-
-  #upload_sl_img input {
-    margin-left: 0px;
-    width: 450px;
-  }
-
-  #upload_sl_img textarea {
-    min-width: 450px;
-    max-width: 450px;
-    max-height: 300px;
-    padding: 10px;
-    border: 1px solid #6633ff;
-  }
-
-  #upload_sl_img #file_img_sl {
-    margin-left: 0px;
-  }
-
-  #upload_sl_img button {
-    width: 223px;
-  }
-}
-
-@media only screen and (max-width: 667px) {
-  /* form login and logout */
-  /* Login */
-  #login .row {
-    background-image: url("../img/backgrounds/bg_login_mb.jpg");
-    background-size: 100% 100%;
-    margin-top: 30px;
-  }
-
-  #login_form {
-    margin-top: 310px;
-    margin-left: 10%;
-    text-align: center;
-  }
-  #login_form .form_group {
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-
-  #login .row .heder_log h1 {
-    font-size: 20px;
-    margin: 5px;
-  }
-
-  #login .row .heder_log img {
-    width: 30px;
-    height: 30px;
-  }
-
-  #login_form .form_group input {
-    width: 170px;
-  }
-
-  #login_form #email_login {
-    margin-left: 34px;
-  }
-
-  #login_form button {
-    width: 84px;
-    font-size: 13px;
-  }
-
-  /* Register */
-  #register .row {
-    background-image: url("../img/backgrounds/bg_reg_mb.jpg");
-    background-size: 100% 100%;
-    margin-top: 50px;
-  }
-
-  #register #form_reg {
-    margin-top: 295px;
-  }
-
-  #register .row .heder_reg {
-    margin: 0px;
-  }
-
-  #register .row .heder_reg h1 {
-    font-size: 20px;
-  }
-
-  #register .row .heder_reg img {
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-  }
-
-  #form_reg label {
-    display: none;
-  }
-  #form_reg #name,
-  #form_reg #birthday,
-  #form_reg #email,
-  #form_reg #_class,
-  #form_reg #gender,
-  #form_reg #_password,
-  #form_reg #rPassword {
-    margin-left: 0px;
-  }
-
-  #form_reg .form_group {
-    margin-bottom: 2px;
-    max-width: 230px;
-    min-width: 230px;
-  }
-
-  #form_reg .form_group input,
-  #gender {
-    font-size: 12px;
-    height: 25px;
-    width: 240px;
-  }
-
-  #form_reg button {
-    width: 78px;
-    font-size: 12px;
-    height: 30px;
-  }
-
-  .insert_slide_img button {
-    font-size: 10px;
-  }
-
-  .insert_slide_img button svg {
-    width: 10px;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  /* form login and logout */
-  /* Login */
-  #login .row {
-    background-image: url("../img/backgrounds/bg_login_mb.jpg");
-    background-size: 100% 100%;
-    margin: 0px;
-  }
-
-  #login_form {
-    margin-top: 310px;
-    margin-left: 10%;
-    text-align: inherit;
-  }
-
-  #login .row .heder_log h1 {
-    font-size: 18px;
-    margin: 5px;
-  }
-
-  #login .row .heder_log img {
-    width: 30px;
-    height: 30px;
-  }
-
-  #login label {
-    font-size: 12px;
-  }
-
-  #login_form .form_group {
-    margin-bottom: 10px;
-    font-size: 12px;
-  }
-
-  #login .row .heder_log {
-    margin-bottom: 10px;
-  }
-
-  #login_form .form_group input {
-    width: 180px;
-    height: 30px;
-  }
-
-  #login_form #email_login,
-  #login_form #password_login {
-    margin-left: 30px;
-    max-width: 260px;
-  }
-
-  #login_form .group_button {
-    max-width: 220px;
-    min-width: 220px;
-  }
-
-  #login_form button {
-    width: 68px;
-    font-size: 10px;
-    height: 30px;
-  }
-  /* Register */
-  #register .row {
-    background-image: url("../img/backgrounds/bg_reg_mb.jpg");
-    background-size: 100% 100%;
-    margin-top: 50px;
-  }
-
-  #form_reg {
-    margin-top: 295px;
-    margin-left: 10%;
-    max-width: 260px;
-    min-width: 260px;
-  }
-
-  #register .row .heder_reg {
-    margin: 0px;
-  }
-
-  #register .row .heder_reg h1 {
-    font-size: 20px;
-  }
-
-  #register .row .heder_reg img {
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-  }
-
-  #form_reg label {
-    display: none;
-  }
-  #form_reg #name,
-  #form_reg #birthday,
-  #form_reg #email,
-  #form_reg #_class,
-  #form_reg #gender,
-  #form_reg #_password,
-  #form_reg #rPassword {
-    margin-left: 0px;
-  }
-
-  #form_reg .form_group {
-    margin-bottom: 2px;
-    max-width: 230px;
-    min-width: 230px;
-  }
-
-  #form_reg .form_group input,
-  #gender {
-    font-size: 12px;
-    height: 25px;
-    width: 240px;
-  }
-
-  #form_reg .group_button {
-    width: 240px;
-  }
-
-  #form_reg button {
-    width: 75px;
-    font-size: 12px;
-    height: 30px;
-  }
-
-  #upload_sl_img .form {
-    min-height: 500px;
-    max-width: 100%;
-    font-size: 12px;
-  }
-
-  #upload_sl_img .form h1{
-    font-size: 18px;
-  }
-
-  #upload_sl_img form {
-    width: 100%;
-    padding-top: 50px;
-    margin-left: 0px;
-  }
-
-  #upload_sl_img input {
-    margin-left: 0px;
-    width: 200px;
-  }
-
-  #upload_sl_img textarea {
-    min-width: 250px;
-    max-width: 250px;
-    max-height: 150px;
-  }
-
-  #upload_sl_img #file_img_sl {
-    width: 192px;
-    margin-left: 0px;
-  }
-
-  #upload_sl_img button {
-    width: 125px;
-  }
-
-
-  .row h1 {
-    font-size: 16px;
-  }
-
-  .insert_even {
-    font-size: 8px;
-  }
-}
-
-@media only screen and (width: 540px) {
-  #login .row .heder_log {
-    margin-left: 80px;
-  }
-
-  #register #form_reg {
-    margin-left: 150px;
-  }
-
-  #upload_sl_img form {
-    margin-left: 80px;
   }
 }
 
@@ -800,5 +438,255 @@
   #login_form button {
     width: 80px;
     font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 667px) {
+  /* form login and logout */
+  /* Login */
+  #login .row {
+    background-image: url("../img/backgrounds/bg_login_mb.jpg");
+    background-size: 100% 100%;
+    margin-top: 30px;
+  }
+
+  #login_form {
+    margin-top: 310px;
+    margin-left: 10%;
+    text-align: center;
+  }
+  #login_form .form_group {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  #login .row .heder_log h1 {
+    font-size: 20px;
+    margin: 5px;
+  }
+
+  #login .row .heder_log img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #login_form .form_group input {
+    width: 170px;
+  }
+
+  #login_form #email_login {
+    margin-left: 34px;
+  }
+
+  #login_form button {
+    width: 84px;
+    font-size: 13px;
+  }
+
+  /* Register */
+  #register .row {
+    background-image: url("../img/backgrounds/bg_reg_mb.jpg");
+    background-size: 100% 100%;
+    margin-top: 50px;
+  }
+
+  #register #form_reg {
+    margin-top: 295px;
+  }
+
+  #register .row .heder_reg {
+    margin: 0px;
+  }
+
+  #register .row .heder_reg h1 {
+    font-size: 20px;
+  }
+
+  #register .row .heder_reg img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  #form_reg label {
+    display: none;
+  }
+  #form_reg #name,
+  #form_reg #birthday,
+  #form_reg #email,
+  #form_reg #_class,
+  #form_reg #gender,
+  #form_reg #_password,
+  #form_reg #rPassword {
+    margin-left: 0px;
+  }
+
+  #form_reg .form_group {
+    margin-bottom: 2px;
+    max-width: 230px;
+    min-width: 230px;
+  }
+
+  #form_reg .form_group input,
+  #gender {
+    font-size: 12px;
+    height: 25px;
+    width: 240px;
+  }
+
+  #form_reg button {
+    width: 78px;
+    font-size: 12px;
+    height: 30px;
+  }
+
+  .insert_slide_img button {
+    font-size: 10px;
+  }
+
+  .insert_slide_img button svg {
+    width: 10px;
+  }
+}
+
+@media only screen and (width: 540px) {
+  #login .row .heder_log {
+    margin-left: 80px;
+  }
+
+  #register #form_reg {
+    margin-left: 150px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  /* form login and logout */
+  /* Login */
+  #login .row {
+    background-image: url("../img/backgrounds/bg_login_mb.jpg");
+    background-size: 100% 100%;
+    margin: 0px;
+  }
+
+  #login_form {
+    margin-top: 310px;
+    margin-left: 10%;
+    text-align: inherit;
+  }
+
+  #login .row .heder_log h1 {
+    font-size: 18px;
+    margin: 5px;
+  }
+
+  #login .row .heder_log img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #login label {
+    font-size: 12px;
+  }
+
+  #login_form .form_group {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  #login .row .heder_log {
+    margin-bottom: 10px;
+  }
+
+  #login_form .form_group input {
+    width: 180px;
+    height: 30px;
+  }
+
+  #login_form #email_login,
+  #login_form #password_login {
+    margin-left: 30px;
+    max-width: 260px;
+  }
+
+  #login_form .group_button {
+    max-width: 220px;
+    min-width: 220px;
+  }
+
+  #login_form button {
+    width: 68px;
+    font-size: 10px;
+    height: 30px;
+  }
+  /* Register */
+  #register .row {
+    background-image: url("../img/backgrounds/bg_reg_mb.jpg");
+    background-size: 100% 100%;
+    margin-top: 50px;
+  }
+
+  #form_reg {
+    margin-top: 295px;
+    margin-left: 10%;
+    max-width: 260px;
+    min-width: 260px;
+  }
+
+  #register .row .heder_reg {
+    margin: 0px;
+  }
+
+  #register .row .heder_reg h1 {
+    font-size: 20px;
+  }
+
+  #register .row .heder_reg img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  #form_reg label {
+    display: none;
+  }
+  #form_reg #name,
+  #form_reg #birthday,
+  #form_reg #email,
+  #form_reg #_class,
+  #form_reg #gender,
+  #form_reg #_password,
+  #form_reg #rPassword {
+    margin-left: 0px;
+  }
+
+  #form_reg .form_group {
+    margin-bottom: 2px;
+    max-width: 230px;
+    min-width: 230px;
+  }
+
+  #form_reg .form_group input,
+  #gender {
+    font-size: 12px;
+    height: 25px;
+    width: 240px;
+  }
+
+  #form_reg .group_button {
+    width: 240px;
+  }
+
+  #form_reg button {
+    width: 75px;
+    font-size: 12px;
+    height: 30px;
+  }
+
+  .row h1 {
+    font-size: 16px;
+  }
+
+  .insert_even {
+    font-size: 8px;
   }
 }

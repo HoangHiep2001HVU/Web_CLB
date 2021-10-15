@@ -1,18 +1,34 @@
 <div id="body_home">
+	<div id="about" class="grid wide">
+		<div class="row">
+			<div class="col l-12 m-12 c-12">
+				<div class="header row">
+					<div class="col l-12 m-12 c-12">
+						<h1>Giới thiệu về CLB Tin Học</h1>
+					</div>
+				</div>
+				<div class="us">
+					<div class="vd">
+						<video autoplay muted loop class="myVideo" onclick="about();">
+							<source src="../public/video/about_us.mp4" type="video/mp4">
+							Your browser does not support HTML5 video.
+						</video>
+					</div>
+					<div class="content">
+						<h1>Heading</h1>
+						<p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+						<button class="myBtn" onclick="about();">Pause</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="grid wide">
 		<div class="row">
-			<div class="col l-8 m-8 c-8">
+			<div class="header col l-12 m-12 c-12">
 				<h1>Sự kiện đang diễn ra</h1>
 			</div>
-			<?php
-			if ($role == 1) {
-				echo "
-					<div class='col l-4 m-4 c-4'>
-						<button class='insert_even'>+ Thêm sự kiện</button>
-					</div>
-				";
-			}
-			?>
 		</div>
 		<div class="row">
 			<div class="col l-6 m-6 c-12">
@@ -24,14 +40,6 @@
 						<p>Thời gian: 2/10/2021 - 31/10/2021</p>
 						<div class="group_buttom">
 							<button>Chi tiết</button>
-							<?php
-							if ($role == 1) {
-								echo "
-									<button>Sửa</button>
-									<button>Xóa</button>
-								";
-							}
-							?>
 						</div>
 					</div>
 				</div>
@@ -45,14 +53,6 @@
 						<p>Thời gian: 2/10/2021 - 31/10/2021</p>
 						<div class="group_buttom">
 							<button>Chi tiết</button>
-							<?php
-							if ($role == 1) {
-								echo "
-									<button>Sửa</button>
-									<button>Xóa</button>
-								";
-							}
-							?>
 						</div>
 					</div>
 				</div>
@@ -66,14 +66,6 @@
 						<p>Thời gian: 2/10/2021 - 31/10/2021</p>
 						<div class="group_buttom">
 							<button>Chi tiết</button>
-							<?php
-							if ($role == 1) {
-								echo "
-									<button>Sửa</button>
-									<button>Xóa</button>
-								";
-							}
-							?>
 						</div>
 					</div>
 				</div>
@@ -87,14 +79,6 @@
 						<p>Thời gian: 2/10/2021 - 31/10/2021</p>
 						<div class="group_buttom">
 							<button>Chi tiết</button>
-							<?php
-							if ($role == 1) {
-								echo "
-									<button>Sửa</button>
-									<button>Xóa</button>
-								";
-							}
-							?>
 						</div>
 					</div>
 				</div>
@@ -108,14 +92,6 @@
 						<p>Thời gian: 2/10/2021 - 31/10/2021</p>
 						<div class="group_buttom">
 							<button>Chi tiết</button>
-							<?php
-							if ($role == 1) {
-								echo "
-									<button>Sửa</button>
-									<button>Xóa</button>
-								";
-							}
-							?>
 						</div>
 					</div>
 				</div>
@@ -129,14 +105,6 @@
 						<p>Thời gian: 2/10/2021 - 31/10/2021</p>
 						<div class="group_buttom">
 							<button>Chi tiết</button>
-							<?php
-							if ($role == 1) {
-								echo "
-									<button>Sửa</button>
-									<button>Xóa</button>
-								";
-							}
-							?>
 						</div>
 					</div>
 				</div>
@@ -150,14 +118,6 @@
 						<p>Thời gian: 2/10/2021 - 31/10/2021</p>
 						<div class="group_buttom">
 							<button>Chi tiết</button>
-							<?php
-							if ($role == 1) {
-								echo "
-									<button>Sửa</button>
-									<button>Xóa</button>
-								";
-							}
-							?>
 						</div>
 					</div>
 				</div>
@@ -171,14 +131,6 @@
 						<p>Thời gian: 2/10/2021 - 31/10/2021</p>
 						<div class="group_buttom">
 							<button>Chi tiết</button>
-							<?php
-							if ($role == 1) {
-								echo "
-									<button>Sửa</button>
-									<button>Xóa</button>
-								";
-							}
-							?>
 						</div>
 					</div>
 				</div>

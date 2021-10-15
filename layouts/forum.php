@@ -1,73 +1,37 @@
 <?php
-echo $_SERVER['PHP_SELF'];
-echo "<br>";
-echo "1<br>";
-echo $_SERVER['GATEWAY_INTERFACE'];
-echo "<br>";
-echo "2<br>";
-echo $_SERVER['SERVER_ADDR'];
-echo "<br>";
-echo "3<br>";
-echo $_SERVER['SERVER_NAME'];
-echo "<br>";
-echo "4<br>";
-echo $_SERVER['SERVER_SOFTWARE'];
-echo "<br>";
-echo "5<br>";
-echo $_SERVER['SERVER_PROTOCOL'];
-echo "<br>";
-echo "6<br>";
-echo $_SERVER['REQUEST_METHOD'];
-echo "<br>";
-echo "7<br>";
-echo $_SERVER['REQUEST_TIME'];
-echo "<br>";
-echo "8<br>";
-echo $_SERVER['QUERY_STRING'];
-echo "<br>";
-echo "9<br>";
-echo $_SERVER['HTTP_ACCEPT'];
-echo "<br>";
-// echo "<br>";
-// echo $_SERVER['HTTP_ACCEPT_CHARSET'];
-echo "<br>";
-echo "10<br>";
-echo $_SERVER['HTTP_HOST'];
-echo "<br>";
-echo "11<br>";
-echo $_SERVER['HTTP_REFERER'];
-echo "<br>";
-// echo "<br>";
-// echo $_SERVER['HTTPS'];
-echo "<br>";
-echo "12<br>";
-echo $_SERVER['REMOTE_ADDR'];
-echo "<br>";
-echo "13<br>";
-echo $_SERVER['SCRIPT_FILENAME'];
-echo "<br>";
-echo "14<br>";
-echo $_SERVER['REMOTE_PORT'];
-echo "<br>";
-echo "15<br>";
-echo $_SERVER['SERVER_ADMIN'];
-echo "<br>";
-echo "16<br>";
-echo $_SERVER['SERVER_PORT'];
-echo "<br>";
-echo "17<br>";
-echo $_SERVER['SERVER_SIGNATURE'];
-echo "<br>";
-// echo "<br>";
-// echo $_SERVER['PATH_TRANSLATED'];
-echo "<br>";
-echo "18<br>";
-echo $_SERVER['SCRIPT_NAME'];
-echo "<br>";
-echo "19<br>";
-// echo $_SERVER['SCRIPT_URI'];
-echo "<br>";
-// echo "<br";
-echo $_SERVER["DOCUMENT_ROOT"];
-echo "<br>";
+require "../data/config.php";
+?>
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <title>CLB Tin Học</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1" />
+    <link rel="stylesheet" type="text/css" href="../public/css/css.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/grid_system.css" />
+    <script type="text/javascript" src="../public/jss/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../public/jss/js.js"></script>
+</head>
+
+<body>
+    <div id="top">
+        <?php require "menu/menu.php"; ?>
+    </div>
+
+    <div id="footer">
+		<?php require "footer/footer.php" ?>
+	</div>
+
+	<?php require "body/click_img.php" ?>
+    
+</body>
+
+</html>
+
+<?php
+//Tắt kết nối
+mysqli_close($conn);
 ?>

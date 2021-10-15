@@ -55,4 +55,11 @@
 - Ngày 12/10:
 	+ Đang tìm cách kế thừa file mà ko bị lỗi đường dẫn ảnh và đường dẫn file.
 - Ngày 13/10:
-
+	+ Chỉnh sửa lại layouts
+	+ Thay đổi file index để phù hợp link
+	+ Sửa giao diện body home
+	+ Sửa lại link trả về sau khi đăng ký và đăng nhập
+	+ Bỏ chỉnh sửa giao diện trực tiếp trên giao diện
+	+ Thêm menu của phần quản trị
+- Ngày 15/10:
+	+ làm giao diện phần liên hệ và group
