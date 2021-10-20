@@ -93,3 +93,40 @@ function about(){
         btn.innerHTML = "Play";
     }
 }
+
+function menu_admin(id,email){
+	location.assign("admin.php?email="+email+"&id="+id);
+}
+
+function current_page(id){
+	$(id).css("background", "#66fcf1");
+	$(id).css("color", "#000");
+}
+
+function search(a,b,c) {
+	var input, filter, table, tr, td, i, txtValue;
+	input = document.getElementById(a);
+	filter = input.value.toUpperCase();
+	table = document.getElementById(b);
+	tr = table.getElementsByTagName("tr");
+	for (i = 0; i < tr.length; i++) {
+	  td = tr[i].getElementsByTagName("td")[c];
+	  if (td) {
+		txtValue = td.textContent || td.innerText;
+		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		  tr[i].style.display = "";
+		} else {
+		  tr[i].style.display = "none";
+		}
+	  }       
+	}
+}
+
+function page(tb,i){
+	var n = 10*i;
+	table = document.getElementById(tb);
+	tr = table.getElementsByTagName("tr");
+	if(n<=tr.length){
+
+	}
+}

@@ -63,3 +63,5 @@
 	+ Thêm menu của phần quản trị
 - Ngày 15/10:
 	+ làm giao diện phần liên hệ và group
+- Ngày 19/10:
+	+ Làm layouts của phần quản trị

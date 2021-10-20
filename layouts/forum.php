@@ -21,6 +21,19 @@ require "../data/config.php";
         <?php require "menu/menu.php"; ?>
     </div>
 
+    <div id="body_forum" class="grid wide">
+        <div class="row">
+            <div class="col l-12">
+                <div class="header">
+                    <h1>Chủ đề câu hỏi?</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            
+        </div>
+    </div>
+
     <div id="footer">
 		<?php require "footer/footer.php" ?>
 	</div>

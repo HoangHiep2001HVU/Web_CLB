@@ -68,8 +68,13 @@ require "../../data/config.php";
 					</div>
 					<div class="group_button">
 						<?php 
-							$X = $_GET["x"];
-							echo "<button type='button' name='registe' onclick='reg(_href,$X);'>Đăng ký</button>";
+							if(isset($_GET["x"])){
+								$X = $_GET["x"];
+								echo "<button type='button' name='registe' onclick='reg(_href,$X);'>Đăng ký</button>";
+							}
+							else{
+								echo "<button type='button' name='registe' onclick='reg(_href,2);'>Đăng ký</button>";
+							}
 						?>
 						<button type="button" name="login"><a href="login.php?x=2">Đăng nhập</a></button>
 						<button type="button" name="back"><a href="../index.php">Quay lại</a></button>
