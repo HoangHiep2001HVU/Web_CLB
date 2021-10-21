@@ -5,7 +5,11 @@ var x = 0;
 //var count = list.getElementsByTagName("img").length;
 //var max_width= count*100-100;
 
-var max_width= 500;
+var max_width = 0;
+
+function Width_sl(n){
+	max_width = n*100-100;
+}
 //Chuyển sang ảnh phía sau
 function Next(){
 	if(x <max_width){
@@ -53,21 +57,19 @@ function click_img(id,src,alt){
 	}
 }
 
-function users(id,close_id){
-	
-	var x = document.getElementById(id);
-	console.log(x);
-	x.style.display = "block";
+function insert(button_close,id){
+	var span = document.getElementsByClassName(button_close)[0];
+	var x = document.getElementsByClassName(id)[0];
 
-	var span = document.getElementById(close_id);
-	
-	span.onclick = function(){
+	console.log(location.href);
+
+	if(x.style.display !="block"){
+		x.style.display = "block";
+		span.innerHTML="-";
+	}
+	else{
 		x.style.display = "none";
-
-		if(id == "upload_sl_img"){
-			//tải ảnh song thì load lại trang
-			location.reload();
-		}
+		span.innerHTML="+";
 	}
 }
 

@@ -54,10 +54,17 @@
 				echo "<img id='$id' src='../public/img/slide_img/$img' alt='$name' onclick='click_img(this.id,this.src,this.alt);'/>";
 			}
 		}
+		echo "\n<script type='text/javascript'>
+			var n = $result->num_rows;
+			$(document).ready(function() {
+				Width_sl(n);
+				Next();
+				Back();
+			});
+		</script>";
 	}
 
 	//Hàm lấy sự kiện ở phần body_home
 	function load_even($con){
 		$sql = "select * from evens order by created_at desc LIMIT 8";
 	}
-?>

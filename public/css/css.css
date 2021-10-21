@@ -1,4 +1,4 @@
-/*Định dạng chung cho web*/
+/*Ã„ÂÃ¡Â»â€¹nh dÃ¡ÂºÂ¡ng chung cho web*/
 
 * {
   box-sizing: border-box;
@@ -27,7 +27,7 @@ body {
   margin: 0 auto;
 }
 
-/*Định dạng css cho menu top*/
+/*Ã„ÂÃ¡Â»â€¹nh dÃ¡ÂºÂ¡ng css cho menu top*/
 .menu img {
   width: 36px;
   height: 36px;
@@ -112,7 +112,7 @@ ul {
   max-height: 90px;
 }
 
-/*Định dạng css cho silde ảnh top*/
+/*Ã„ÂÃ¡Â»â€¹nh dÃ¡ÂºÂ¡ng css cho silde Ã¡ÂºÂ£nh top*/
 .banner_top {
   width: 100%;
   overflow: hidden;
@@ -195,7 +195,7 @@ ul {
   display: block;
 }
 
-/* Định dạng phần layouts khi click vào ảnh */
+/* phan hien thi khi clich vao ảnh */
 .click_img {
   width: 100%;
 }
@@ -281,7 +281,7 @@ ul {
   cursor: pointer;
 }
 
-/*Định dạng phần đăng ký và đăng nhập*/
+/*Ã„ÂÃ¡Â»â€¹nh dÃ¡ÂºÂ¡ng phÃ¡ÂºÂ§n Ã„â€˜Ã„Æ’ng kÃƒÂ½ vÃƒÂ  Ã„â€˜Ã„Æ’ng nhÃ¡ÂºÂ­p*/
 /* Login */
 #login .row {
   background-image: url("../img/backgrounds/bg_login.jpg");
@@ -471,7 +471,7 @@ a {
 
 .us {
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
-  0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    0 6px 20px 0 rgba(255, 255, 255, 0.19);
   border: 2px dashed #fff;
 }
 
@@ -680,11 +680,12 @@ a {
   width: 100%;
 }
 
-#contact_us .phone img, #contact_us .email img, #contact_us .fb img {
+#contact_us .phone img,
+#contact_us .email img,
+#contact_us .fb img {
   width: 150%;
   margin-top: 20px;
 }
-
 
 /* dinh dang admin */
 
@@ -724,33 +725,18 @@ a {
 }
 
 #admin_body h1 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #000;
+  padding: 20px 0px;
+  margin: 0px;
+  color: #66fcf1;
+  background: #000
 }
 
 .number {
-  display: flex;
   float: right;
 }
 
 .number p {
   margin-right: 10px;
-}
-
-.number button {
-  background: #66fcf1;
-  color: #000;
-  outline: none;
-  border: none;
-  padding: 5px;
-  margin-top: -5px;
-  font-weight: bold;
-}
-
-.number button:hover {
-  background: #000;
-  color: #66fcf1;
 }
 
 .search {
@@ -772,7 +758,8 @@ a {
   margin: 0px 10px;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #0b0c10;
   padding: 5px;
 }
@@ -783,19 +770,19 @@ td, th {
   font-weight: bold;
 }
 
-.data .update{
+.data .update {
   background: #00ff00;
 }
 
-.data .update:hover{
-   background: green;
+.data .update:hover {
+  background: green;
 }
 
 .data .delete {
   background: red;
 }
 
-.data .delete:hover{
+.data .delete:hover {
   background: #b30000;
 }
 
@@ -805,6 +792,132 @@ td, th {
 }
 
 .number_row button:hover {
- background: #0b0c10;
- color: #fff;
+  background: #0b0c10;
+  color: #fff;
+}
+
+/* dinh dang phan forum */
+#body_forum, #body_post  {
+  background: #0b0c10;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#table_theme a:hover > h2,
+#table_theme a:hover > p,
+#table_question a:hover > h2,
+#table_question a:hover > p {
+  color: #66fcf1;
+}
+
+#table_question a {
+  display: flex;
+}
+
+#table_question img{
+  vertical-align: text-top;
+  width: 40px;
+  height: 40px;
+}
+
+#body_post .row{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.times {
+  margin-top: -15px; 
+  font-size: 12px;
+}
+
+.content_post{
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  background: gray;
+}
+
+#body_post h2 {
+  text-align: center;
+}
+
+.interact {
+  display: flex;
+}
+
+.interact p {
+  margin: 0px 20px 20px 0px;
+}
+
+#body_post textarea {
+  min-width: 100%;
+  max-width: 100%;
+  padding: 10px;
+}
+
+.content_post_user, .file_content, .content_submit {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.content_submit {
+  text-align: center;
+}
+
+.content_submit button {
+  width: 10%;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.content_submit button:hover {
+  background: #66fcf1;
+  color: #fff;
+}
+
+/* phan insert */
+.upload {
+  display: none;
+}
+
+.form_group input {
+  width: 100%;
+}
+
+.form_group textarea {
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.form_group input, .form_group textarea{
+  padding: 5px;
+  outline: none;
+}
+
+.group_button {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.insert_sl {
+  float: right;
+  margin-right: 10px;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+}
+
+.group_button button{
+  width: 20%;
+  background: #000;
+  color: #fff;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.group_button button:hover, .insert_sl:hover {
+  background: #66fcf1;
+  color: #000;
 }

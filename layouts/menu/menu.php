@@ -45,7 +45,7 @@
 					echo "<li class='users'><a href='index.php'>Đăng xuất</a></li>";
 					echo "<li class='users'><a href='#'>$name</a></li>";
 				} else {
-					if(isset($_GET["id"])){
+					if(isset($_GET["id"]) || isset($_GET["theme"])){
 						echo "<li class='users'><a href='users/register.php?x=1'>Đăng ký</a></li>";
 						echo "<li class='users'><a href='users/login.php?x=1'>Đăng nhập</a></li>";
 					}
@@ -72,12 +72,6 @@
 
 		<div class="slide_img">
 			<?php sl_img(); ?>
-			<script type="text/javascript">
-				$(document).ready(function() {
-					Next();
-					Back();
-				});
-			</script>
 		</div>
 
 	</div>

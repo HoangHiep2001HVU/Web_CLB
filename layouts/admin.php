@@ -40,9 +40,15 @@ require "../data/config.php";
                             require "admin/banners.php";
                         }
                         else if($_GET["id"]=="tab_5"){
-                            require "admin/leaders.php";
+                            require "admin/";
                         }
                         else if($_GET["id"]=="tab_6"){
+                            require "admin/";
+                        }
+                        else if($_GET["id"]=="tab_7"){
+                            require "admin/leaders.php";
+                        }
+                        else if($_GET["id"]=="tab_8"){
                             require "admin/users.php";
                         }
                         else {
@@ -53,6 +59,7 @@ require "../data/config.php";
                         echo "<script type='text/javascript'>
                             $(document).ready(function() {
                                 current_page($current_page);
+                                $('#number_img').text('Tổng số banner: '+count);
                             });
                         </script>";
                     ?>

@@ -22,24 +22,30 @@ require "../data/config.php";
     </div>
 
     <div id="body_forum" class="grid wide">
-        <div class="row">
-            <div class="col l-12">
-                <div class="header">
-                    <h1>Chủ đề câu hỏi?</h1>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            
-        </div>
+        <?php 
+            if(isset($_GET["email"])){
+                $email  = $_GET["email"];
+                $_link = "forum.php?email=$email&theme";
+            }
+            else {
+                $_link = "forum.php?theme";
+            }
+
+            if(isset($_GET["theme"])){
+                require "body/body_question.php";
+            }
+            else{
+                require "body/body_forum.php";
+            }
+        ?>
     </div>
 
     <div id="footer">
-		<?php require "footer/footer.php" ?>
-	</div>
+        <?php require "footer/footer.php" ?>
+    </div>
 
-	<?php require "body/click_img.php" ?>
-    
+    <?php require "body/click_img.php" ?>
+
 </body>
 
 </html>
