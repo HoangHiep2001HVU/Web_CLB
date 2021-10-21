@@ -68,3 +68,5 @@
 - Ngày 20/10:
 	+ Hoàn thành gần như giao diện thiếu responsive
 	+ Đc chức năng thêm va hiển thị dự liệu của banner
+- Ngày 21/10:
+	+ Xóa được sl ảnh

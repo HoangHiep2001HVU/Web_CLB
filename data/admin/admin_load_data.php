@@ -11,6 +11,7 @@ function load_slide_imgs(){
             $img = $row['image'];
             $note = $row['note'];
             $created_ad = $row['created_at'];
+            $remove_sl = "Remove_sl($id,'$img')";
             echo "<tr class='row'>
                     <td class='col l-1'>$id</td>
                     <td class='col l-2'>$name</td>
@@ -18,7 +19,7 @@ function load_slide_imgs(){
                     <td class='col l-3'>$note</td>
                     <td class='col l-2'>$created_ad</td>
                     <td class='col l-1'><button class='update'>Sửa</button></td>
-                    <td class='col l-1'><button class='delete' onclick='Remove_sl($id,'$name')'>Xóa</button></td>
+                    <td class='col l-1'><button class='delete' onclick=".$remove_sl.">Xóa</button></td>
                 </tr>";
         }
     }

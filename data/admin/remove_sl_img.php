@@ -5,7 +5,7 @@
         $remove_id = $_POST["id"];
         $remove_name = $_POST["name"];
 
-        $pathName_sl="../public/img/slide_img/"+$remove_name;
+        $pathName_sl="../../public/img/slide_img/".$remove_name;
 
         if(!unlink($pathName_sl)){
             echo 0;
@@ -19,4 +19,6 @@
     else{
         echo 0;
     }
+    
+    mysqli_close($conn);
 ?>
