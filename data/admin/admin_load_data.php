@@ -10,16 +10,19 @@ function load_slide_imgs(){
             $name = $row['name'];
             $img = $row['image'];
             $note = $row['note'];
-            $created_ad = $row['created_at'];
-            $remove_sl = "Remove_sl($id,'$img')";
+            $created_at = $row['created_at'];
+            $update_at =  $row['update_at'];
+            $remove_sl = "\"Remove_sl($id,'$img')\"";
+            $update="\"Display_update($id,'$name','$img','$note')\"";
             echo "<tr class='row'>
-                    <td class='col l-1'>$id</td>
-                    <td class='col l-2'>$name</td>
-                    <td class='col l-2'>$img</td>
-                    <td class='col l-3'>$note</td>
-                    <td class='col l-2'>$created_ad</td>
-                    <td class='col l-1'><button class='update'>Sửa</button></td>
-                    <td class='col l-1'><button class='delete' onclick=".$remove_sl.">Xóa</button></td>
+                    <td class='col l-1' title='$id'>$id</td>
+                    <td class='col l-2' title='$name'>$name</td>
+                    <td class='col l-1' title='$img'>$img</td>
+                    <td class='col l-2' title='$note'>$note</td>
+                    <td class='col l-2' title='$created_at'>$created_at</td>
+                    <td class='col l-2' title='$update_at'>$update_at</td>
+                    <td class='col l-1' title='Chỉnh sửa'><button class='update' onclick=$update>Sửa</button></td>
+                    <td class='col l-1' title='Xóa'><button class='delete' onclick=$remove_sl>Xóa</button></td>
                 </tr>";
         }
     }

@@ -33,7 +33,7 @@
 					}
 
 					if($role == 1){
-						echo "<li><a href='admin.php?email=$email&id=tab_1'>Quản trị</a></li>";
+						echo "<li><a href='admin.php?email=$email&tab=tab_1'>Quản trị</a></li>";
 					}
 					
 				?>

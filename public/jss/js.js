@@ -97,7 +97,7 @@ function about(){
 }
 
 function menu_admin(id,email){
-	location.assign("admin.php?email="+email+"&id="+id);
+	location.assign("admin.php?email="+email+"&tab="+id);
 }
 
 function current_page(id){
@@ -124,11 +124,22 @@ function search(a,b,c) {
 	}
 }
 
-function page(tb,i){
-	var n = 10*i;
-	table = document.getElementById(tb);
-	tr = table.getElementsByTagName("tr");
-	if(n<=tr.length){
+function Display_update(id,name,img,note){
+	var up= document.getElementsByClassName("update_data")[0];
+	up.style.display="block";
 
-	}
+	var _id = document.getElementById("id_update");
+	_id.value= id;
+	var _name = document.getElementById("header_update_sl");
+	_name.value=name;
+	var _img = document.getElementById("file_choice");
+	_img.value=img;
+	var _note = document.getElementById("note_update_sl");
+	_note.value=note;
+}
+
+function Hide_update(){
+	document.getElementById("update_sl").reset();
+	var up= document.getElementsByClassName("update_data")[0];
+	up.style.display="none";
 }

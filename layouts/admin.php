@@ -27,35 +27,35 @@ require "../data/config.php";
             <div class="col l-9">
                 <div id="admin_body">
                     <?php 
-                        if($_GET["id"]=="tab_1"){
+                        if($_GET["tab"]=="tab_1"){
                             require "admin/video_contacts.php";
                         }
-                        else if($_GET["id"]=="tab_2"){
+                        else if($_GET["tab"]=="tab_2"){
                             require "admin/groups.php";
                         }
-                        else if($_GET["id"]=="tab_3"){
+                        else if($_GET["tab"]=="tab_3"){
                             require "admin/evens.php";
                         }
-                        else if($_GET["id"]=="tab_4"){
+                        else if($_GET["tab"]=="tab_4"){
                             require "admin/banners.php";
                         }
-                        else if($_GET["id"]=="tab_5"){
+                        else if($_GET["tab"]=="tab_5"){
                             require "admin/";
                         }
-                        else if($_GET["id"]=="tab_6"){
+                        else if($_GET["tab"]=="tab_6"){
                             require "admin/";
                         }
-                        else if($_GET["id"]=="tab_7"){
+                        else if($_GET["tab"]=="tab_7"){
                             require "admin/leaders.php";
                         }
-                        else if($_GET["id"]=="tab_8"){
+                        else if($_GET["tab"]=="tab_8"){
                             require "admin/users.php";
                         }
                         else {
                             echo "Không tìm được trang!";
                         }
 
-                        $current_page = $_GET["id"];
+                        $current_page = $_GET["tab"];
                         echo "<script type='text/javascript'>
                             $(document).ready(function() {
                                 current_page($current_page);

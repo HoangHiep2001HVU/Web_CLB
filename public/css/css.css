@@ -1,4 +1,4 @@
-/*Ã„ÂÃ¡Â»â€¹nh dÃ¡ÂºÂ¡ng chung cho web*/
+/*Ãƒâ€žÃ‚ÂÃƒÂ¡Ã‚Â»Ã¢â‚¬Â¹nh dÃƒÂ¡Ã‚ÂºÃ‚Â¡ng chung cho web*/
 
 * {
   box-sizing: border-box;
@@ -27,7 +27,7 @@ body {
   margin: 0 auto;
 }
 
-/*Ã„ÂÃ¡Â»â€¹nh dÃ¡ÂºÂ¡ng css cho menu top*/
+/*Ãƒâ€žÃ‚ÂÃƒÂ¡Ã‚Â»Ã¢â‚¬Â¹nh dÃƒÂ¡Ã‚ÂºÃ‚Â¡ng css cho menu top*/
 .menu img {
   width: 36px;
   height: 36px;
@@ -112,7 +112,7 @@ ul {
   max-height: 90px;
 }
 
-/*Ã„ÂÃ¡Â»â€¹nh dÃ¡ÂºÂ¡ng css cho silde Ã¡ÂºÂ£nh top*/
+/*Ãƒâ€žÃ‚ÂÃƒÂ¡Ã‚Â»Ã¢â‚¬Â¹nh dÃƒÂ¡Ã‚ÂºÃ‚Â¡ng css cho silde ÃƒÂ¡Ã‚ÂºÃ‚Â£nh top*/
 .banner_top {
   width: 100%;
   overflow: hidden;
@@ -195,7 +195,7 @@ ul {
   display: block;
 }
 
-/* phan hien thi khi clich vao ảnh */
+/* phan hien thi khi clich vao áº£nh */
 .click_img {
   width: 100%;
 }
@@ -281,7 +281,6 @@ ul {
   cursor: pointer;
 }
 
-/*Ã„ÂÃ¡Â»â€¹nh dÃ¡ÂºÂ¡ng phÃ¡ÂºÂ§n Ã„â€˜Ã„Æ’ng kÃƒÂ½ vÃƒÂ  Ã„â€˜Ã„Æ’ng nhÃ¡ÂºÂ­p*/
 /* Login */
 #login .row {
   background-image: url("../img/backgrounds/bg_login.jpg");
@@ -728,7 +727,7 @@ a {
   padding: 20px 0px;
   margin: 0px;
   color: #66fcf1;
-  background: #000
+  background: #000;
 }
 
 .number {
@@ -758,10 +757,19 @@ a {
   margin: 0px 10px;
 }
 
-td,
 th {
+  background: #000;
+  color: #fff;
+  padding: 5px;
+  border: 1px solid #fff;
+}
+
+td {
   border: 1px solid #0b0c10;
   padding: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .data button {
@@ -797,7 +805,8 @@ th {
 }
 
 /* dinh dang phan forum */
-#body_forum, #body_post  {
+#body_forum,
+#body_post {
   background: #0b0c10;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -814,23 +823,23 @@ th {
   display: flex;
 }
 
-#table_question img{
+#table_question img {
   vertical-align: text-top;
   width: 40px;
   height: 40px;
 }
 
-#body_post .row{
+#body_post .row {
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .times {
-  margin-top: -15px; 
+  margin-top: -15px;
   font-size: 12px;
 }
 
-.content_post{
+.content_post {
   border: 1px solid gray;
   border-radius: 5px;
   padding: 10px;
@@ -855,7 +864,9 @@ th {
   padding: 10px;
 }
 
-.content_post_user, .file_content, .content_submit {
+.content_post_user,
+.file_content,
+.content_submit {
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -891,7 +902,8 @@ th {
   max-height: 500px;
 }
 
-.form_group input, .form_group textarea{
+.form_group input,
+.form_group textarea {
   padding: 5px;
   outline: none;
 }
@@ -901,7 +913,8 @@ th {
   margin-bottom: 20px;
 }
 
-.insert_sl {
+.insert_sl,
+.btn_close {
   float: right;
   margin-right: 10px;
   background: #000;
@@ -909,7 +922,7 @@ th {
   font-weight: bold;
 }
 
-.group_button button{
+.group_button button {
   width: 20%;
   background: #000;
   color: #fff;
@@ -917,7 +930,14 @@ th {
   font-weight: bold;
 }
 
-.group_button button:hover, .insert_sl:hover {
+.group_button button:hover,
+.insert_sl:hover,
+.btn_close:hover {
   background: #66fcf1;
   color: #000;
+}
+
+.update_data {
+  width: 100%;
+  display: none;
 }

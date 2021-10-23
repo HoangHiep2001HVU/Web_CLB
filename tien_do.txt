@@ -70,3 +70,8 @@
 	+ Đc chức năng thêm va hiển thị dự liệu của banner
 - Ngày 21/10:
 	+ Xóa được sl ảnh
+-Ngày 23/10:
+	+ lm giao diệm update của image banner
+	+ link icon: <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	+ Làm song delete banner
