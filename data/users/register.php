@@ -16,7 +16,7 @@
 			echo 0;
 		}
 		else{
-			$sql_acc = "INSERT INTO account(email,password,role) VALUES ('$email','$_password',0)";
+			$sql_acc = "INSERT INTO account(email,password,role) VALUES ('$email','$_password',14)";
 			$sql_user= "INSERT INTO users(name, birthday, email, class, sex) VALUES ('$name','$birthday','$email','$_class','$sex')";
 			$conn->query($sql_acc);
 			$conn->query($sql_user);

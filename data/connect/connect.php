@@ -15,5 +15,7 @@
 		}
 	}
 	Connect($conn);
+
+	$number_of_pages=0;
 	
 ?>

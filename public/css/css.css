@@ -1,4 +1,4 @@
-/*Ãƒâ€žÃ‚ÂÃƒÂ¡Ã‚Â»Ã¢â‚¬Â¹nh dÃƒÂ¡Ã‚ÂºÃ‚Â¡ng chung cho web*/
+/* Dinh dang chung */
 
 * {
   box-sizing: border-box;
@@ -27,7 +27,7 @@ body {
   margin: 0 auto;
 }
 
-/*Ãƒâ€žÃ‚ÂÃƒÂ¡Ã‚Â»Ã¢â‚¬Â¹nh dÃƒÂ¡Ã‚ÂºÃ‚Â¡ng css cho menu top*/
+/*css cho menu top*/
 .menu img {
   width: 36px;
   height: 36px;
@@ -112,7 +112,7 @@ ul {
   max-height: 90px;
 }
 
-/*Ãƒâ€žÃ‚ÂÃƒÂ¡Ã‚Â»Ã¢â‚¬Â¹nh dÃƒÂ¡Ã‚ÂºÃ‚Â¡ng css cho silde ÃƒÂ¡Ã‚ÂºÃ‚Â£nh top*/
+/*css cho slide top*/
 .banner_top {
   width: 100%;
   overflow: hidden;
@@ -162,40 +162,7 @@ ul {
   display: block;
 }
 
-.insert_slide_img {
-  display: none;
-  width: 100%;
-  max-width: 1200px;
-  position: absolute;
-}
-
-.insert_slide_img button {
-  background: gray;
-  float: right;
-  outline: none;
-  border: none;
-  color: #fff;
-  font-size: 18px;
-  padding: 5px 5px;
-  opacity: 0.8;
-  border-radius: 5%;
-  margin: 5px;
-}
-
-.insert_slide_img button svg {
-  width: 20px;
-}
-
-.insert_slide_img button:hover {
-  background: #1f2833;
-  opacity: 1;
-}
-
-.banner_top:hover .insert_slide_img {
-  display: block;
-}
-
-/* phan hien thi khi clich vao áº£nh */
+/* phan hien thi khi clich vao anh */
 .click_img {
   width: 100%;
 }
@@ -762,6 +729,7 @@ th {
   color: #fff;
   padding: 5px;
   border: 1px solid #fff;
+  text-justify: none;
 }
 
 td {
@@ -799,8 +767,21 @@ td {
   margin-bottom: 10px;
 }
 
+.number_row button {
+  margin: 0px 2px;
+}
+
 .number_row button:hover {
   background: #0b0c10;
+}
+
+.number_row a {
+  color: #000;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.number_row button:hover > a {
   color: #fff;
 }
 
@@ -904,8 +885,15 @@ td {
 
 .form_group input,
 .form_group textarea {
+  margin: 10px 0px;
   padding: 5px;
   outline: none;
+}
+
+.form_group p,
+.form_group label,
+.form_group select {
+  margin: 10px 0px;
 }
 
 .group_button {
@@ -913,7 +901,7 @@ td {
   margin-bottom: 20px;
 }
 
-.insert_sl,
+.insert,
 .btn_close {
   float: right;
   margin-right: 10px;
@@ -931,7 +919,7 @@ td {
 }
 
 .group_button button:hover,
-.insert_sl:hover,
+.insert:hover,
 .btn_close:hover {
   background: #66fcf1;
   color: #000;
@@ -940,4 +928,15 @@ td {
 .update_data {
   width: 100%;
   display: none;
+}
+
+.form_group select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.form_group option {
+  background: #000;
+  color: #fff;
 }

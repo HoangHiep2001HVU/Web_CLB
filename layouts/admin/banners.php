@@ -6,7 +6,7 @@
 <div class="header row">
     <div class="col l-12">
         <hr>
-        <h2>Thêm banner <button class="insert_sl" onclick="insert('insert_sl','upload');">+</button></h2>
+        <h2>Thêm banner <button class="insert" onclick="insert('insert','upload');">+</button></h2>
     </div>
 </div>
 <div class="row">
@@ -21,7 +21,7 @@
 
                 <div class="form_group">
                     <p>Nội dung:</p>
-                    <textarea id="note_img_sl" cols="55" rows="6" placeholder="Nhập vào nội dung cho ảnh" name="note_img_sl"></textarea>
+                    <textarea id="note_img_sl" cols="55" rows="6" placeholder="Nhập vào nội dung cho ảnh..." name="note_img_sl"></textarea>
                 </div>
 
                 <div class="form_group">
@@ -42,7 +42,7 @@
             <div class="header row">
                 <div class="col l-12">
                     <hr>
-                    <h2>Chỉnh sửa <button class="btn_close" onclick="Hide_update();">x</button></h2>
+                    <h2>Chỉnh sửa banner<button class="btn_close" onclick="Hide_update();">x</button></h2>
                 </div>
             </div>
             <div class="row">
@@ -51,17 +51,17 @@
 
                         <div class="form_group">
                             <label for="id_update">Id:</label>
-                            <input type="text" id="id_update" name="id_update" placeholder="Vui lòng chọn đối tượng cần chỉnh sửa" required minlength="1" readonly>
+                            <input type="text" id="id_update" name="id_update" placeholder="Vui lòng chọn đối tượng cần chỉnh sửa...." required minlength="1" readonly>
                         </div>
 
                         <div class="form_group">
                             <label for="header_update_sl">Tiêu đề:</label>
-                            <input type="text" id="header_update_sl" placeholder="Nhập vào tiêu đề của ảnh.." name="header_update_sl" required minlength="5">
+                            <input type="text" id="header_update_sl" placeholder="Nhập vào tiêu đề của ảnh..." name="header_update_sl" required minlength="5">
                         </div>
 
                         <div class="form_group">
                             <p>Nội dung:</p>
-                            <textarea id="note_update_sl" cols="55" rows="6" placeholder="Nhập vào nội dung cho ảnh" name="note_update_sl"></textarea>
+                            <textarea id="note_update_sl" cols="55" rows="6" placeholder="Nhập vào nội dung cho ảnh..." name="note_update_sl"></textarea>
                         </div>
 
                         <div class="form_group">
@@ -118,15 +118,9 @@
         ?>
     </tbody>
 </table>
-<div class="row">
-    <div class="number_row col l-12">
-        <button id="back">
-            < </button>
-                <button id="1"> 1 </button>
-                <button id="2"> 2 </button>
-                <button id="next"> > </button>
-    </div>
-</div>
+<?php
+    page();
+?>
 <script type="text/javascript">
     $(document).ready(function() {
         upload_sl();

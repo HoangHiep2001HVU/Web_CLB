@@ -1,5 +1,5 @@
 <?php
-//hàm lấy ra tên của tài khoản
+	//hàm lấy ra tên của tài khoản
 	$email = "";
 	$user_id = 0;
 	$role=0; //biến lấy lư vai trò của người đăng nhập
@@ -34,7 +34,7 @@
 					echo "<li><a href='group.php?id=$id'>$name_group</a></li>";
 				}
 				else{
-					echo "<li><a href='group.php?id=$id&email=$email'>$name_group</a></li>";
+					echo "<li><a href='group.php?email=$email&id=$id'>$name_group</a></li>";
 				}
 				
 			}
@@ -54,7 +54,7 @@
 				echo "<img id='$id' src='../public/img/slide_img/$img' alt='$name' onclick='click_img(this.id,this.src,this.alt);'/>";
 			}
 		}
-		echo "\n<script type='text/javascript'>
+		echo "<script type='text/javascript'>
 			var n = $result->num_rows;
 			$(document).ready(function() {
 				Width_sl(n);
@@ -68,3 +68,4 @@
 	function load_even($con){
 		$sql = "select * from evens order by created_at desc LIMIT 8";
 	}
+?>

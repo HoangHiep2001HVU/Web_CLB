@@ -75,3 +75,8 @@
 	+ link icon: <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 	+ Làm song delete banner
+-Ngày 24/10:
+	+ chia page thành công cho bảng
+-Ngày 25/10:
+	+ Định lại quan hệ trong bảng
+	+ Làm song thêm sửa xóa cho group

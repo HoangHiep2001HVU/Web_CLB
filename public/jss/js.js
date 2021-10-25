@@ -87,7 +87,7 @@ function about(){
 	var video = document.getElementById("myVideo");
     var btn = document.getElementById("myBtn");
 	
-    if (video.paused) {
+    if (video.pause()) {
         video.play();
         btn.innerHTML = "Pause";
      } else {
@@ -124,7 +124,10 @@ function search(a,b,c) {
 	}
 }
 
-function Display_update(id,name,img,note){
+function Display_update_sl(id,name,img,note){
+	var x = document.getElementsByClassName("upload")[0];
+	x.style.display = "none";
+	
 	var up= document.getElementsByClassName("update_data")[0];
 	up.style.display="block";
 
@@ -139,7 +142,36 @@ function Display_update(id,name,img,note){
 }
 
 function Hide_update(){
-	document.getElementById("update_sl").reset();
 	var up= document.getElementsByClassName("update_data")[0];
 	up.style.display="none";
+}
+
+function Display_update_general(id,name,type,note,file){
+	var x = document.getElementsByClassName("upload")[0];
+	x.style.display = "none";
+	var up= document.getElementsByClassName("update_data")[0];
+	up.style.display="block";
+
+	var _type = document.getElementById("type_update");
+	_type.value=type;
+	var _id = document.getElementById("id_update");
+	_id.value= id;
+	var _name = document.getElementById("header_update");
+	_name.value=name;
+	var _file = document.getElementById("file_choice");
+	_file.value=file;
+	var _note = document.getElementById("note_update");
+	_note.value=note;
+}
+
+function Display_update_group(id,name){
+	var x = document.getElementsByClassName("upload")[0];
+	x.style.display = "none";
+	var up= document.getElementsByClassName("update_data")[0];
+	up.style.display="block";
+
+	var _id = document.getElementById("id_update");
+	_id.value= id;
+	var _name = document.getElementById("name_update");
+	_name.value=name;
 }

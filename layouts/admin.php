@@ -28,7 +28,7 @@ require "../data/config.php";
                 <div id="admin_body">
                     <?php 
                         if($_GET["tab"]=="tab_1"){
-                            require "admin/video_contacts.php";
+                            require "admin/generals.php";
                         }
                         else if($_GET["tab"]=="tab_2"){
                             require "admin/groups.php";
