@@ -1,40 +1,56 @@
 <div class="header row">
     <div class="col l-12">
-        <h1>Quản lý chung</h1>
+        <h1>Quản lý sự kiện</h1>
     </div>
 </div>
 <div class="header row">
     <div class="col l-12">
         <hr>
-        <h2>Thêm thông tin <button class="insert" onclick="insert('insert','upload');">+</button></h2>
+        <h2>Thêm sự kiện <button class="insert" onclick="insert('insert','upload');">+</button></h2>
     </div>
 </div>
 <div class="row">
     <div class="col l-o-1 l-o-12 l-10">
         <!--tải ảnh sl lên-->
         <div class="upload">
-            <form method="POST" id="upload_general" enctype="multipart/form-data">
+            <form method="POST" id="upload_even" enctype="multipart/form-data">
                 <div class="form_group">
-                    <label for="type">Chọn thể loại:</label>
-                    <select name="type" id="type">
-                        <option value="Sự kiện">Sự kiện</option>
-                        <option value="Giới thiệu">Giới thiệu</option>
+                    <label for="group">Chọn nhóm:</label>
+                    <select name="group" id="group">
+                        <?php
+                        group_choice();
+                        ?>
                     </select>
                 </div>
 
                 <div class="form_group">
-                    <label for="header_general">Tiêu đề:</label>
-                    <input type="text" id="header_general" placeholder="Nhập vào tiêu đề .." name="header_general" required minlength="5">
+                    <label for="header_even">Tiêu đề:</label>
+                    <input type="text" id="header_even" placeholder="Nhập vào tiêu đề .." name="header_even" required minlength="5">
+                </div>
+
+                <div class="form_group">
+                    <label for="description_even">Mô tả:</label>
+                    <input type="text" id="description_even" placeholder="Nhập vào tiêu đề .." name="description_even" required minlength="5">
                 </div>
 
                 <div class="form_group">
                     <p>Nội dung:</p>
-                    <textarea id="note_general" cols="55" rows="6" placeholder="Nhập vào nội dung..." name="note_general"></textarea>
+                    <textarea id="note_even" cols="55" rows="6" placeholder="Nhập vào nội dung..." name="note_even" required minlength="5"></textarea>
                 </div>
 
                 <div class="form_group">
-                    <label for="file_general">Chọn file:</label>
-                    <input type="file" accept=".jpeg,.jpg,.png,.gif,.mp4,.mov,.avi" class="form_control" id="file_general" name="file_general">
+                    <p>Ngày bắt đầu:</p>
+                    <input type="date" id="start_day" name="start_day" required>
+                </div>
+
+                <div class="form_group">
+                    <p>Ngày kết thúc:</p>
+                    <input type="date" id="end_day" name="end_day" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="file_even">Chọn file:</label>
+                    <input type="file" accept=".jpeg,.jpg,.png" class="form_control" id="file_even" name="file_even">
                 </div>
 
                 <div class="group_button">
@@ -55,12 +71,13 @@
             </div>
             <div class="row">
                 <div class="col l-10 l-o-1">
-                    <form method="POST" id="update_general" enctype="multipart/form-data">
+                    <form method="POST" id="update_even" enctype="multipart/form-data">
                         <div class="form_group">
-                            <label for="type_update">Chọn thể loại:</label>
-                            <select name="type" id="type_update">
-                                <option value="Sự kiện">Sự kiện</option>
-                                <option value="Giới thiệu">Giới thiệu</option>
+                            <label for="group_update">Chọn nhóm:</label>
+                            <select name="group_update" id="group_update">
+                                <?php
+                                group_choice();
+                                ?>
                             </select>
                         </div>
 
@@ -75,8 +92,23 @@
                         </div>
 
                         <div class="form_group">
+                            <label for="description_update">Mô tả:</label>
+                            <input type="text" id="description_update" placeholder="Nhập vào tiêu đề .." name="description_update" required minlength="5">
+                        </div>
+
+                        <div class="form_group">
                             <p>Nội dung:</p>
-                            <textarea id="note_update" cols="55" rows="6" placeholder="Nhập vào nội dung..." name="note_update"></textarea>
+                            <textarea id="note_update" cols="55" rows="6" placeholder="Nhập vào nội dung..." name="note_update" required minlength="5"></textarea>
+                        </div>
+
+                        <div class="form_group">
+                            <p>Ngày bắt đầu:</p>
+                            <input type="date" id="start_day_update" name="start_day_update" required>
+                        </div>
+
+                        <div class="form_group">
+                            <p>Ngày kết thúc:</p>
+                            <input type="date" id="end_day_update" name="end_day_update" required>
                         </div>
 
                         <div class="form_group">
@@ -84,8 +116,9 @@
                             <input type="text" id="file_choice" name="file_choice" readonly>
                         </div>
 
-                        <div class="form_group">File khác khác:</label>
-                            <input type="file" accept=".jpeg,.jpg,.png,.gif,.mp4,.mov,.avi" class="form_control" id="file_update" name="file_update">
+                        <div class="form_group">
+                            <label for="file_even">Chọn file:</label>
+                            <input type="file" accept=".jpeg,.jpg,.png" class="form_control" id="file_even" name="file_even">
                         </div>
 
                         <div class="group_button">
@@ -107,7 +140,7 @@
 <div class="row">
     <div class="col l-8">
         <div class="search">
-            <p>Tìm kiếm: <input type="text" id="search_general" onkeyup="search('search_general','table_general',1);" placeholder="Tìm kiếm theo tiêu đề" title="Tìm kiếm theo tiêu đề" /></p>
+            <p>Tìm kiếm: <input type="text" id="search_even" onkeyup="search('search_even','table_even',2);" placeholder="Tìm kiếm theo tiêu đề" title="Tìm kiếm theo tiêu đề" /></p>
         </div>
     </div>
     <div class="col l-4">
@@ -116,30 +149,33 @@
         </div>
     </div>
 </div>
-<table class="data row">
-    <tbody id="table_general" class="col l-12">
-        <tr class="row">
-            <th class="col l-1">ID</th>
-            <th class="col l-1">Tiêu đề</th>
-            <th class="col l-1">Thể loại</th>
-            <th class="col l-2">Nội dung</th>
-            <th class="col l-1">Files</th>
-            <th class="col l-2">Ngày thêm</th>
-            <th class="col l-2">Ngày cập nhập</th>
-            <th class="col l-1">Sửa</th>
-            <th class="col l-1">xóa</th>
+<table class="data_even row" style="margin: 0px 10px 0px 10px;">
+    <tbody id="table_even" style="width: 100%; overflow: auto;">
+        <tr style="width: 130%">
+            <th style="width:5%; ">ID</th>
+            <th style="width:5%; ">ID nhóm</th>
+            <th style="width:10%; ">Tiêu đề</th>
+            <th style="width:20%; ">Mô tả</th>
+            <th style="width:20%; ">Nội dung</th>
+            <th style="width:10%; ">Files</th>
+            <th style="width:10%; ">Ngày bắt dầu</th>
+            <th style="width:10%; ">Ngày kết thúc</th>
+            <th style="width:10%; ">Ngày thêm</th>
+            <th style="width:10%; ">Ngày sửa</th>
+            <th style="width:5%; ">Sửa</th>
+            <th style="width:5%; ">Xóa</th>
         </tr>
         <?php
-        load_general();
+        admin_load_even();
         ?>
     </tbody>
 </table>
 <?php
- page();
+page();
 ?>
 <script type="text/javascript">
     $(document).ready(function() {
-        upload_general();
-        update_general();
+        upload_even();
+        update_even();
     });
 </script>

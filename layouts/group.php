@@ -30,13 +30,9 @@ require "../data/config.php";
                     </div>
                 </div>
                 <div class="leader row">
-                    <img src="../public/img/users/team2.jpg" alt="John">
-                    <div class="txt">
-                        <h1>John Doe</h1>
-                        <p class="title">CEO & Founder, Example</p>
-                        <p>Harvard University</p>
-                        <p><a href="#">Contact</a></p>
-                    </div>
+                <?php
+                    leader_group($_GET["id_group"]);
+                ?>
                 </div>
             </div>
         </div>

@@ -42,7 +42,7 @@ setInterval(function(){
 
 function click_img(id,src,alt){
 	var modal = document.getElementById("myModal");
-	var img = document.getElementById("sl_1");
+	var img = document.getElementById(id);
 	var modalImg = document.getElementById("img01");
 	var captionText = document.getElementById("caption");
 	
@@ -85,15 +85,14 @@ function menu_mobile(){
 
 function about(){
 	var video = document.getElementById("myVideo");
-    var btn = document.getElementById("myBtn");
-	
-    if (video.pause()) {
-        video.play();
-        btn.innerHTML = "Pause";
-     } else {
-        video.pause();
-        btn.innerHTML = "Play";
-    }
+	var btn = document.getElementById("myBtn");
+    if (video.paused) {
+		video.play();
+		btn.innerHTML = "Pause";
+	} else {
+		video.pause();
+		btn.innerHTML = "Play";
+	}
 }
 
 function menu_admin(id,email){
@@ -164,7 +163,7 @@ function Display_update_general(id,name,type,note,file){
 	_note.value=note;
 }
 
-function Display_update_group(id,name){
+function Display_update_group(id,name,leader,link,img){
 	var x = document.getElementsByClassName("upload")[0];
 	x.style.display = "none";
 	var up= document.getElementsByClassName("update_data")[0];
@@ -174,4 +173,74 @@ function Display_update_group(id,name){
 	_id.value= id;
 	var _name = document.getElementById("name_update");
 	_name.value=name;
+	var _leader = document.getElementById("leader_update");
+	_leader.value = leader;
+	var _link = document.getElementById("link_leader_update");
+	_link.value = link;
+	var _img_leader = document.getElementById("img_leader_old");
+	_img_leader.value = img;
+}
+
+function Display_update_even(id,id_group,header,description,detail,file,start,end){
+	var x = document.getElementsByClassName("upload")[0];
+	x.style.display = "none";
+	var up= document.getElementsByClassName("update_data")[0];
+	up.style.display="block";
+
+	var _id = document.getElementById("id_update");
+	_id.value= id;
+	var _group = document.getElementById("group_update");
+	_group.value= id_group;
+	var _header = document.getElementById("header_update");
+	_header.value= header;
+	var _description = document.getElementById("description_update");
+	_description.value= description;
+	var _note = document.getElementById("note_update");
+	_note.value= detail;
+	var _file_choice = document.getElementById("file_choice");
+	_file_choice.value= file;
+	var _start_day = document.getElementById("start_day_update");
+	_start_day.value= start;
+	var _end_day = document.getElementById("end_day_update");
+	_end_day.value= end;
+}
+
+function Display_update_contact(id,method,link,file){
+	var x = document.getElementsByClassName("upload")[0];
+	x.style.display = "none";
+	var up= document.getElementsByClassName("update_data")[0];
+	up.style.display="block";
+
+	var _id = document.getElementById("id_update");
+	_id.value= id;
+	var _method = document.getElementById("method_update");
+	_method.value= method;
+	var _file_choice = document.getElementById("logo_choice");
+	_file_choice.value= file;
+	var _link = document.getElementById("contact_update");
+	_link.value= link;
+}
+
+function Display_update_user(id,name,email,birthday,_class,sex,file,role){
+	var x = document.getElementsByClassName("upload")[0];
+	x.style.display = "none";
+	var up= document.getElementsByClassName("update_data")[0];
+	up.style.display="block";
+
+	var _id = document.getElementById("id_update");
+	_id.value = id;
+	var _name = document.getElementById("name_update");
+	_name.value = name;
+	var _brithday = document.getElementById("birthday_update");
+	_brithday.value = birthday;
+	var _email = document.getElementById("email_update");
+	_email.value = email;
+	var _class_up = document.getElementById("_class_update");
+	_class_up.value = _class;
+	var _sex = document.getElementById("_gender_update");
+	_sex.value = sex;
+	var _file = document.getElementById("file_choice");
+	_file.value = file;
+	var _role = document.getElementById("role_update");
+	_role.value = role;
 }

@@ -1,7 +1,54 @@
+<div class="header row">
+    <div class="col l-12">
+        <hr>
+        <h2>Thêm câu hỏi <button class="insert" onclick="insert('insert','upload');">+</button></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col l-o-1 l-o-12 l-10">
+        <!--tải ảnh sl lên-->
+        <div class="upload">
+            <?php
+            if (isset($_GET["email"])) {
+                $theme = $_GET["theme"];
+                echo "<form method='POST' id='upload_question' enctype='multipart/form-data'>
+
+                            <div class='form_group' style='display: none;'>
+                                <label for='id_topic'>Id chủ đề:</label>
+                                <input type='text' id='id_topic' name='id_topic' readonly value='$theme'>
+                            </div>
+
+                            <div class='form_group' style='display: none;'>
+                                <label for='user_create'>Id người tạo:</label>
+                                <input type='text' id='user_create' name='user_create' readonly value='$user_id'>
+                            </div>
+            
+                            <div class='form_group'>
+                                <label for='name_question'>Tên câu hỏi:</label>
+                                <input type='text' id='name_question' placeholder='Nhập vào tên câu hỏi ...' name='name_question' required minlength='5'>
+                            </div>
+            
+                            <div class='form_group'>
+                                <label for='note_question'>Miêu tả chi tiết:</label>
+                                <input type='text' id='note_question' placeholder='Nhập vào miêu tả chi tiết của câu hỏi...' name='note_question' required minlength='5'>
+                            </div>
+            
+                            <div class='group_button'>
+                                <button type='submit' name='upload' id='insert'>Thêm</button>
+                            </div>
+                        </form>";
+            } else {
+                echo "<h3 style='color:red'>Vui lòng đăng nhập vào tài khoản của bạn để thực hiện chức năng này!<h3>";
+            }
+            ?>
+        </div>
+    </div>
+</div>
 <div class="row">
     <div class="col l-12">
         <div class="header">
-            <h1>Nhưng câu hỏi chủa chủ đề A</h1>
+            <hr>
+            <h1>Những câu hỏi chủa chủ đề</h1>
         </div>
     </div>
 </div>
@@ -13,79 +60,22 @@
     </div>
     <div class="col l-4">
         <div class="number">
-            <p>Tổng số câu hỏi: 5</p>
-            <p><button>Thêm câu hỏi</button></p>
+            <p id="number">Tổng số câu hỏi: 0</p>
         </div>
     </div>
 </div>
 <table class="data row">
     <tbody id="table_question" class="col l-12">
         <?php
-        echo "<tr class='row'>
-                    <td class='col l-12'>
-                        <a href='posts.php?email=$email&question=1'>
-                            <img src='../public/gif/question.gif' alt='icon câu hỏi' />
-                            <div>
-                                <h2>Câu hỏi 1</h2>
-                                <p>Miêu tả 1</p>
-                            </div>
-                        </a>
-                    </td>
-                </tr>";
-        echo "<tr class='row'>
-                    <td class='col l-12'>
-                        <a href='posts.php?email=$email&question=2'>
-                            <img src='../public/gif/question.gif' alt='icon câu hỏi' />
-                            <div>
-                                <h2>Câu hỏi 2</h2>
-                                <p>Miêu tả 2</p>
-                            </div>
-                        </a>
-                    </td>
-                </tr>";
-        echo "<tr class='row'>
-                    <td class='col l-12'>
-                        <a href='posts.php?email=$email&question=3'>
-                            <img src='../public/gif/question.gif' alt='icon câu hỏi' />
-                            <div>
-                                <h2>Câu hỏi 3</h2>
-                                <p>Miêu tả 3</p>
-                            </div>
-                        </a>
-                    </td>
-                </tr>";
-        echo "<tr class='row'>
-                <td class='col l-12'>
-                    <a href='posts.php?email=$email&question=4'>
-                        <img src='../public/gif/question.gif' alt='icon câu hỏi' />
-                        <div>
-                            <h2>Câu hỏi 4</h2>
-                            <p>Miêu tả 4</p>
-                        </div>
-                    </a>
-                </td>
-            </tr>";
-        echo "<tr class='row'>
-            <td class='col l-12'>
-                <a href='posts.php?email=$email&question=5'>
-                    <img src='../public/gif/question.gif' alt='icon câu hỏi' />
-                    <div>
-                        <h2>Câu hỏi 5</h2>
-                        <p>Miêu tả 5</p>    
-                    </div>
-                </a>
-            </td>
-        </tr>";
+            load_question();
         ?>
     </tbody>
 </table>
 
-<div class="row">
-    <div class="number_row col l-12">
-        <button id="back">
-            < </button>
-                <button id="1"> 1 </button>
-                <button id="2"> 2 </button>
-                <button id="next"> > </button>
-    </div>
-</div>
+<?php
+_page('forum.php');
+?>
+
+<script type="text/javascript">
+    upload_question();
+</script>

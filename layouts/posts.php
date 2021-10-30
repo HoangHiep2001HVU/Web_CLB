@@ -22,68 +22,59 @@ require "../data/config.php";
     </div>
 
     <div id="body_post" class="grid wide">
+        <?php
+        load_name_question();
+        ?>
         <div class="row">
-            <div class="col l-12">
-                <div class="header">
-                    <h1>Câu hỏi ABC</h1>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col l-12">
-                <p>Miêu tả chi tiết câu hỏi</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col l-12">
+            <div class="col l-12 m-12 c-12">
                 <hr>
                 <h2>Các câu trả lời!</h2>
             </div>
         </div>
-        <div class="row">
-            <div class="col l-12">
-                <h3>User 1</h3>
-                <p class="times">20/10/2021</p>
-                <p class="content_post">nội dung</p>
-                <div class="interact">
-                    <p>Có ... lượt thích</p>
-                    <p>Thích</p>
-                </div>
-            </div>
+        <div id="answer">
+            <?php
+            load_reply();
+            ?>
         </div>
         <div class="row">
-            <div class="col l-12">
-                <h3>User 2</h3>
-                <p class="times">19/10/2021</p>
-                <p class="content_post">nội dung</p>
-                <div class="interact">
-                    <p>Có ... lượt thích</p>
-                    <p>Thích</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col l-12">
+            <div class="col l-12 m-12 c-12">
                 <hr>
                 <h2>Thêm câu trả lời của bạn</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col l-12">
-                <form action="" id="user_post">
+            <div class="col l-12 c-12 m-12">
+                <form method="POST" id="upload_post" enctype="multipart/form-data">
+                    <?php
+                    $question = $_GET["question"];
+                    echo "<div class='form_group' style='display: none;'>
+                                <label for='id_question'>Id chủ đề:</label>
+                                <input type='text' id='id_question' name='id_question' readonly value='$question'>
+                            </div>
+
+                            <div class='form_group' style='display: none;'>
+                                <label for='user_create'>Id người tạo:</label>
+                                <input type='text' id='user_create' name='user_create' readonly value='$user_id'>
+                            </div>";
+                    ?>
                     <div class="content_post_user">
-                        <label for="content">Nội dung trả lời:</label>
-                        <textarea name="content_post_user" id="content" rows="10" placeholder="Vui long nhập nội dung câu trả lời của bạn"></textarea>
+                        <label for="content_post_user">Nội dung trả lời:</label>
+                        <textarea name="content_post_user" id="content_post_user" rows="10" 
+                        placeholder="Vui long nhập nội dung câu trả lời của bạn" minlength="20" require></textarea>
                     </div>
                     <div class="file_content">
                         <label for="file_content">Ảnh minh họa(nếu có):</label>
                         <input type="file" name="file_content" id="file_content">
                     </div>
                     <div class="content_submit">
-                        <button>Trả lời</button>
+                        <button type="submit" style="width: 20%;">Trả lời</button>
                     </div>
                 </form>
             </div>
+
+            <script type="text/javascript">
+               upload_post();
+            </script>
         </div>
     </div>
 

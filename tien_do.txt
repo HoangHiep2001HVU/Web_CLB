@@ -80,3 +80,9 @@
 -Ngày 25/10:
 	+ Định lại quan hệ trong bảng
 	+ Làm song thêm sửa xóa cho group
+-Ngày 26/10:
+	+ link tham khảo ngày tháng trong php: https://toidicode.com/xu-ly-ngay-thang-trong-php-73.html
+- Ngày 29/10:
+	+ Hoàn thiện chức năng cơ bản
+- Ngày 30/10:
+	+ Thêm được diễn đàn còn nốt phần like là oki.

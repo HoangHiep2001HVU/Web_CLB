@@ -40,16 +40,16 @@ require "../data/config.php";
                             require "admin/banners.php";
                         }
                         else if($_GET["tab"]=="tab_5"){
-                            require "admin/";
+                            require "admin/users.php";
                         }
                         else if($_GET["tab"]=="tab_6"){
-                            require "admin/";
+                            
                         }
                         else if($_GET["tab"]=="tab_7"){
-                            require "admin/leaders.php";
+                            
                         }
                         else if($_GET["tab"]=="tab_8"){
-                            require "admin/users.php";
+                            require "admin/contact.php";
                         }
                         else {
                             echo "Không tìm được trang!";
@@ -59,7 +59,7 @@ require "../data/config.php";
                         echo "<script type='text/javascript'>
                             $(document).ready(function() {
                                 current_page($current_page);
-                                $('#number_img').text('Tổng số banner: '+count);
+                                $('#number_img').text('Tổng số: '+count);
                             });
                         </script>";
                     ?>

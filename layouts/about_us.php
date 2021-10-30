@@ -23,74 +23,50 @@ require "../data/config.php";
 
     <div id="contact" class="grid wide">
         <div class="header row">
-            <div class="col l-12">
+            <div class="col l-12 m-12 c-12">
                 <h1>Ban chủ nhiệm câu lạc bộ</h1>
             </div>
         </div>
         <div class="member row">
-            <div class="col l-4">
+            <div class="col l-4 m-4 c-12">
                 <div class="card">
-                    <img src="../public/img/users/team2.jpg" alt="John">
-                    <h1>John Doe</h1>
-                    <p class="title">CEO & Founder, Example</p>
-                    <p>Harvard University</p>
-                    <p><a href="#">Contact</a></p>
+                    <?php
+                    $_role = "Giảng viên cố vấn";
+                    load_contact_user($_role);
+                    ?>
                 </div>
             </div>
-            <div class="col l-4">
+            <div class="col l-4 m-4 c-12">
                 <div class="card">
-                    <img src="../public/img/users/team2.jpg" alt="John">
-                    <h1>John Doe</h1>
-                    <p class="title">CEO & Founder, Example</p>
-                    <p>Harvard University</p>
-                    <p><a href="#">Contact</a></p>
+                    <?php
+                    $_role = "Chủ nhiệm";
+                    load_contact_user($_role);
+                    ?>
                 </div>
             </div>
-            <div class="col l-4">
+            <div class="col l-4 m-4 c-12">
                 <div class="card">
-                    <img src="../public/img/users/team2.jpg" alt="John">
-                    <h1>John Doe</h1>
-                    <p class="title">CEO & Founder, Example</p>
-                    <p>Harvard University</p>
-                    <p><a href="#">Contact</a></p>
+                <?php
+                    $_role = "Phó chủ nhiệm";
+                    load_contact_user($_role);
+                    ?>
                 </div>
             </div>
         </div>
         <div id="contact_us">
             <div class="row">
-                <div class="col l-6">
+                <div class="col l-6 m-12 c-12">
                     <img src="../public/img/backgrounds/contact.png" alt="Ảnh contact.png">
                 </div>
-                <div class="col l-6">
+                <div class="col l-6 m-12 c-12">
                     <div class="contact row">
-                        <div class="col l-12">
-                            <h1>Thông tin liên hệ chung</h1>
+                        <div class="col l-12 m-12 c-12">
+                            <h1 style="margin-bottom: 10px;">Thông tin liên hệ chung</h1>
                         </div>
                     </div>
-                    <div class="phone row">
-                        <div class="col l-1 l-o-1">
-                            <img src="../public/img/backgrounds/phone.png" alt="Ảnh điện thoại">
-                        </div>
-                        <div class="col l-10">
-                            <p>SĐT: 0384191013</p>
-                        </div>
-                    </div>
-                    <div class="email row">
-                        <div class="col l-1 l-o-1">
-                            <img src="../public/img/backgrounds/email.png" alt="Ảnh email">
-                        </div>
-                        <div class="col l-10">
-                            <p>Email: clbtinhoc@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="fb row">
-                        <div class="col l-1 l-o-1">
-                            <img src="../public/img/backgrounds/fb_bg.png" alt="Ảnh điện thoại">
-                        </div>
-                        <div class="col l-10">
-                            <p>Facebook: CLB Tin Hoc</p>
-                        </div>
-                    </div>
+                    <?php
+                    load_contact();
+                    ?>
                 </div>
             </div>
         </div>

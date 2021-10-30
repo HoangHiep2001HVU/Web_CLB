@@ -4,5 +4,5 @@
 		<span class="close" id= "click_img">&times;</span>
 		<img class="modal-content" id="img01" alt="Ảnh vừa click">
 		<div id="caption"></div>
-	</div>
+	</div> 
 </div>

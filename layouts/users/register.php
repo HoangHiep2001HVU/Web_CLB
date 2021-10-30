@@ -49,7 +49,7 @@ require "../../data/config.php";
 					</div>
 
 					<div class="form_group">
-						<label for="gender">Giới tinh:</label>
+						<label for="gender">Giới tính:</label>
 						<select name="gender" id="gender">
 							<option value="Nam">Nam</option>
 							<option value="Nữ">Nữ</option>

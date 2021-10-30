@@ -20,6 +20,21 @@
                     <input type="text" id="name_group" placeholder="Nhập vào tên nhóm ..." name="name_group" required minlength="5">
                 </div>
 
+                <div class="form_group">
+                    <label for="leader_group">Trưởng nhóm:</label>
+                    <input type="text" id="leader_group" placeholder="Nhập vào tên trưởng nhóm ..." name="leader_group" required minlength="5">
+                </div>
+
+                <div class="form_group">
+                    <label for="link_leader_group">Link Facebook/Zalo:</label>
+                    <input type="text" id="link_leader_group" placeholder="Nhập link Facebook/Zalo ..." name="link_leader_group" required minlength="5">
+                </div>
+
+                <div class="form_group">
+                    <label for="img_leader_group">Ảnh trưởng nhóm:</label>
+                    <input type="file" id="img_leader_group" name="img_leader_group" required>
+                </div>
+
                 <div class="group_button">
                     <button type="submit" name="upload" id="insert">Thêm</button>
                 </div>
@@ -33,7 +48,7 @@
             <div class="header row">
                 <div class="col l-12">
                     <hr>
-                    <h2>Chỉnh nhóm<button class="btn_close" onclick="Hide_update();">x</button></h2>
+                    <h2>Chỉnh sửa thông tin nhóm<button class="btn_close" onclick="Hide_update();">x</button></h2>
                 </div>
             </div>
             <div class="row">
@@ -46,8 +61,28 @@
                         </div>
 
                         <div class="form_group">
-                            <label for="name_update">Id:</label>
+                            <label for="name_update">Tên nhóm:</label>
                             <input type="text" id="name_update" name="name_update" placeholder="Vui lòng nhập tên nhóm" required minlength="1">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="leader_update">Trưởng nhóm:</label>
+                            <input type="text" id="leader_update" placeholder="Nhập vào tên trưởng nhóm ..." name="leader_update" required minlength="5">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="link_leader_update">Link Facebook/Zalo:</label>
+                            <input type="text" id="link_leader_update" placeholder="Nhập link Facebook/Zalo ..." name="link_leader_update" required minlength="5">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="img_leader_old">Ảnh trưởng nhóm:</label>
+                            <input type="text" id="img_leader_old" name="img_leader_old" readonly>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="img_leader_update">Ảnh trưởng nhóm:</label>
+                            <input type="file" id="img_leader_update" name="img_leader_update" required>
                         </div>
 
                         <div class="group_button">
@@ -78,15 +113,18 @@
         </div>
     </div>
 </div>
-<table class="data row">
-    <tbody id="table_group" class="col l-12">
-        <tr class="row">
-            <th class="col l-1">ID</th>
-            <th class="col l-5">Tên nhóm</th>
-            <th class="col l-2">Ngày thêm</th>
-            <th class="col l-2">Ngày cập nhập</th>
-            <th class="col l-1">Sửa</th>
-            <th class="col l-1">xóa</th>
+<table class="data row" style="margin: 0px 10px 0px 10px;">
+    <tbody id="table_group" style="width: 100%; overflow: auto;">
+        <tr style="width: 130%">
+            <th style="width: 5%;">ID</th>
+            <th style="width: 20%;">Tên nhóm</th>
+            <th style="width: 20%;">Trưởng nhóm</th>
+            <th style="width: 15%;">Links</th>
+            <th style="width: 10%;">Ảnh trưởng nhóm</th>
+            <th style="width: 10%;">Ngày thêm</th>
+            <th style="width: 10%;">Ngày cập nhập</th>
+            <th style="width: 5%;">Sửa</th>
+            <th style="width: 5%;">xóa</th>
         </tr>
         <?php
         load_group();
@@ -94,7 +132,7 @@
     </tbody>
 </table>
 <?php
- page();
+page();
 ?>
 <script type="text/javascript">
     $(document).ready(function() {

@@ -42,6 +42,7 @@
 			<ul class="mb_users">
 				<?php
 				if (isset($_GET["email"])) {
+					$name = username($user_id, $email, $role);
 					echo "<li class='users'><a href='index.php'>Đăng xuất</a></li>";
 					echo "<li class='users'><a href='#'>$name</a></li>";
 				} else {

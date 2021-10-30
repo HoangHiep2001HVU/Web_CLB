@@ -28,22 +28,22 @@
         </div>
         <div class="row">
             <div class="col l-12">
-                <button id="tab_5" onclick="menu_admin(this.id,email);">Quản lý chủ đề diến đàn</button>
+                <button id="tab_5" onclick="menu_admin(this.id,email);">Quản lý thành viên</button>
             </div>
         </div>
         <div class="row">
             <div class="col l-12">
-                <button id="tab_6" onclick="menu_admin(this.id,email);">Quản lý câu hỏi</button>
+                <button id="tab_6" onclick="menu_admin(this.id,email);">Quản lý chủ đề diến đàn</button>
             </div>
         </div>
         <div class="row">
             <div class="col l-12">
-                <button id="tab_7" onclick="menu_admin(this.id,email);">Quản lý ban chủ nhiệm</button>
+                <button id="tab_7" onclick="menu_admin(this.id,email);">Quản lý câu hỏi</button>
             </div>
         </div>
         <div class="row">
             <div class="col l-12">
-                <button id="tab_8" onclick="menu_admin(this.id,email);">Quản lý thành viên</button>
+                <button id="tab_8" onclick="menu_admin(this.id,email);">Quản lý thông tin liên hệ</button>
             </div>
         </div>
     </div>

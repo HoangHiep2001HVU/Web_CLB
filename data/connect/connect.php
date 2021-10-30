@@ -17,5 +17,5 @@
 	Connect($conn);
 
 	$number_of_pages=0;
-	
+	$pass_default = "clbtinhoc@123";
 ?>

@@ -32,6 +32,7 @@ require "../data/config.php";
             }
 
             if(isset($_GET["theme"])){
+                $theme = $_GET["theme"];
                 require "body/body_question.php";
             }
             else{

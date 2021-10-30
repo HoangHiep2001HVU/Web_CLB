@@ -127,7 +127,7 @@
             <th class="col l-2">Ngày thêm</th>
             <th class="col l-2">Ngày cập nhập</th>
             <th class="col l-1">Sửa</th>
-            <th class="col l-1">xóa</th>
+            <th class="col l-1">Xóa</th>
         </tr>
         <?php
         load_general();

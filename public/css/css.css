@@ -75,6 +75,11 @@ ul {
   border-radius: 5px;
   position: relative;
   cursor: pointer;
+  transition: 0.8s;
+}
+
+button {
+  transition: 0.8s;
 }
 
 .menu li:hover {
@@ -441,6 +446,10 @@ a {
   border: 2px dashed #fff;
 }
 
+.vd img {
+  width: 100%;
+}
+
 .myVideo {
   max-width: 100%;
 }
@@ -558,6 +567,10 @@ a {
   font-size: 20px;
 }
 
+.leader img {
+  max-height: 355px;
+}
+
 .txt {
   margin: 0 auto;
 }
@@ -576,6 +589,19 @@ a {
   background: #66fcf1;
 }
 
+.txt h1{
+  color: #000;
+  text-shadow: 2px 2px 5px #fff;
+}
+
+.txt p {
+  color: #000;
+}
+
+.txt .title {
+  color: gray;
+}
+
 .introduce {
   margin-bottom: 50px;
 }
@@ -592,6 +618,10 @@ a {
   font-family: arial;
   background: #fff;
   color: black;
+}
+
+.card img{
+  max-height: 355px;
 }
 
 .member img {
@@ -646,9 +676,7 @@ a {
   width: 100%;
 }
 
-#contact_us .phone img,
-#contact_us .email img,
-#contact_us .fb img {
+#contact_us .method img {
   width: 150%;
   margin-top: 20px;
 }
@@ -716,12 +744,16 @@ a {
   outline: none;
 }
 
-.data {
+.data, .data_even {
   padding-bottom: 20px;
 }
 
 .data .row {
   margin: 0px 10px;
+}
+
+table {
+  border-collapse:collapse;
 }
 
 th {
@@ -740,25 +772,25 @@ td {
   white-space: nowrap;
 }
 
-.data button {
+.data button, .data_even button {
   width: 100%;
   border: none;
   font-weight: bold;
 }
 
-.data .update {
+.data .update,.data_even .update {
   background: #00ff00;
 }
 
-.data .update:hover {
+.data .update:hover, .data_even .update:hover {
   background: green;
 }
 
-.data .delete {
+.data .delete, .data_even .delete {
   background: red;
 }
 
-.data .delete:hover {
+.data .delete:hover, .data_even .delete:hover {
   background: #b30000;
 }
 
@@ -939,4 +971,15 @@ td {
 .form_group option {
   background: #000;
   color: #fff;
+}
+
+.data_even{
+  border-collapse: collapse;
+}
+
+.data_even td{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 20%;
 }
