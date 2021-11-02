@@ -2,8 +2,8 @@
     require "../connect/connect.php";
 
     $id = $_POST["id_update"];
-    $name = $_POST["name_update"];
-    $leader = $_POST["leader_update"];
+    $name = addslashes($_POST["name_update"]);
+    $leader = addslashes($_POST["leader_update"]);
     $link_leader = $_POST["link_leader_update"];
     $file = $_FILES["img_leader_update"]["name"];
     $file_old = $_POST["img_leader_old"];

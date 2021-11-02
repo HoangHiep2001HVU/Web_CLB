@@ -3,8 +3,8 @@
 
     $id_update = $_POST["id_update"];
     $file = $_FILES['file_update_sl']['name'];
-    $header_img = $_POST['header_update_sl'];
-    $note_sl = $_POST['note_update_sl'];
+    $header_img = addslashes($_POST['header_update_sl']);
+    $note_sl = addslashes($_POST['note_update_sl']);
     $file_choice=$_POST["file_choice"];
 
     $target = "../../public/img/slide_img/" . basename($file);

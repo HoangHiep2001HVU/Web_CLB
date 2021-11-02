@@ -40,18 +40,18 @@ function load_slide_imgs(){
   if($result->num_rows > 0){
     while($row = $result->fetch_assoc()) {
       $id = $row['id'];
-      $name = $row['name'];
+      $name = htmlspecialchars($row['name']);
       $img = $row['image'];
-      $note = $row['note'];
+      $note = htmlspecialchars($row['note']);
       $created_at = $row['created_at'];
       $update_at =  $row['update_at'];
       $remove_sl = "\"Remove_sl($id,'$img')\"";
-      $update="\"Display_update_sl($id,'$name','$img','$note')\"";
+      $update="\"Display_update_sl($id,'".addslashes($name)."','$img','".addslashes($note)."')\"";
       echo "<tr class='row'>
               <td class='col l-1' title='$id'>$id</td>
-              <td class='col l-2' title='$name'>$name</td>
+              <td class='col l-2' title='".str_replace( array( '\'', '"' ), ' ',$name)."'>$name</td>
               <td class='col l-1' title='$img'><img style='width:100%;' src='../public/img/slide_img/$img' alt='$name' onclick='click_img(this.id,this.src,this.alt);'></td>
-              <td class='col l-2' title='$note'>$note</td>
+              <td class='col l-2' title='".str_replace( array( '\'', '"' ), ' ',$note)."'>$note</td>
               <td class='col l-2' title='".date('d-m-Y H:i:s',strtotime($created_at))."'>".date('d-m-Y H:i:s',strtotime($created_at))."</td>
               <td class='col l-2' title='".date('d-m-Y H:i:s',strtotime($update_at))."'>".date('d-m-Y H:i:s',strtotime($update_at))."</td>
               <td class='col l-1' title='Chỉnh sửa'><button class='update' onclick=$update>Sửa</button></td>
@@ -120,19 +120,19 @@ function load_general(){
   if($result->num_rows > 0){
     while($row = $result->fetch_assoc()) {
       $id = $row['id'];
-      $name = $row['name'];
-      $type = $row['type'];
+      $name = htmlspecialchars($row['name']);
+      $type = htmlspecialchars($row['type']);
       $file = $row['file'];
-      $note = $row['note'];
+      $note = htmlspecialchars($row['note']);
       $created_at = $row['created_at'];
       $update_at =  $row['update_at'];
       $remove_sl = "\"remove_general($id,'$file')\"";
-      $update="\"Display_update_general($id,'$name','$type','$note','$file')\"";
+      $update="\"Display_update_general($id,'".addslashes($name)."','".addslashes($type)."','".addslashes($note)."','$file')\"";
       echo "<tr class='row'>
               <td class='col l-1' title='$id'>$id</td>
-              <td class='col l-1' title='$name'>$name</td>
-              <td class='col l-1' title='$type'>$type</td>
-              <td class='col l-2' title='$note'>$note</td>";
+              <td class='col l-1' title='".str_replace( array( '\'', '"' ), ' ',$name)."'>$name</td>
+              <td class='col l-1' title='".str_replace( array( '\'', '"' ), ' ',$type)."'>$type</td>
+              <td class='col l-2' title='".str_replace( array( '\'', '"' ), ' ',$note)."'>$note</td>";
       $imageFileType = strtolower(pathinfo($file, PATHINFO_EXTENSION));
 
       
@@ -168,19 +168,19 @@ function load_group(){
   if($result->num_rows > 0){
     while($row = $result->fetch_assoc()) {
       $id = $row['id'];
-      $name = $row['name'];
-      $leader = $row['leader'];
-      $link = $row['link_contact'];
+      $name = htmlspecialchars($row['name']);
+      $leader = htmlspecialchars($row['leader']);
+      $link = htmlspecialchars($row['link_contact']);
       $img = $row['image_leader'];
       $created_at = $row['created_at'];
       $update_at =  $row['update_at'];
-      $update = "\"Display_update_group($id,'$name','$leader','$link','$img')\"";
+      $update = "\"Display_update_group($id,'".addslashes($name)."','".addslashes($leader)."','".addslashes($link)."','$img')\"";
       $remove = "\"remove_group($id,'$img')\"";
       echo "<tr style='width: 100%'>
               <td style='max-width: 50px;' title='$id'>$id</td>
-              <td style='max-width: 150px;' title='$name'>$name</td>
-              <td style='max-width: 150px;' title='$leader'>$leader</td>
-              <td style='max-width: 150px;' title='$link'>$link</td>
+              <td style='max-width: 150px;' title='".str_replace( array( '\'', '"' ), ' ',$name)."'>$name</td>
+              <td style='max-width: 150px;' title='".str_replace( array( '\'', '"' ), ' ',$leader)."'>$leader</td>
+              <td style='max-width: 150px;' title='".str_replace( array( '\'', '"' ), ' ',$link)."'>$link</td>
               <td style='max-width: 50px;' title='$img'><img style='width:100%;' src='../public/img/leader/$img' alt='$name' onclick='click_img(this.id,this.src,this.alt);'></td>
               <td style='max-width: 100px;' title='".date('d-m-Y H:i:s',strtotime($created_at))."'>".date('d-m-Y H:i:s',strtotime($created_at))."</td>
               <td style='max-width: 100px;' title='".date('d-m-Y H:i:s',strtotime($update_at))."'>".date('d-m-Y H:i:s',strtotime($update_at))."</td>
@@ -209,22 +209,22 @@ function admin_load_even(){
     while($row = $result->fetch_assoc()) {
       $id = $row['id'];
       $id_group = $row['id_group'];
-      $name = $row['name'];
-      $description = $row['description'];
-      $detail = $row['detail'];
+      $name = htmlspecialchars($row['name']);
+      $description = htmlspecialchars($row['description']);
+      $detail = htmlspecialchars($row['detail']);
       $file = $row['file'];
       $start = $row['start_day'];
       $end = $row['end_date'];
       $created_at = $row['created_at'];
       $update_at =  $row['update_at'];
-      $update = "\"Display_update_even($id,'$id_group','$name','$description','$detail','$file','$start','$end')\"";
+      $update = "\"Display_update_even($id,'$id_group','".addslashes($name)."','".addslashes($description)."','".addslashes($detail)."','$file','$start','$end')\"";
       $remove = "\"remove_even($id,'$file')\"";
       echo "<tr style='width: 130%'>
             <td style='max-width: 50px;' title='$id'>$id</td>
             <td style='max-width: 50px;' title='$id_group'>$id_group</td>
-            <td style='max-width: 150px;' title='$name'>$name</td>
-            <td style='max-width: 200px;' title='$description'>$description</td>
-            <td style='max-width: 350px;' title='$detail'>$detail</td>
+            <td style='max-width: 150px;' title='".str_replace( array( '\'', '"' ), ' ',$name)."'>$name</td>
+            <td style='max-width: 200px;' title='".str_replace( array( '\'', '"' ), ' ',$description)."'>$description</td>
+            <td style='max-width: 350px;' title='".str_replace( array( '\'', '"' ), ' ',$detail)."'>$detail</td>
             <td style='max-width: 100px;' title='$file'><img style='width:100%;' src='../public/img/even_img/$file' alt='$file' onclick='click_img(this.id,this.src,this.alt);'></td>
             <td style='max-width: 100px;' title='".date('d-m-Y H:i:s',strtotime($start))."'>".date('d-m-Y H:i:s',strtotime($start))."</td>
             <td style='max-width: 100px;' title='".date('d-m-Y H:i:s',strtotime($end))."'>".date('d-m-Y H:i:s',strtotime($end))."</td>
@@ -249,7 +249,7 @@ function group_choice(){
   if($result->num_rows > 0){
     while($row = $result->fetch_assoc()) {
       $id = $row["id"];
-      $name = $row["name"];
+      $name = htmlspecialchars($row["name"]);
      echo "<option value='$id'>$name</option>";
     }
   }
@@ -269,17 +269,17 @@ function contact(){
   if($result->num_rows > 0){
     while($row = $result->fetch_assoc()) {
       $id = $row['id'];
-      $method = $row['method'];
-      $link = $row['link'];
+      $method = htmlspecialchars($row['method']);
+      $link = htmlspecialchars($row['link']);
       $file = $row['logo'];
       $created_at = $row['created_at'];
       $update_at =  $row['update_at'];
-      $update = "\"Display_update_contact($id,'$method','$link','$file');\"";
+      $update = "\"Display_update_contact($id,'".addslashes($method)."','".addslashes($link)."','$file');\"";
       $remove = "\"remove_contact($id,'$file');\"";
       echo "<tr class='row'>
             <td class='col l-1' title='$id'>$id</td>
-            <td class='col l-2' title='$method'>$method</td>
-            <td class='col l-2' title='$link'>$link</td>
+            <td class='col l-2' title='".str_replace( array( '\'', '"' ), ' ',$method)."'>$method</td>
+            <td class='col l-2' title='".str_replace( array( '\'', '"' ), ' ',$link)."'>$link</td>
             <td class='col l-1' title='$file'><img style='width:100%;' src='../public/img/$file' alt='$file' onclick='click_img(this.id,this.src,this.alt);'></td>
             <td class='col l-2' title='".date('d-m-Y H:i:s',strtotime($created_at))."'>".date('d-m-Y H:i:s',strtotime($created_at))."</td>
             <td class='col l-2' title='".date('d-m-Y H:i:s',strtotime($update_at))."'>".date('d-m-Y H:i:s',strtotime($update_at))."</td>
@@ -309,24 +309,24 @@ function users(){
     while($row = $result->fetch_assoc()) {
       $id = $row['id'];
       $id_role = $row['id_role'];
-      $name = $row['name'];
-      $email = $row['email'];
+      $name = htmlspecialchars($row['name']);
+      $email = htmlspecialchars($row['email']);
       $birthday =$row['birthday'];
-      $_class = $row['class'];
+      $_class = htmlspecialchars($row['class']);
       $sex = $row['sex'];
       $file = $row['image'];
       $role = $row['role'];
       $created_at = $row['created_at'];
       $update_at =  $row['update_at'];
-      $update = "\"Display_update_user($id,'$name','$email','".date('Y-m-d',strtotime($birthday))."','$_class','$sex','$file','$id_role');\"";
+      $update = "\"Display_update_user($id,'".addslashes($name)."','".addslashes($email)."','".date('Y-m-d',strtotime($birthday))."','".addslashes($_class)."','$sex','$file','$id_role');\"";
       $remove = "\"remove_user($id,'$file');\"";
       $reset_pass ="\"reset_pass($id);\"";
       echo "<tr style='width: 130%'>
             <td style='max-width: 50px;' title='$id'>$id</td>
-            <td style='max-width: 250px;' title='$name'>$name</td>
-            <td style='max-width: 150px;' title='$email'>$email</td>
+            <td style='max-width: 250px;' title='".str_replace( array( '\'', '"' ), ' ',$name)."'>$name</td>
+            <td style='max-width: 150px;' title='".str_replace( array( '\'', '"' ), ' ',$email)."'>$email</td>
             <td style='max-width: 200px;' title='$birthday'>".date('d-m-Y',strtotime($birthday))."</td>
-            <td style='max-width: 100px;' title='$_class'>$_class</td>
+            <td style='max-width: 100px;' title='".str_replace( array( '\'', '"' ), ' ',$_class)."'>$_class</td>
             <td style='max-width: 100px;' title='$sex'>$sex</td>
             <td style='max-width: 150px;' title='$file'><img style='width:100%;' src='../public/img/users/$file' alt='$file' onclick='click_img(this.id,this.src,this.alt);'></td>
             <td style='max-width: 100px;' title='$role'>$role</td>
@@ -351,7 +351,7 @@ function role_clb(){
   if($result->num_rows > 0){
     while($row = $result->fetch_assoc()) {
       $id = $row["id"];
-      $role = $row["role"];
+      $role = htmlspecialchars($row["role"]);
      echo "<option value='$id'>$role</option>";
     }
   }
@@ -372,17 +372,17 @@ function topic(){
     while($row = $result->fetch_assoc()) {
       $id = $row['id'];
       $id_user = $row['user_create'];
-      $topic = $row['topic'];
-      $note = $row['note'];
+      $topic = htmlspecialchars($row['topic']);
+      $note = htmlspecialchars($row['note']);
       $created_at = $row['created_at'];
       $update_at =  $row['update_at'];
-      $update = "\"Display_update_topic($id,'$topic','$note');\"";
+      $update = "\"Display_update_topic($id,'".addslashes($topic)."','".addslashes($note)."');\"";
       $remove = "\"remove_topic($id);\"";
       echo "<tr class='row'>
             <td class='col l-1' title='$id'>$id</td>
             <td class='col l-1' title='$id_user'>$id_user</td>
-            <td class='col l-2' title='$topic'>$topic</td>
-            <td class='col l-2' title='$note'>$note</td>
+            <td class='col l-2' title='".str_replace( array( '\'', '"' ), ' ',$topic)."'>$topic</td>
+            <td class='col l-2' title='".str_replace( array( '\'', '"' ), ' ',$note)."'>$note</td>
             <td class='col l-2' title='".date('d-m-Y H:i:s',strtotime($created_at))."'>".date('d-m-Y H:i:s',strtotime($created_at))."</td>
             <td class='col l-2' title='".date('d-m-Y H:i:s',strtotime($update_at))."'>".date('d-m-Y H:i:s',strtotime($update_at))."</td>
             <td class='col l-1' ><button class='update' onclick=$update>Sửa</button></td>
@@ -403,7 +403,7 @@ function topic_choice(){
   if($result->num_rows > 0){
     while($row = $result->fetch_assoc()) {
       $id = $row["id"];
-      $topic = $row["topic"];
+      $topic = htmlspecialchars($row["topic"]);
      echo "<option value='$id'>$topic</option>";
     }
   }
@@ -425,18 +425,18 @@ function question(){
       $id = $row['id'];
       $id_user = $row['user_create'];
       $id_topic = $row["id_topic"];
-      $question = $row['question'];
-      $note = $row['note'];
+      $question = htmlspecialchars($row['question']);
+      $note = htmlspecialchars($row['note']);
       $created_at = $row['created_at'];
       $update_at =  $row['update_at'];
-      $update = "\"Display_update_question($id,'$id_topic','$question','$note');\"";
+      $update = "\"Display_update_question($id,'$id_topic','".addslashes($question)."','".addslashes($note)."');\"";
       $remove = "\"remove_question($id);\"";
       echo "<tr class='row'>
             <td class='col l-1' title='$id'>$id</td>
             <td class='col l-1' title='$id_topic'>$id_topic</td>
             <td class='col l-1' title='$id_user'>$id_user</td>
-            <td class='col l-1' title='$question'>$question</td>
-            <td class='col l-2' title='$note'>$note</td>
+            <td class='col l-1' title='".str_replace( array( '\'', '"' ), ' ',$question)."'>$question</td>
+            <td class='col l-2' title='".str_replace( array( '\'', '"' ), ' ',$note)."'>$note</td>
             <td class='col l-2' title='".date('d-m-Y H:i:s',strtotime($created_at))."'>".date('d-m-Y H:i:s',strtotime($created_at))."</td>
             <td class='col l-2' title='".date('d-m-Y H:i:s',strtotime($update_at))."'>".date('d-m-Y H:i:s',strtotime($update_at))."</td>
             <td class='col l-1' ><button class='update' onclick=$update>Sửa</button></td>
@@ -457,7 +457,7 @@ function question_choice(){
   if($result->num_rows > 0){
     while($row = $result->fetch_assoc()) {
       $id = $row["id"];
-      $question = $row["question"];
+      $question = htmlspecialchars($row["question"]);
      echo "<option value='$id'>$question</option>";
     }
   }
@@ -479,18 +479,18 @@ function load_post(){
       $id = $row['id'];
       $id_question = $row['id_question'];
       $user_create = $row["user_create"];
-      $answer = $row['answer'];
+      $answer = htmlspecialchars($row['answer']);
       $file = $row['file'];
       $_like = $row['_like'];
       $created_at = $row['created_at'];
       $update_at =  $row['update_at'];
-      $update = "\"Display_update_post($id,'$id_question','$answer','$file');\"";
+      $update = "\"Display_update_post($id,'$id_question','".addslashes($answer)."','$file');\"";
       $remove = "\"remove_post($id,'$file');\"";
       echo "<tr class='row'>
             <td class='col l-1' title='$id'>$id</td>
             <td class='col l-1' title='$id_question'>$id_question</td>
             <td class='col l-1' title='$user_create'>$user_create</td>
-            <td class='col l-3' title='$answer'>$answer</td>
+            <td class='col l-3' title='".str_replace( array( '\'', '"' ), ' ',$answer)."'>$answer</td>
             <td class='col l-1' title='$file'><img style='width:100%;' src='../public/img/post/$file' alt='$file' onclick='click_img(this.id,this.src,this.alt);'></td>
             <td class='col l-1' title='$_like'>$_like</td>
             <td class='col l-1' title='".date('d-m-Y H:i:s',strtotime($created_at))."'>".date('d-m-Y H:i:s',strtotime($created_at))."</td>

@@ -2,7 +2,7 @@
     require "../connect/connect.php";
 
 	$file = $_FILES['contact_logo']['name'];
-	$method = $_POST['contact_method'];
+	$method = addslashes($_POST['contact_method']);
 	$link = $_POST['contact_link'];
 	
     //lấy phần mowrroongj của file

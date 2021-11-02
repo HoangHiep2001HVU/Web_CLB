@@ -2,8 +2,8 @@
     require "../connect/connect.php";
 
     $id_user = $_POST["user_create"];
-    $name = $_POST["name_topic"];
-    $note_topic = $_POST["note_topic"];
+    $name = addslashes($_POST["name_topic"]);
+    $note_topic = addslashes($_POST["note_topic"]);
     
     $sql = "INSERT INTO question_topics(user_create, topic, note) VALUES ('$id_user','$name','$note_topic')";
     $upload_kt=mysqli_query($conn, $sql);

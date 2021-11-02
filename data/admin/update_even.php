@@ -3,9 +3,9 @@
 
     $id = $_POST["id_update"];
     $id_group = $_POST["group_update"];
-    $header = $_POST["header_update"];
-    $description = $_POST["description_update"];
-    $note = $_POST["note_update"];
+    $header = addslashes($_POST["header_update"]);
+    $description = addslashes($_POST["description_update"]);
+    $note = addslashes($_POST["note_update"]);
     $start_date = $_POST["start_day_update"];
     $end_date = $_POST["end_day_update"];
     $file = $_FILES['file_even']['name'];

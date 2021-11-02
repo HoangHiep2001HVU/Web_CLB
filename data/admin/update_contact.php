@@ -3,7 +3,7 @@
 
     $id = $_POST['id_update'];
 	$file = $_FILES['logo_update']['name'];
-	$method = $_POST['method_update'];
+	$method = addslashes($_POST['method_update']);
 	$link = $_POST['contact_update'];
     $file_old = $_POST['logo_choice'];
 	

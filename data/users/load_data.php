@@ -16,7 +16,7 @@
 				$role = $row['role'];
 			}
 		}
-		return $name;
+		return htmlspecialchars($name);
 	}
 	
 	//Hàm lấy ra tên các nhóm r gán vào menu
@@ -31,10 +31,10 @@
 				$id = $row['id'];
 				$name_group = $row['name'];
 				if($email==""){
-					echo "<li><a href='group.php?id_group=$id'>$name_group</a></li>";
+					echo "<li><a href='group.php?id_group=$id'>".htmlspecialchars($name_group)."</a></li>";
 				}
 				else{
-					echo "<li><a href='group.php?email=$email&id_group=$id'>$name_group</a></li>";
+					echo "<li><a href='group.php?email=$email&id_group=$id'>".htmlspecialchars($name_group)."</a></li>";
 				}
 				
 			}
@@ -51,7 +51,7 @@
 				$name = $row['name'];
 				$img = $row['image'];
 				$note = $row['note'];
-				echo "<img id='$id' src='../public/img/slide_img/$img' alt='$name' onclick='click_img(this.id,this.src,this.alt);'/>";
+				echo "<img id='$id' src='../public/img/slide_img/$img' alt='".htmlspecialchars($name)."' onclick='click_img(this.id,this.src,this.alt);'/>";
 			}
 		}
 		echo "<script type='text/javascript'>
@@ -79,9 +79,9 @@
 			while($row = $result->fetch_assoc()) {
 			$id = $row['id'];
 			$id_group = $row['id_group'];
-			$name = $row['name'];
-			$description = $row['description'];
-			$detail = $row['detail'];
+			$name = htmlspecialchars($row['name']);
+			$description = htmlspecialchars($row['description']);
+			$detail = htmlspecialchars($row['detail']);
 			$file = $row['file'];
 			$start = $row['start_day'];
 			$end = $row['end_date'];
@@ -172,9 +172,9 @@
 		if($result->num_rows > 0){
 			while($row = $result->fetch_assoc()) {
 				$id = $row['id'];
-				$name = $row['name'];
+				$name = htmlspecialchars($row['name']);
 				$type = $row['type'];
-				$note = $row['note'];
+				$note = htmlspecialchars($row['note']);
 				$video = $row['file'];
 			}
 		}
@@ -218,8 +218,8 @@
 		if($result->num_rows > 0){
 			while($row = $result->fetch_assoc()) {
 				$id = $row['id'];
-				$method = $row['method'];
-				$link = $row['link'];
+				$method = htmlspecialchars($row['method']);
+				$link = htmlspecialchars($row['link']);
 				$file = $row['logo'];
 				echo " <div class='method row'>
 					<div class='col l-1 l-o-1'>
@@ -240,7 +240,7 @@
 		$result = $conn->query($sql);
 		if($result->num_rows > 0){
 			while($row = $result->fetch_assoc()) {
-				$name = $row['name'];
+				$name = htmlspecialchars($row['name']);
 				$_role = $row['role'];
 				$file = $row['image'];
 				echo "<img src='../public/img/users/$file' alt='$name'>
@@ -258,8 +258,8 @@
 		$result = $conn->query($sql);
 		if($result->num_rows > 0){
 			while($row = $result->fetch_assoc()) {
-				$name = $row['leader'];
-				$link = $row['link_contact'];
+				$name = htmlspecialchars($row['leader']);
+				$link = htmlspecialchars($row['link_contact']);
 				$file = $row['image_leader'];
 				echo "<div class='col l-4 m-4 c-12'>
 						<img src='../public/img/leader/$file' style='width: 100%;' alt='$name'>
@@ -289,8 +289,8 @@
 		if($result->num_rows > 0){
 			while($row = $result->fetch_assoc()) {
 			$id = $row["id"];
-			$topic = $row["topic"];
-			$note = $row["note"];
+			$topic = htmlspecialchars($row["topic"]);
+			$note = htmlspecialchars($row["note"]);
 			echo "<tr class='row'>
 					<td class='col l-12'>
 						<a href='$_link=$id'>
@@ -323,8 +323,8 @@
 		if($result->num_rows > 0){
 			while($row = $result->fetch_assoc()) {
 			$id = $row["id"];
-			$question = $row["question"];
-			$note = $row["note"];
+			$question = htmlspecialchars($row["question"]);
+			$note = htmlspecialchars($row["note"]);
 			echo "<tr class='row'>
                     <td class='col l-12'>
                         <a href='posts.php?email=".$_GET["email"]."&theme=".$_GET["theme"]."&question=$id'>
@@ -365,7 +365,7 @@
 		if($result->num_rows > 0){
 			while($row = $result->fetch_assoc()) {
 			$id = $row["id"];
-			$question = $row["question"];
+			$question = htmlspecialchars($row["question"]);
 			$note = $row["note"];
 			echo "<div class='row'>
 					<div class='col l-12 m-12 c-12'>
@@ -398,8 +398,8 @@
 		if($result->num_rows > 0){
 			while($row = $result->fetch_assoc()) {
 			$id = $row["id"];
-			$name = $row["name"];
-			$answer = $row["answer"];
+			$name = htmlspecialchars($row["name"]);
+			$answer = htmlspecialchars($row["answer"]);
 			$file = $row["file"];
 			$like = $row["_like"];
 			$created_at = $row["created_at"];

@@ -2,9 +2,9 @@
     require "../connect/connect.php";
 
 	$file = $_FILES['file_general']['name'];
-	$header = $_POST['header_general'];
-	$note = $_POST['note_general'];
-    $type = $_POST['type'];
+	$header = addslashes($_POST['header_general']);
+	$note = addslashes($_POST['note_general']);
+    $type = addslashes($_POST['type']);
 	
     //lấy phần mowrroongj của file
 	$imageFileType = strtolower(pathinfo($file, PATHINFO_EXTENSION));

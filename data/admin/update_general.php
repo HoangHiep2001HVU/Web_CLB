@@ -3,8 +3,8 @@
 
     $id_update = $_POST["id_update"];
     $file = $_FILES['file_update']['name'];
-	$header = $_POST['header_update'];
-	$note = $_POST['note_update'];
+	$header = addslashes($_POST['header_update']);
+	$note = addslashes($_POST['note_update']);
     $type = $_POST['type'];
     $file_choice=$_POST["file_choice"];
 

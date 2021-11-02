@@ -3,7 +3,7 @@ require "../connect/connect.php";
 
 $id_question = $_POST["id_question"];
 $id_user = $_POST["user_create"];
-$note = $_POST["content_post_user"];
+$note = addslashes($_POST["content_post_user"]);
 $file = $_FILES["file_content"]["name"];
 
 if($note==""){

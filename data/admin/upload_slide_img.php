@@ -2,8 +2,8 @@
 	require "../connect/connect.php";
 
 	$file = $_FILES['file_img_sl']['name'];
-	$header_img = $_POST['header_img_sl'];
-	$note_sl = $_POST['note_img_sl'];
+	$header_img = addslashes($_POST['header_img_sl']);
+	$note_sl = addslashes($_POST['note_img_sl']);
 
 	$target = "../../public/img/slide_img/" . basename($file);
 	$imageFileType = strtolower(pathinfo($target, PATHINFO_EXTENSION));

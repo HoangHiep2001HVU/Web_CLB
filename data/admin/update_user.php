@@ -2,10 +2,10 @@
 require "../connect/connect.php";
 if (isset($_POST['id_update'])) {
     $id = $_POST['id_update'];
-    $name = $_POST['name_update'];
+    $name = addslashes($_POST['name_update']);
     $birthday = $_POST['birthday_update'];
-    $email = $_POST['email_update'];
-    $_class = $_POST['_class_update'];
+    $email = addslashes($_POST['email_update']);
+    $_class = addslashes($_POST['_class_update']);
     $sex = $_POST['_gender_update'];
     $role = $_POST['role_update'];
     $file_choice = $_POST['file_choice'];

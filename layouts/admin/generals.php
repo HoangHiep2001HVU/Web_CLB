@@ -17,8 +17,8 @@
                 <div class="form_group">
                     <label for="type">Chọn thể loại:</label>
                     <select name="type" id="type">
-                        <option value="Sự kiện">Sự kiện</option>
                         <option value="Giới thiệu">Giới thiệu</option>
+                        <option value="Phát triển sau">Để đây sau này phát triển</option>
                     </select>
                 </div>
 
@@ -59,8 +59,8 @@
                         <div class="form_group">
                             <label for="type_update">Chọn thể loại:</label>
                             <select name="type" id="type_update">
-                                <option value="Sự kiện">Sự kiện</option>
                                 <option value="Giới thiệu">Giới thiệu</option>
+                                <option value="Phát triển sau">Để đây sau này phát triển</option>
                             </select>
                         </div>
 

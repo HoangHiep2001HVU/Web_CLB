@@ -1,10 +1,10 @@
 <?php
 require "../connect/connect.php";
 if (isset($_POST['name'])) {
-    $name = $_POST['name'];
+    $name = addslashes($_POST['name']);
     $birthday = $_POST['birthday'];
-    $email = $_POST['email'];
-    $_class = $_POST['_class'];
+    $email = addslashes($_POST['email']);
+    $_class = addslashes($_POST['_class']);
     $sex = $_POST['_gender'];
     $role = $_POST['role'];
     $file = $_FILES['file']['name'];

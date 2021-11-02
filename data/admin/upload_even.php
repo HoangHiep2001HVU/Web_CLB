@@ -2,9 +2,9 @@
     require "../connect/connect.php";
 
     $id_group = $_POST["group"];
-    $header = $_POST["header_even"];
-    $description = $_POST["description_even"];
-    $note = $_POST["note_even"];
+    $header = addslashes($_POST["header_even"]);
+    $description = addslashes($_POST["description_even"]);
+    $note = addslashes($_POST["note_even"]);
     $start_date = $_POST["start_day"];
     $end_date = $_POST["end_day"];
     $file = $_FILES['file_even']['name'];

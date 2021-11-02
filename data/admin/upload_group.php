@@ -1,8 +1,8 @@
 <?php
     require "../connect/connect.php";
 
-    $name = $_POST["name_group"];
-    $leader = $_POST["leader_group"];
+    $name = addslashes($_POST["name_group"]);
+    $leader = addslashes($_POST["leader_group"]);
     $link_leader = $_POST["link_leader_group"];
     $file = $_FILES["img_leader_group"]["name"];
 
