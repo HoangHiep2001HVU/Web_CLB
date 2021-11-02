@@ -244,3 +244,33 @@ function Display_update_user(id,name,email,birthday,_class,sex,file,role){
 	var _role = document.getElementById("role_update");
 	_role.value = role;
 }
+
+function Display_update_topic(id,topic,note){
+	var x = document.getElementsByClassName("upload")[0];
+	x.style.display = "none";
+	var up= document.getElementsByClassName("update_data")[0];
+	up.style.display="block";
+
+	var _id = document.getElementById("id_update");
+	_id.value = id;
+	var _name = document.getElementById("name_topic_update");
+	_name.value = topic;
+	var _note = document.getElementById("note_topic_update");
+	_note.value = note;
+}
+
+function Display_update_question(id,id_topic,question,note){
+	var x = document.getElementsByClassName("upload")[0];
+	x.style.display = "none";
+	var up= document.getElementsByClassName("update_data")[0];
+	up.style.display="block";
+
+	var _id = document.getElementById("id_update");
+	_id.value = id;
+	var _name = document.getElementById("name_question_update");
+	_name.value = question;
+	var topic = document.getElementById("id_topic_update");
+	topic.value = id_topic;
+	var _note = document.getElementById("note_question_update");
+	_note.value = note;
+}

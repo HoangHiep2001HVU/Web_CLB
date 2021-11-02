@@ -43,12 +43,15 @@ require "../data/config.php";
                             require "admin/users.php";
                         }
                         else if($_GET["tab"]=="tab_6"){
-                            
+                            require "admin/topic.php";
                         }
                         else if($_GET["tab"]=="tab_7"){
-                            
+                            require "admin/questions.php";
                         }
                         else if($_GET["tab"]=="tab_8"){
+                            require "admin/replys.php";
+                        }
+                        else if($_GET["tab"]=="tab_9"){
                             require "admin/contact.php";
                         }
                         else {

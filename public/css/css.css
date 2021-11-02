@@ -589,7 +589,7 @@ a {
   background: #66fcf1;
 }
 
-.txt h1{
+.txt h1 {
   color: #000;
   text-shadow: 2px 2px 5px #fff;
 }
@@ -620,7 +620,7 @@ a {
   color: black;
 }
 
-.card img{
+.card img {
   max-height: 355px;
 }
 
@@ -744,7 +744,8 @@ a {
   outline: none;
 }
 
-.data, .data_even {
+.data,
+.data_even {
   padding-bottom: 20px;
 }
 
@@ -753,7 +754,7 @@ a {
 }
 
 table {
-  border-collapse:collapse;
+  border-collapse: collapse;
 }
 
 th {
@@ -772,25 +773,30 @@ td {
   white-space: nowrap;
 }
 
-.data button, .data_even button {
+.data button,
+.data_even button {
   width: 100%;
   border: none;
   font-weight: bold;
 }
 
-.data .update,.data_even .update {
+.data .update,
+.data_even .update {
   background: #00ff00;
 }
 
-.data .update:hover, .data_even .update:hover {
+.data .update:hover,
+.data_even .update:hover {
   background: green;
 }
 
-.data .delete, .data_even .delete {
+.data .delete,
+.data_even .delete {
   background: red;
 }
 
-.data .delete:hover, .data_even .delete:hover {
+.data .delete:hover,
+.data_even .delete:hover {
   background: #b30000;
 }
 
@@ -973,13 +979,27 @@ td {
   color: #fff;
 }
 
-.data_even{
+.data_even {
   border-collapse: collapse;
 }
 
-.data_even td{
+.data_even td {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 20%;
+}
+
+.like {
+  background: none;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  margin-top: -17px;
+  font-size: 14px;
+}
+
+.like:hover {
+  color: #66fcf1;
 }

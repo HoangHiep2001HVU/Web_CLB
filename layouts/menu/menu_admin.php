@@ -33,7 +33,7 @@
         </div>
         <div class="row">
             <div class="col l-12">
-                <button id="tab_6" onclick="menu_admin(this.id,email);">Quản lý chủ đề diến đàn</button>
+                <button id="tab_6" onclick="menu_admin(this.id,email);">Quản lý chủ đề câu hỏi</button>
             </div>
         </div>
         <div class="row">
@@ -43,7 +43,12 @@
         </div>
         <div class="row">
             <div class="col l-12">
-                <button id="tab_8" onclick="menu_admin(this.id,email);">Quản lý thông tin liên hệ</button>
+                <button id="tab_8" onclick="menu_admin(this.id,email);">Quản lý câu trả lời</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l-12">
+                <button id="tab_9" onclick="menu_admin(this.id,email);">Quản lý thông tin liên hệ</button>
             </div>
         </div>
     </div>

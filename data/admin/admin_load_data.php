@@ -225,7 +225,7 @@ function admin_load_even(){
             <td style='max-width: 150px;' title='$name'>$name</td>
             <td style='max-width: 200px;' title='$description'>$description</td>
             <td style='max-width: 350px;' title='$detail'>$detail</td>
-            <td style='max-width: 100px;' title='$file'><img style='width:100%;' src='../public/img/even_img/$file' alt='$file' onclick='click_img(this.id,this.src,this.alt);'></td></td>
+            <td style='max-width: 100px;' title='$file'><img style='width:100%;' src='../public/img/even_img/$file' alt='$file' onclick='click_img(this.id,this.src,this.alt);'></td>
             <td style='max-width: 100px;' title='".date('d-m-Y H:i:s',strtotime($start))."'>".date('d-m-Y H:i:s',strtotime($start))."</td>
             <td style='max-width: 100px;' title='".date('d-m-Y H:i:s',strtotime($end))."'>".date('d-m-Y H:i:s',strtotime($end))."</td>
             <td style='max-width: 100px;' title='".date('d-m-Y H:i:s',strtotime($created_at))."'>".date('d-m-Y H:i:s',strtotime($created_at))."</td>
@@ -280,7 +280,7 @@ function contact(){
             <td class='col l-1' title='$id'>$id</td>
             <td class='col l-2' title='$method'>$method</td>
             <td class='col l-2' title='$link'>$link</td>
-            <td class='col l-1' title='$file'><img style='width:100%;' src='../public/img/$file' alt='$file' onclick='click_img(this.id,this.src,this.alt);'></td></td>
+            <td class='col l-1' title='$file'><img style='width:100%;' src='../public/img/$file' alt='$file' onclick='click_img(this.id,this.src,this.alt);'></td>
             <td class='col l-2' title='".date('d-m-Y H:i:s',strtotime($created_at))."'>".date('d-m-Y H:i:s',strtotime($created_at))."</td>
             <td class='col l-2' title='".date('d-m-Y H:i:s',strtotime($update_at))."'>".date('d-m-Y H:i:s',strtotime($update_at))."</td>
             <td class='col l-1' ><button class='update' onclick=$update>Sửa</button></td>
@@ -328,7 +328,7 @@ function users(){
             <td style='max-width: 200px;' title='$birthday'>".date('d-m-Y',strtotime($birthday))."</td>
             <td style='max-width: 100px;' title='$_class'>$_class</td>
             <td style='max-width: 100px;' title='$sex'>$sex</td>
-            <td style='max-width: 150px;' title='$file'><img style='width:100%;' src='../public/img/users/$file' alt='$file' onclick='click_img(this.id,this.src,this.alt);'></td></td>
+            <td style='max-width: 150px;' title='$file'><img style='width:100%;' src='../public/img/users/$file' alt='$file' onclick='click_img(this.id,this.src,this.alt);'></td>
             <td style='max-width: 100px;' title='$role'>$role</td>
             <td style='max-width: 100px;' title='".date('d-m-Y H:i:s',strtotime($created_at))."'>".date('d-m-Y H:i:s',strtotime($created_at))."</td>
             <td style='max-width: 100px;' title='".date('d-m-Y H:i:s',strtotime($update_at))."'>".date('d-m-Y H:i:s',strtotime($update_at))."</td>
@@ -355,4 +355,152 @@ function role_clb(){
      echo "<option value='$id'>$role</option>";
     }
   }
+}
+
+function topic(){
+  global $conn;
+  global $this_page_first_result;
+  global $results_per_page;
+  global $number_of_results;
+  sum_page('question_topics', 10);
+  
+  //Hiển thị
+  $sql='SELECT * FROM question_topics LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
+  $result = mysqli_query($conn, $sql);
+
+  if($result->num_rows > 0){
+    while($row = $result->fetch_assoc()) {
+      $id = $row['id'];
+      $id_user = $row['user_create'];
+      $topic = $row['topic'];
+      $note = $row['note'];
+      $created_at = $row['created_at'];
+      $update_at =  $row['update_at'];
+      $update = "\"Display_update_topic($id,'$topic','$note');\"";
+      $remove = "\"remove_topic($id);\"";
+      echo "<tr class='row'>
+            <td class='col l-1' title='$id'>$id</td>
+            <td class='col l-1' title='$id_user'>$id_user</td>
+            <td class='col l-2' title='$topic'>$topic</td>
+            <td class='col l-2' title='$note'>$note</td>
+            <td class='col l-2' title='".date('d-m-Y H:i:s',strtotime($created_at))."'>".date('d-m-Y H:i:s',strtotime($created_at))."</td>
+            <td class='col l-2' title='".date('d-m-Y H:i:s',strtotime($update_at))."'>".date('d-m-Y H:i:s',strtotime($update_at))."</td>
+            <td class='col l-1' ><button class='update' onclick=$update>Sửa</button></td>
+            <td class='col l-1' ><button class='delete' onclick=$remove>Xóa</button></td>
+        </tr>";
+    }
+  }
+  echo "<script type='text/javascript'>
+          var count = $number_of_results;
+      </script>";
+}
+
+function topic_choice(){
+  global $conn;
+  $sql="SELECT * FROM question_topics";
+  $result = mysqli_query($conn, $sql);
+
+  if($result->num_rows > 0){
+    while($row = $result->fetch_assoc()) {
+      $id = $row["id"];
+      $topic = $row["topic"];
+     echo "<option value='$id'>$topic</option>";
+    }
+  }
+}
+
+function question(){
+  global $conn;
+  global $this_page_first_result;
+  global $results_per_page;
+  global $number_of_results;
+  sum_page('questions', 10);
+  
+  //Hiển thị
+  $sql='SELECT * FROM questions LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
+  $result = mysqli_query($conn, $sql);
+
+  if($result->num_rows > 0){
+    while($row = $result->fetch_assoc()) {
+      $id = $row['id'];
+      $id_user = $row['user_create'];
+      $id_topic = $row["id_topic"];
+      $question = $row['question'];
+      $note = $row['note'];
+      $created_at = $row['created_at'];
+      $update_at =  $row['update_at'];
+      $update = "\"Display_update_question($id,'$id_topic','$question','$note');\"";
+      $remove = "\"remove_question($id);\"";
+      echo "<tr class='row'>
+            <td class='col l-1' title='$id'>$id</td>
+            <td class='col l-1' title='$id_topic'>$id_topic</td>
+            <td class='col l-1' title='$id_user'>$id_user</td>
+            <td class='col l-1' title='$question'>$question</td>
+            <td class='col l-2' title='$note'>$note</td>
+            <td class='col l-2' title='".date('d-m-Y H:i:s',strtotime($created_at))."'>".date('d-m-Y H:i:s',strtotime($created_at))."</td>
+            <td class='col l-2' title='".date('d-m-Y H:i:s',strtotime($update_at))."'>".date('d-m-Y H:i:s',strtotime($update_at))."</td>
+            <td class='col l-1' ><button class='update' onclick=$update>Sửa</button></td>
+            <td class='col l-1' ><button class='delete' onclick=$remove>Xóa</button></td>
+        </tr>";
+    }
+  }
+  echo "<script type='text/javascript'>
+          var count = $number_of_results;
+      </script>";
+}
+
+function question_choice(){
+  global $conn;
+  $sql="SELECT * FROM questions";
+  $result = mysqli_query($conn, $sql);
+
+  if($result->num_rows > 0){
+    while($row = $result->fetch_assoc()) {
+      $id = $row["id"];
+      $question = $row["question"];
+     echo "<option value='$id'>$question</option>";
+    }
+  }
+}
+
+function load_post(){
+  global $conn;
+  global $this_page_first_result;
+  global $results_per_page;
+  global $number_of_results;
+  sum_page('replys', 10);
+  
+  //Hiển thị
+  $sql='SELECT * FROM replys LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
+  $result = mysqli_query($conn, $sql);
+
+  if($result->num_rows > 0){
+    while($row = $result->fetch_assoc()) {
+      $id = $row['id'];
+      $id_question = $row['id_question'];
+      $user_create = $row["user_create"];
+      $answer = $row['answer'];
+      $file = $row['file'];
+      $_like = $row['_like'];
+      $created_at = $row['created_at'];
+      $update_at =  $row['update_at'];
+      $update = "\"Display_update_post($id,'$id_question','$answer','$file');\"";
+      $remove = "\"remove_post($id,'$file');\"";
+      echo "<tr class='row'>
+            <td class='col l-1' title='$id'>$id</td>
+            <td class='col l-1' title='$id_question'>$id_question</td>
+            <td class='col l-1' title='$user_create'>$user_create</td>
+            <td class='col l-3' title='$answer'>$answer</td>
+            <td class='col l-1' title='$file'><img style='width:100%;' src='../public/img/post/$file' alt='$file' onclick='click_img(this.id,this.src,this.alt);'></td>
+            <td class='col l-1' title='$_like'>$_like</td>
+            <td class='col l-1' title='".date('d-m-Y H:i:s',strtotime($created_at))."'>".date('d-m-Y H:i:s',strtotime($created_at))."</td>
+            <td class='col l-1' title='".date('d-m-Y H:i:s',strtotime($update_at))."'>".date('d-m-Y H:i:s',strtotime($update_at))."</td>
+            <td class='col l-1' ><button class='update' onclick=$update>Sửa</button></td>
+            <td class='col l-1' ><button class='delete' onclick=$remove>Xóa</button></td>
+        </tr>";
+    }
+  }
+  echo "<script type='text/javascript'>
+          var count = $number_of_results;
+      </script>";
 }

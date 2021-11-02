@@ -93,7 +93,7 @@
 							<p>$description</p>
 							<p>Thời gian: ".date('d-m-Y',strtotime($start))." đến ".date('d-m-Y',strtotime($end))."</p>
 							<div class='group_buttom'>
-								<button>Chi tiết</button>
+								<button onclick='click_img($id,\"../public/img/even_img/$file\",\"$detail\");'>Chi tiết</button>
 							</div>
 						</div>
 					</div>
@@ -222,10 +222,10 @@
 				$link = $row['link'];
 				$file = $row['logo'];
 				echo " <div class='method row'>
-					<div class='col l-1 l-o-1 m-o-1 m-1 c-o-1 c-1'>
+					<div class='col l-1 l-o-1'>
 						<img src='../public/img/$file' alt='$file'>
 					</div>
-					<div class='col l-10 m-o-1 m-9 c-o-1 c-8'>
+					<div class='col l-10'>
 						<p>$method: $link</p>
 					</div>
 				</div>";
@@ -338,6 +338,18 @@
                 </tr>";
 			}
 		}
+		else{
+			echo "<tr class='row'>
+			<td class='col l-12'>
+				<a href='#'>
+					<img src='../public/gif/question.gif' alt='icon câu hỏi' />
+					<div>
+						<h2 style='color: red'>Chưa có câu hỏi nào!</h2>
+					</div>
+				</a>
+			</td>
+		</tr>";
+		}
 		echo "<script type='text/javascript'>
           var count = $number_of_results;
 		  $(document).ready(function() {
@@ -375,31 +387,78 @@
 		global $conn;
 		global $this_page_first_result;
 		global $results_per_page;
+		global $user_id;
 		sum_page("replys,users,questions WHERE replys.user_create = users.id and questions.id = replys.id_question and questions.id = ".$_GET["question"], 10);
 		
 		//Hiển thị
-		$sql= 'SELECT users.name, replys.answer, replys.file, replys.like, replys.created_at FROM replys,users,questions 
+		$sql= 'SELECT replys.id, users.name, replys.answer, replys.file, replys._like, replys.created_at FROM replys,users,questions 
 		WHERE replys.user_create = users.id and questions.id = replys.id_question and questions.id = '.$_GET["question"].' LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
 		$result = mysqli_query($conn, $sql);
 
 		if($result->num_rows > 0){
 			while($row = $result->fetch_assoc()) {
+			$id = $row["id"];
 			$name = $row["name"];
 			$answer = $row["answer"];
 			$file = $row["file"];
-			$like = $row["like"];
+			$like = $row["_like"];
 			$created_at = $row["created_at"];
 			echo "<div class='row'>
 					<div class='col l-12 m-12 c-12'>
 						<h3>$name</h3>
 						<p class='times'>".date('d-m-Y H:i:s',strtotime($created_at))."</p>
-						<p class='content_post'>$answer</p>
+						<p class='content_post'>$answer<br>";
+						if($file!=""){
+							echo "<p>Ảnh kèm theo: </p>";
+							echo "<img style='width:50%;' src='../public/img/post/$file' alt='$answer' onclick='click_img(this.id,this.src,this.alt);'>";
+						}
+						echo "</p>
 						<div class='interact'>
-							<p>Có $like lượt thích</p>
-							<p>Thích</p>
-						</div>
+							<p>Có $like lượt thích</p>";
+				if(kt_like($id,$user_id)){
+					echo "<button class='like' onclick='Like($id,$user_id)'>Thích</button>";
+				}
+				else{
+					echo "<button class='like' onclick='Un_Like($id,$user_id)'>Bỏ thích</button>";
+				}
+				if(user_post($id,$user_id)){
+					echo "<button class='like' onclick='remove_post($id,\"$file\")'>Xóa</button>";
+				}
+			echo "			</div>
 					</div>
 				</div>";
 			}
+		}
+		else{
+			echo "<div class='row'>
+					<div class='col l-12 m-12 c-12'>
+						<h3 style='color: red;'>Chưa có câu trả lời nào!</h3>
+						<p class='times'>".date('d-m-Y')."</p>
+					</div>
+				</div>";
+		}
+	}
+
+	function kt_like($id,$user_id){
+		global $conn;
+		$sql = "select * from likes where id_port=$id and id_user=$user_id";
+		$result = mysqli_query($conn, $sql);
+		if($result->num_rows > 0){
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+
+	function user_post($id,$user_id){
+		global $conn;
+		$sql="SELECT * FROM replys where id= $id and user_create= $user_id";
+		$result = mysqli_query($conn, $sql);
+		if($result->num_rows > 0){
+			return true;
+		}
+		else{
+			return false;
 		}
 	}

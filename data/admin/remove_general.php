@@ -9,7 +9,7 @@
 
         $pathName_sl="";
 
-        if($imageFileType == "jpg" || $imageFileType == "png" || $imageFileType == "jpeg"){
+        if($imageFileType == "jpg" || $imageFileType == "png" || $imageFileType == "jpeg" || $imageFileType == "gif"){
             $pathName_sl="../../public/img/even_img/".$file;
         }
         else{

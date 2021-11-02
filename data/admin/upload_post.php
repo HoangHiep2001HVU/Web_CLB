@@ -11,7 +11,7 @@ if($note==""){
 }
 else{
     if ($file == "") {
-        $sql = "INSERT INTO replys(id_question, user_create, answer, like) VALUES ('$id_question','$id_user','$note',0)";
+        $sql = "INSERT INTO replys(id_question, user_create, answer, _like) VALUES ('$id_question','$id_user','$note',0)";
         $upload_kt = mysqli_query($conn, $sql);
         if ($upload_kt) {
             echo 1;
@@ -30,7 +30,7 @@ else{
             } else {
     
                 if (move_uploaded_file($_FILES['file_content']['tmp_name'], $target)) {
-                    $sql = "INSERT INTO replys(id_question, user_create, answer, file, like) VALUES ('$id_question','$id_user','$note','$file',0)";
+                    $sql = "INSERT INTO replys(id_question, user_create, answer, file, _like) VALUES ('$id_question','$id_user','$note','$file',0)";
                     $upload_kt = mysqli_query($conn, $sql);
                     if ($upload_kt) {
                         echo 1;

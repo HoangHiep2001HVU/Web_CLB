@@ -148,7 +148,7 @@
 <div class="row">
     <div class="col l-8">
         <div class="search">
-            <p>Tìm kiếm: <input type="text" id="search" onkeyup="search('search','table_user',2);" placeholder="Tìm kiếm theo tiêu đề" title="Tìm kiếm theo tiêu đề" /></p>
+            <p>Tìm kiếm: <input type="text" id="search" onkeyup="search('search','table_user',1);" placeholder="Tìm kiếm theo tiêu đề" title="Tìm kiếm theo tiêu đề" /></p>
         </div>
     </div>
     <div class="col l-4">
