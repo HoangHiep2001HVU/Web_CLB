@@ -9,7 +9,7 @@
         <!--tải ảnh sl lên-->
         <div class="upload">
             <?php
-            if (isset($_GET["email"])) {
+            if (isset($_SESSION["email"])) {
                 echo "<form method='POST' id='upload_topic' enctype='multipart/form-data'>
 
                             <div class='form_group' style='display: none;'>

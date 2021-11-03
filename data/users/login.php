@@ -1,5 +1,9 @@
 <?php
 	require "../connect/connect.php";
+	if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 	if(isset($_POST['acount'])){
 		$email = $_POST['acount'];
 		$_password = md5($_POST['password_login']);
@@ -14,6 +18,7 @@
 				$pass = $row['password'];
 			}
 			if($pass == $_password){
+				$_SESSION["email"]= $email;
 				echo 1;
 			}
 			else {

@@ -95,8 +95,8 @@ function about(){
 	}
 }
 
-function menu_admin(id,email){
-	location.assign("admin.php?email="+email+"&tab="+id);
+function menu_admin(id){
+	location.assign("admin.php?tab="+id);
 }
 
 function current_page(id){

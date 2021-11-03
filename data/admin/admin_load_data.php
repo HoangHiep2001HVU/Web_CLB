@@ -67,7 +67,7 @@ function load_slide_imgs(){
 function page(){
   global $number_of_pages;
   if($number_of_pages > 1){
-    $url_page = "admin.php?email=".$_GET["email"]."&tab=".$_GET["tab"]."&page=";
+    $url_page = "admin.php?tab=".$_GET["tab"]."&page=";
     $i=2;
     echo "<div class='row'>
         <div class='number_row col l-12'>";
@@ -87,10 +87,10 @@ function page(){
 
     $url =  $url_page.$i; 
     if($i-1<$number_of_pages){
-      echo "<button id='next'> <a href='$url'> > </a> </button>
-            </div>
-        </div>";
+      echo "<button id='next'> <a href='$url'> > </a> </button>";
     }
+    echo "</div>
+    </div>";
 
     echo "<script type='text/javascript'>";
     if(isset($_GET["page"])){

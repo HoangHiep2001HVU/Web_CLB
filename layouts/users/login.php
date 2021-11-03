@@ -38,13 +38,7 @@ require "../../data/config.php";
 					</div>
 					<div class="group_button">
 						<?php 
-							if(isset($_GET["x"])){
-								$X = $_GET["x"];
-								echo "<button type='button' name='login' onclick='log(_href,$X);'>Đăng nhập</button>";
-							}
-							else{
-								echo "<button type='button' name='login' onclick='log(_href,2);'>Đăng nhập</button>";
-							}
+							echo "<button type='button' name='login' onclick='log();'>Đăng nhập</button>";
 						?>
 						<button type="button" name="register"><a href="register.php?x=2">Đăng ký</a></button>
 						<button type="button" name="back"><a href="../index.php">Quay lại</a></button>
@@ -52,8 +46,6 @@ require "../../data/config.php";
 				</form>
 			</div>
 		</div>
-		
-		<?php echo "<script>var _href = '$pastServer'</script>" ?>
 	</div>
 	<?php
 	//Tắt kết nối

@@ -30,13 +30,7 @@
 			while($row = $result->fetch_assoc()) {
 				$id = $row['id'];
 				$name_group = $row['name'];
-				if($email==""){
-					echo "<li><a href='group.php?id_group=$id'>".htmlspecialchars($name_group)."</a></li>";
-				}
-				else{
-					echo "<li><a href='group.php?email=$email&id_group=$id'>".htmlspecialchars($name_group)."</a></li>";
-				}
-				
+				echo "<li><a href='group.php?id_group=$id'>".htmlspecialchars($name_group)."</a></li>";
 			}
 		}
 	}
@@ -106,22 +100,13 @@
 		global $number_of_pages;
 		if($number_of_pages > 1){
 			$url_page = "";
-			if(isset($_GET["email"])){
-				if(isset($_GET["theme"])){
-					$url_page = "$tab?email=".$_GET["email"]."&theme=".$_GET["theme"]."&page=";
-				}
-				else{
-					$url_page = "$tab?email=".$_GET["email"]."&page=";
-				}
+			if(isset($_GET["theme"])){
+				$url_page = "$tab?theme=".$_GET["theme"]."&page=";
 			}
 			else{
-				if(isset($_GET["theme"])){
-					$url_page = "$tab?theme=".$_GET["theme"]."&page=";
-				}
-				else{
-					$url_page = "$tab?page=";
-				}
+				$url_page = "$tab?page=";
 			}
+			
 			$i=2;
 			echo "<div class='row'>
 				<div class='number_row col l-12'>";
@@ -327,7 +312,6 @@
 			$note = htmlspecialchars($row["note"]);
 			echo "<tr class='row'>
                     <td class='col l-12'>";
-                        if(!isset($_GET["email"])){
 							echo "<a href='posts.php?theme=".$_GET["theme"]."&question=$id'>
                             <img src='../public/gif/question.gif' alt='icon câu hỏi' />
                             <div>
@@ -336,17 +320,6 @@
                             </div>
                         </a>";
 							
-						}
-						else{
-							$email = $_GET["email"];
-							echo "<a href='posts.php?email=".$email."&theme=".$_GET["theme"]."&question=$id'>
-                            <img src='../public/gif/question.gif' alt='icon câu hỏi' />
-                            <div>
-                                <h2>$question</h2>
-                                <p>$note</p>
-                            </div>
-                        </a>";
-						}
             echo"        </td>
                 </tr>";
 			}

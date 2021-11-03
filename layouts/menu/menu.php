@@ -9,13 +9,11 @@
 			</div>
 			<ul class="nav">
 				<?php
-				if (isset($_GET["email"])) {
-					$email = $_GET["email"];
+				if (isset($_SESSION["email"])) {
+					$email = $_SESSION["email"];
 					$name = username($user_id, $email, $role);
-					echo "<li><a href='index.php?email=$email'>Trang chủ</a></li>";
-				} else {
+				} 
 					echo "<li><a href='index.php'>Trang chủ</a></li>";
-				}
 				?>
 				<li>
 					Các nhóm
@@ -24,16 +22,11 @@
 					</ul>
 				</li>
 				<?php
-					if (isset($_GET["email"])) {
-						echo "<li><a href='forum.php?email=$email'>Diễn đàn</a></li>
-						<li><a href='about_us.php?email=$email'>Giới thiệu</a></li>";
-					} else {
-						echo "<li><a href='forum.php'>Diễn đàn</a></li>
-						<li><a href='about_us.php'>Liên hệ</a></li>";
-					}
+					echo "<li><a href='forum.php'>Diễn đàn</a></li>
+					<li><a href='about_us.php'>Giới thiệu</a></li>";
 
 					if($role == 1){
-						echo "<li><a href='admin.php?email=$email&tab=tab_1'>Quản trị</a></li>";
+						echo "<li><a href='admin.php?tab=tab_1'>Quản trị</a></li>";
 					}
 					
 				?>
@@ -41,9 +34,9 @@
 
 			<ul class="mb_users">
 				<?php
-				if (isset($_GET["email"])) {
+				if (isset($_SESSION["email"])) {
 					$name = username($user_id, $email, $role);
-					echo "<li class='users'><a href='index.php'>Đăng xuất</a></li>";
+					echo "<li class='users' onclick=\"logout('$email')\">Đăng xuất</li>";
 					echo "<li class='users'><a href='#'>$name</a></li>";
 				} else {
 					if(isset($_GET["id"]) || isset($_GET["theme"])){

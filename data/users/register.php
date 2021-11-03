@@ -1,5 +1,9 @@
 <?php
 	require "../connect/connect.php";
+	if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 	if(isset($_POST['name'])){
 		$name = $_POST['name'];
 		$birthday = $_POST['birthday'];
@@ -20,6 +24,7 @@
 			$sql_user= "INSERT INTO users(name, birthday, email, class, sex) VALUES ('$name','$birthday','$email','$_class','$sex')";
 			$conn->query($sql_acc);
 			$conn->query($sql_user);
+			$_SESSION["email"]= $email;
 			echo 1;
 		}
 	}

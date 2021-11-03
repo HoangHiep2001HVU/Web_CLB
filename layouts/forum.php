@@ -23,13 +23,7 @@ require "../data/config.php";
 
     <div id="body_forum" class="grid wide">
         <?php 
-            if(isset($_GET["email"])){
-                $email  = $_GET["email"];
-                $_link = "forum.php?email=$email&theme";
-            }
-            else {
-                $_link = "forum.php?theme";
-            }
+            $_link = "forum.php?theme";
 
             if(isset($_GET["theme"])){
                 $theme = $_GET["theme"];

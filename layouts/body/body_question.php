@@ -9,7 +9,7 @@
         <!--tải ảnh sl lên-->
         <div class="upload">
             <?php
-            if (isset($_GET["email"])) {
+            if (isset($_SESSION["email"])) {
                 $theme = $_GET["theme"];
                 echo "<form method='POST' id='upload_question' enctype='multipart/form-data'>
 
