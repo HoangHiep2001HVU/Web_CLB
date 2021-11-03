@@ -326,15 +326,28 @@
 			$question = htmlspecialchars($row["question"]);
 			$note = htmlspecialchars($row["note"]);
 			echo "<tr class='row'>
-                    <td class='col l-12'>
-                        <a href='posts.php?email=".$_GET["email"]."&theme=".$_GET["theme"]."&question=$id'>
+                    <td class='col l-12'>";
+                        if(!isset($_GET["email"])){
+							echo "<a href='posts.php?theme=".$_GET["theme"]."&question=$id'>
                             <img src='../public/gif/question.gif' alt='icon câu hỏi' />
                             <div>
                                 <h2>$question</h2>
                                 <p>$note</p>
                             </div>
-                        </a>
-                    </td>
+                        </a>";
+							
+						}
+						else{
+							$email = $_GET["email"];
+							echo "<a href='posts.php?email=".$email."&theme=".$_GET["theme"]."&question=$id'>
+                            <img src='../public/gif/question.gif' alt='icon câu hỏi' />
+                            <div>
+                                <h2>$question</h2>
+                                <p>$note</p>
+                            </div>
+                        </a>";
+						}
+            echo"        </td>
                 </tr>";
 			}
 		}

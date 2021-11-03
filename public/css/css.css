@@ -347,7 +347,7 @@ a {
 }
 
 #form_reg {
-  margin-top: 70px;
+  margin-top: 10px;
   margin-left: 70px;
   text-align: center;
 }
@@ -369,7 +369,6 @@ a {
 }
 
 #form_reg .form_group {
-  margin-bottom: 10px;
   font-size: 18px;
 }
 
